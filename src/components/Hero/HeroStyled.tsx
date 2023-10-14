@@ -1,13 +1,11 @@
 import styled from "styled-components";
-import img from "../../assets/img-intro.jpg";
+import img from "../../assets/img-hero.jpg";
 
 export const Background = styled.section`
   background: url(${img}) center center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
-
-  /* transform: translateY(-80px); */
 
   display: flex;
   align-items: center;

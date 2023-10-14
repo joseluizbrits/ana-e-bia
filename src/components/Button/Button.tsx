@@ -8,16 +8,14 @@ const ButtonStyled = styled.button`
   cursor: pointer;
   transition: 0.3s;
 
+  color: #fff;
+  font-family: var(--text);
+  font-weight: var(--medium);
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+
   &:hover {
     opacity: 0.8;
-  }
-
-  p {
-    color: #fff;
-    font-family: var(--text);
-    font-weight: var(--semibold);
-    font-size: 1.25rem;
-    letter-spacing: 0.05rem;
   }
 `;
 
@@ -29,7 +27,7 @@ type ButtonProps = React.ComponentProps<"button"> & {
 function Button({ color, text }: ButtonProps) {
   return (
     <ButtonStyled className="rounded" color={color}>
-      <p>{text}</p>
+      {text}
     </ButtonStyled>
   );
 }
