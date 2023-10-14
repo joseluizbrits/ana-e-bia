@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   height: 80px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 120px;
 
-  position: relative;
-  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
 
   @media (max-width: 1100px) {
     flex-direction: row-reverse;

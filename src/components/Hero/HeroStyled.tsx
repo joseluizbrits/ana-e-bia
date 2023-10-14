@@ -7,7 +7,7 @@ export const Background = styled.section`
   width: 100vw;
   height: 100vh;
 
-  transform: translateY(-80px);
+  /* transform: translateY(-80px); */
 
   display: flex;
   align-items: center;
