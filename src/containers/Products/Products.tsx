@@ -1,5 +1,5 @@
 import React from "react";
-import { Section } from "./ProdutosStyled";
+import { Section } from "./ProductsStyled";
 import Button from "../Button/Button";
 import { products } from "../../utils/products";
 
