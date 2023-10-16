@@ -52,7 +52,7 @@ export const Section = styled.section`
     gap: 200px;
   }
 
-  .image {
+  .candy .image {
     transform: translateY(-120px);
 
     img {
@@ -64,15 +64,15 @@ export const Section = styled.section`
       position: relative;
       z-index: 1;
 
-      &#img-cookie {
+      &#cookie {
         object-position: 0 -200px;
       }
 
-      &#img-cake {
+      &#cake {
         object-position: 0 -56px;
       }
 
-      &#img-macaron {
+      &#macaron {
         object-position: 0 -220px;
       }
     }
@@ -121,8 +121,8 @@ export const Section = styled.section`
     flex-direction: row-reverse;
     margin-bottom: 80px;
 
-    .title {
-      padding-top: 80px;
+    .text {
+      padding-top: 20px;
     }
 
     .image {
@@ -137,6 +137,184 @@ export const Section = styled.section`
 
     button.rounded {
       align-self: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .title {
+      height: 480px;
+
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
+
+    .products {
+      gap: 160px;
+      background: linear-gradient(to bottom, var(--p1) 40%, #fff 40%);
+    }
+
+    .candy {
+      gap: 120px;
+    }
+
+    .candy .image {
+      transform: translateY(-64px);
+
+      img {
+        width: 400px;
+        height: 400px;
+
+        &#cookie {
+          object-position: 0 -140px;
+        }
+
+        &#macaron {
+          object-position: 0 -160px;
+        }
+      }
+    }
+
+    .candy .image .shadow {
+      width: 250px;
+      height: 250px;
+      bottom: -48px;
+      right: -48px;
+    }
+
+    .candy:nth-child(even) .image .shadow {
+      top: -48px;
+      left: -48px;
+    }
+
+    .text h3 {
+      font-size: 2rem;
+    }
+
+    .text p {
+      font-size: 1rem;
+      margin-top: 12px;
+    }
+
+    .text button.rounded {
+      font-size: 1rem;
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .title {
+      height: 216px;
+      padding-top: 64px;
+
+      h2 {
+        font-size: 2rem;
+        max-width: 12ch;
+        text-align: center;
+      }
+
+      p {
+        display: none;
+      }
+
+      &::before {
+        font-size: 0.5rem;
+        bottom: 40px;
+        right: 40px;
+      }
+    }
+
+    .products {
+      gap: 80px;
+      padding: 0 80px;
+      background: linear-gradient(to bottom, var(--p1) 51%, #fff 51%);
+    }
+
+    .candy {
+      gap: 48px;
+    }
+
+    .candy .image {
+      transform: translateY(40px);
+
+      img {
+        width: 250px;
+        height: 250px;
+
+        &#cookie {
+          object-position: 0 -85px;
+        }
+
+        &#cake {
+          object-position: 0 -20px;
+        }
+
+        &#macaron {
+          object-position: 0 -100px;
+        }
+      }
+    }
+
+    .candy .image .shadow {
+      display: none;
+    }
+
+    .candy:nth-child(even) {
+      margin-bottom: 0;
+    }
+
+    .text h3 {
+      font-size: 1.5rem;
+    }
+
+    .text p {
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+
+    .text button.rounded {
+      font-size: 0.75rem;
+      margin-top: 16px;
+    }
+
+    .candy:nth-child(even) .text {
+      padding-top: 40px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .products {
+      background: linear-gradient(to bottom, var(--p1) 50.5%, #fff 50.5%);
+    }
+
+    .text {
+      padding-top: 64px;
+      align-items: center;
+    }
+
+    .text p {
+      text-align: center;
+    }
+
+    .text button.rounded {
+      font-weight: var(--semibold);
+      width: 100%;
+      margin-top: 32px;
+    }
+
+    .candy,
+    .candy:nth-child(even) {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .candy:nth-child(even) .image {
+      transform: translateY(14px);
     }
   }
 `;
