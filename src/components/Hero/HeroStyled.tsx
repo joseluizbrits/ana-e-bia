@@ -2,108 +2,104 @@ import styled from "styled-components";
 import img from "../../assets/img-hero.jpg";
 
 export const Background = styled.section`
+  width: 100%;
+  height: 100vh;
   background: url(${img}) center center;
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
-  @media (max-width: 1500px) {
-    div.one {
-      font-size: 2.5rem;
-      line-height: 3.25rem;
+  h1 {
+    font-family: var(--title);
+    font-weight: var(--bold);
+    color: #fff;
+
+    width: 100%;
+    padding: 0 160px;
+    margin-top: -120px;
+
+    display: flex;
+    justify-content: space-between;
+
+    .one,
+    .two {
+      display: grid;
+
+      p {
+        grid-area: 1/1;
+        transform: translate(0); // gambiarra (alternativa ao z-index)
+      }
+
+      .circle {
+        background: var(--p4);
+        border-radius: 50%;
+        grid-area: 1/1;
+      }
     }
 
-    div.two {
-      font-size: 1.5rem;
-      line-height: 2.25rem;
+    .one p {
+      font-size: 4.5rem;
+      max-width: 14ch;
     }
 
-    span.c-two {
-      top: -10px;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    h1.title {
-      padding: 0 40px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    h1.title {
-      transform: translateY(-60px);
+    .one .circle {
+      width: 160px;
+      height: 160px;
+      transform: translate(120px, -32px);
     }
 
-    div.two {
-      display: none;
+    .two {
+      align-self: flex-end;
     }
 
-    span.c-one {
+    .two p {
+      font-size: 3rem;
+      max-width: 18ch;
+    }
+
+    .two .circle {
       width: 100px;
       height: 100px;
-      top: 20px;
-      left: 140px;
+      transform: translate(360px, 32px);
     }
   }
-`;
 
-export const Title = styled.h1`
-  width: 100%;
-  height: 300px;
-  padding: 0 160px;
+  @media screen and (max-width: 1500px) {
+    h1 .one p {
+      font-size: 3.5rem;
+    }
 
-  display: flex;
-  justify-content: space-between;
-`;
+    h1 .two p {
+      font-size: 2rem;
+    }
 
-export const Text = styled.div`
-  font-family: var(--title);
-  font-weight: var(--bold);
-  letter-spacing: 0.05rem;
-
-  &.one {
-    font-size: 4rem;
-    max-width: 13ch;
-    color: #fff;
-    position: relative;
+    h1 .two .circle {
+      transform: translate(160px, 0);
+    }
   }
 
-  &.two {
-    align-self: center;
-    font-size: 2.5rem;
-    max-width: 19ch;
-    color: #fff;
-    position: relative;
+  @media screen and (max-width: 1200px) {
+    h1 {
+      margin-top: -240px;
+    }
+
+    h1 .two {
+      display: none;
+    }
   }
 
-  span.text {
-    z-index: 1;
-    position: relative;
-  }
-`;
+  @media screen and (max-width: 720px) {
+    h1 {
+      padding: 0 40px;
+    }
 
-export const Circle = styled.span`
-  content: "";
-  display: block;
-  border-radius: 50%;
-  background: var(--p4);
-  position: absolute;
+    h1 .one p {
+      font-size: 2.5rem;
+    }
 
-  &.c-one {
-    width: 150px;
-    height: 150px;
-    top: -30px;
-    left: 100px;
-  }
-
-  &.c-two {
-    width: 100px;
-    height: 100px;
-    top: 30px;
-    right: 80px;
+    h1 .one .circle {
+      transform: translate(64px, -32px);
+    }
   }
 `;

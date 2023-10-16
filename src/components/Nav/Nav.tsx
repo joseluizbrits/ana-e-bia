@@ -1,21 +1,18 @@
 import React from "react";
 import { Header, Hamburger, Logo } from "./NavStyled";
 import Button from "../Button/Button";
-
-import gsap from "gsap";
+import Menu from "../Menu/Menu";
 
 function Nav() {
-  React.useEffect(() => {
-    gsap.from("header", {
-      duration: 1,
-      y: -100,
-      opacity: 0,
-    });
-  }, []);
+  const [menuActive, setMenuActive] = React.useState(false);
 
   return (
     <Header>
-      <Hamburger className="hamburger" />
+      <Hamburger
+        className={`hamburger ${menuActive ? "active" : ""}`}
+        onClick={() => setMenuActive(!menuActive)}
+      />
+      <Menu className={menuActive ? "active" : ""} />
       <Logo href="/" className="logo">
         <span>Ana & Bia</span>
         <span>doces</span>

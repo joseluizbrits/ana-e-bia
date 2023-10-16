@@ -43,6 +43,7 @@ export const Hamburger = styled.button`
   border-radius: 5px;
   background: none;
   cursor: pointer;
+  z-index: 101;
 
   display: flex;
   justify-content: center;
@@ -55,6 +56,7 @@ export const Hamburger = styled.button`
     height: 3px;
     border-radius: 3px;
     background: var(--p6);
+    transition: 0.3s;
   }
 
   &::after {
@@ -63,6 +65,17 @@ export const Hamburger = styled.button`
     height: 3px;
     border-radius: inherit;
     background: var(--p6);
+    transition: 0.3s;
+  }
+
+  &.active::before {
+    transform: rotate(-135deg) translateY(-5px);
+    background: #fff;
+  }
+
+  &.active::after {
+    transform: rotate(135deg) translateY(5px);
+    background: #fff;
   }
 `;
 

@@ -31,8 +31,8 @@ export const Section = styled.section`
     content: "hmmmmm!";
     display: block;
     position: absolute;
-    bottom: 80px;
-    right: 80px;
+    bottom: 40px;
+    right: 40px;
     font-family: var(--text);
     color: var(--p1);
   }
@@ -224,8 +224,8 @@ export const Section = styled.section`
 
       &::before {
         font-size: 0.5rem;
-        bottom: 40px;
-        right: 40px;
+        bottom: 20px;
+        right: 20px;
       }
     }
 
