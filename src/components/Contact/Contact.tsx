@@ -1,4 +1,5 @@
 import React from "react";
+import { FormStyled } from "./ContactStyled";
 import useForm from "../../hooks/useForm";
 import Cake from "../../assets/svg/Cake";
 import Field from "./Field";
@@ -56,24 +57,33 @@ function Contact() {
   }, [success, name.error, email.error, message.error]);
 
   return (
-    <section>
-      <Cake />
-      <h2>Entre em contato conosco e faça o seu pedido!</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="fields">
-          <Field label="Nome" type="text" name="name" {...name} />
-          <Field label="Email" type="email" name="email" {...email} />
-          <Field
-            label="Menssagem"
-            type="textarea"
-            name="message"
-            {...message}
-          />
-          <button>Enviar</button>
-          {success && <p className="success">Menssagem enviada com sucesso!</p>}
-        </div>
-      </form>
-    </section>
+    <FormStyled>
+      <div className="wrapp">
+        <Cake />
+        <form onSubmit={handleSubmit}>
+          <div className="title">
+            <div className="circle"></div>
+            <h2>Entre em contato conosco e faça o seu pedido!</h2>
+          </div>
+          <div className="fields">
+            <div className="circle c-one"></div>
+            <div className="circle c-two"></div>
+            <Field label="Nome" type="text" name="name" {...name} />
+            <Field label="Email" type="email" name="email" {...email} />
+            <Field
+              label="Menssagem"
+              type="textarea"
+              name="message"
+              {...message}
+            />
+            <button>Enviar</button>
+            {success && (
+              <p className="success">Menssagem enviada com sucesso!</p>
+            )}
+          </div>
+        </form>
+      </div>
+    </FormStyled>
   );
 }
 

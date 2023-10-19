@@ -43,6 +43,18 @@ const GlobalStyle = createGlobalStyle`
     list-style: none;
   }
 
+  input, textarea {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none;
+  }
+
   input:focus, textarea:focus {
     border: none;
     box-shadow: none;
