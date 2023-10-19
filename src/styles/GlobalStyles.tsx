@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     --medium: 500;
     --semibold: 600;
     --bold: 700;
+    --gradient: linear-gradient(to right, #DB3A5F, #E84E72);
     --p8: #9C0024;
     --p7: #BA183E;
     --p6: #DB3A5F;
@@ -60,7 +61,6 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: none;
     outline-style: none;
   }
-  
 `;
 
 export default GlobalStyle;

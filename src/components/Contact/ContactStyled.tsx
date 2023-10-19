@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FormStyled = styled.section`
   width: 100%;
   background: var(--p8);
-  border-radius: 0 300px 0 0;
+  border-radius: 0 200px 0 0;
   margin-top: 160px;
   display: flex;
   justify-content: center;
@@ -23,11 +23,13 @@ export const FormStyled = styled.section`
     max-width: 1920px;
     display: flex;
     justify-content: space-between;
-    padding: 0 8%;
+    align-items: center;
+    padding: 0 8% 64px 8%;
   }
 
   svg {
     margin-top: -200px;
+    width: 560px;
   }
 
   form {
@@ -84,7 +86,7 @@ export const FormStyled = styled.section`
 
     &.c-two {
       bottom: 12px;
-      right: -40px;
+      right: -24px;
     }
   }
 
@@ -104,17 +106,138 @@ export const FormStyled = styled.section`
     width: 100%;
     background: var(--p2);
     border-radius: 10px;
-    margin-top: 4px;
+    margin-top: 8px;
+    padding: 20px;
     position: relative;
+
+    font-family: var(--text);
+    color: var(--p8);
+
+    transition: 0.3s;
+
+    &:hover {
+      background: #fff;
+    }
+
+    &:focus-visible {
+      background: #fff;
+      outline: 1px solid var(--p7);
+      box-shadow: 0px 0px 4px 1px var(--p4);
+    }
   }
 
   form .fields input[type="text"],
   form .fields input[type="email"] {
-    height: 32px;
+    height: 24px;
   }
 
   form .fields textarea {
     height: 200px;
+  }
+
+  form .fields button {
+    height: 40px;
+    border-radius: 10px;
     position: relative;
+    background: var(--p6);
+    box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.1);
+
+    font-family: var(--text);
+    font-weight: var(--semibold);
+    color: #fff;
+
+    transition: background 0.3s;
+
+    &:hover {
+      background: var(--p5);
+    }
+
+    &.loading {
+      color: transparent;
+      text-indent: -9999px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-bottom-color: transparent;
+        animation: loading 1s linear infinite;
+      }
+
+      @keyframes loading {
+        from {
+          transform: rotate(0);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+
+  p.error,
+  p.success {
+    font-family: var(--text);
+    font-weight: 400;
+    font-size: 0.75rem;
+  }
+
+  p.error {
+    margin-top: 4px;
+    color: #ed4337;
+  }
+
+  p.success {
+    color: #6bbf59;
+  }
+
+  @media screen and (max-width: 1200px) {
+    & {
+      border-radius: 0 100px 0 0;
+    }
+
+    svg {
+      width: 400px;
+      height: fit-content;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    &::before {
+      font-size: 0.5rem;
+      top: -36px;
+      left: 20px;
+    }
+
+    svg {
+      width: 300px;
+    }
+
+    form .title h2 {
+      font-size: 1.75rem;
+      line-height: 2.25rem;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    svg {
+      display: none;
+    }
+
+    form {
+      padding: 0;
+    }
+
+    form .field-name,
+    form .field-email {
+      grid-column: span 2;
+    }
   }
 `;

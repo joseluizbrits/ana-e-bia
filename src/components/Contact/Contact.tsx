@@ -6,6 +6,7 @@ import Field from "./Field";
 import emailjs from "@emailjs/browser";
 
 function Contact() {
+  const [loading, setLoading] = React.useState("");
   const [success, setSuccess] = React.useState(false);
   const name = useForm(false);
   const email = useForm("email");
@@ -13,6 +14,8 @@ function Contact() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+
+    setLoading("loading");
 
     if (email.validate() && message.validate()) {
       const templateParams = {
@@ -30,6 +33,7 @@ function Contact() {
         )
         .then(
           () => {
+            setLoading("");
             setSuccess(true);
             name.setValue("");
             email.setValue("");
@@ -38,6 +42,7 @@ function Contact() {
           (err: Error) => {
             console.log("Erro ao enviar o menssagem");
             console.log(err);
+            setLoading("loading");
             name.setValue("");
             email.setValue("");
             message.setValue("");
@@ -76,7 +81,7 @@ function Contact() {
               name="message"
               {...message}
             />
-            <button>Enviar</button>
+            <button className={loading}>Enviar</button>
             {success && (
               <p className="success">Menssagem enviada com sucesso!</p>
             )}

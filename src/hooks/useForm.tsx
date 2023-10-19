@@ -38,7 +38,7 @@ function useForm(type: "" | "email" | false) {
   }
 
   function onChange(event: { target: HTMLInputElement | HTMLTextAreaElement }) {
-    if (error) validate(event.target.value);
+    if (error) validate(event.target.value.trim());
     setValue(event.target.value);
   }
 
