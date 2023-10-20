@@ -27,7 +27,7 @@ export const Section = styled.section`
     }
   }
 
-  .title::before {
+  .title::after {
     content: "hmmmmm!";
     display: block;
     position: absolute;
@@ -222,7 +222,7 @@ export const Section = styled.section`
         display: none;
       }
 
-      &::before {
+      &::after {
         font-size: 0.5rem;
         bottom: 20px;
         right: 20px;

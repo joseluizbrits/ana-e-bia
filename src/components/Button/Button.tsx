@@ -20,7 +20,7 @@ const ButtonStyled = styled.button`
 `;
 
 type ButtonProps = React.ComponentProps<"button"> & {
-  color: "p5" | "p6";
+  color: "p5" | "p6" | "gradient";
   text: string;
 };
 

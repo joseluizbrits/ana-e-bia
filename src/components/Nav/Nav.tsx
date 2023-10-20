@@ -17,7 +17,7 @@ function Nav() {
         <span>Ana & Bia</span>
         <span>doces</span>
       </Logo>
-      <Button className="rounded" color="p6" text="Faça seu pedido!" />
+      <Button className="rounded" color="gradient" text="Faça seu pedido!" />
     </Header>
   );
 }

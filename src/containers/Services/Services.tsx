@@ -4,6 +4,7 @@ import Cupcake from "../../assets/svg/Cupcake";
 import CakeServices from "../../assets/svg/CakeServices";
 import MenuServices from "../../assets/svg/MenuServices";
 import DeliveryServices from "../../assets/svg/DeliveryServices";
+import Button from "../../components/Button/Button";
 
 const services = [
   {
@@ -41,6 +42,14 @@ function Services() {
             <p>{desc}</p>
           </div>
         ))}
+      </div>
+      <div className="sub-title">
+        <h3>Atendimento profissional</h3>
+        <p>
+          Nossa equipe garante que as sobremesas sejam servidas com sabor e
+          estética, propriciando uma experiência mágica sem grandes preocupações
+        </p>
+        <Button className="rounded" color="gradient" text="Saiba mais" />
       </div>
     </ServicesStyled>
   );
