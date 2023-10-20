@@ -153,7 +153,9 @@ export const FormStyled = styled.section`
     }
 
     &.loading {
+      pointer-events: none;
       color: transparent;
+      opacity: 0.8;
       text-indent: -9999px;
       display: flex;
       justify-content: center;
