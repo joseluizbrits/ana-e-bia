@@ -1,10 +1,9 @@
-import React from "react";
 import { ServicesStyled } from "./ServicesStyled";
 import Cupcake from "../../assets/svg/Cupcake";
 import CakeServices from "../../assets/svg/CakeServices";
 import MenuServices from "../../assets/svg/MenuServices";
 import DeliveryServices from "../../assets/svg/DeliveryServices";
-import Button from "../../components/Button/Button";
+import Button from "../Button/Button";
 
 const services = [
   {

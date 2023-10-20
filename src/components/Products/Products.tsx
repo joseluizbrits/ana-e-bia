@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "./ProductsStyled";
-import Button from "../../components/Button/Button";
+import Button from "../Button/Button";
 import { products } from "../../utils/products";
 
 function Produtos() {
