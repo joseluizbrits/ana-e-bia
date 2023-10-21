@@ -1,6 +1,11 @@
-function PlusCircle() {
+type PlusCircleProps = {
+  className: string;
+};
+
+function PlusCircle({ className }: PlusCircleProps) {
   return (
     <svg
+      className={className}
       width="30"
       height="30"
       viewBox="0 0 30 30"
