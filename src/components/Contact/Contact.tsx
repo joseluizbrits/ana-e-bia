@@ -42,12 +42,14 @@ function Contact() {
           (err: Error) => {
             console.log("Erro ao enviar o menssagem");
             console.log(err);
-            setLoading("loading");
+            setLoading("");
             name.setValue("");
             email.setValue("");
             message.setValue("");
           }
         );
+    } else {
+      setLoading("");
     }
   }
 
