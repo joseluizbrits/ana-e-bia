@@ -12,6 +12,27 @@ export const Header = styled.header`
   top: 0;
   right: 0;
 
+  .logo {
+    transform: translateX(105px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    :nth-child(1) {
+      color: var(--p8);
+      font-family: var(--title);
+      font-weight: var(--semibold);
+      font-size: 3rem;
+    }
+
+    :nth-child(2) {
+      color: var(--p5);
+      font-family: var(--title);
+      font-weight: var(--semibold);
+      font-size: 1.25rem;
+    }
+  }
+
   @media (max-width: 1100px) {
     flex-direction: row-reverse;
 
@@ -76,26 +97,5 @@ export const Hamburger = styled.button`
   &.active::after {
     transform: rotate(135deg) translateY(5px);
     background: #fff;
-  }
-`;
-
-export const Logo = styled.a`
-  transform: translateX(105px);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  :nth-child(1) {
-    color: var(--p8);
-    font-family: var(--title);
-    font-weight: var(--semibold);
-    font-size: 3rem;
-  }
-
-  :nth-child(2) {
-    color: var(--p5);
-    font-family: var(--title);
-    font-weight: var(--semibold);
-    font-size: 1.25rem;
   }
 `;

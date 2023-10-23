@@ -1,5 +1,6 @@
 import React from "react";
-import { Header, Hamburger, Logo } from "./NavStyled";
+import { Link } from "react-router-dom";
+import { Header, Hamburger } from "./NavStyled";
 import Button from "../Button/Button";
 import Menu from "../Menu/Menu";
 
@@ -13,10 +14,10 @@ function Nav() {
         onClick={() => setMenuActive(!menuActive)}
       />
       <Menu className={menuActive ? "active" : ""} />
-      <Logo href="/" className="logo">
+      <Link to="/" className="logo">
         <span>Ana & Bia</span>
         <span>doces</span>
-      </Logo>
+      </Link>
       <Button className="rounded" color="gradient" text="Faça seu pedido!" />
     </Header>
   );

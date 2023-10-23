@@ -1,11 +1,8 @@
 import styled from "styled-components";
-import img from "../../assets/img-hero.jpg";
 
 export const Background = styled.section`
   width: 100%;
   height: 100vh;
-  background: url(${img}) center center;
-  background-size: cover;
 
   display: flex;
   align-items: center;
@@ -22,9 +19,10 @@ export const Background = styled.section`
     display: flex;
     justify-content: space-between;
 
-    .one,
-    .two {
+    .text-1,
+    .text-2 {
       display: grid;
+      position: relative;
 
       p {
         grid-area: 1/1;
@@ -32,49 +30,51 @@ export const Background = styled.section`
       }
 
       .circle {
-        background: var(--p4);
         border-radius: 50%;
         grid-area: 1/1;
+        position: absolute;
       }
     }
 
-    .one p {
+    .text-1 p {
       font-size: 4.5rem;
       max-width: 14ch;
     }
 
-    .one .circle {
+    .text-1 .circle {
       width: 160px;
       height: 160px;
-      transform: translate(120px, -32px);
+      top: 10%;
+      left: 10%;
     }
 
-    .two {
+    .text-2 {
       align-self: flex-end;
     }
 
-    .two p {
+    .text-2 p {
       font-size: 3rem;
       max-width: 18ch;
     }
 
-    .two .circle {
+    .text-2 .circle {
       width: 100px;
       height: 100px;
-      transform: translate(360px, 32px);
+      top: 10%;
+      right: 10%;
     }
   }
 
   @media screen and (max-width: 1500px) {
-    h1 .one p {
+    h1 .text-1 p {
       font-size: 3.5rem;
     }
 
-    h1 .two p {
+    h1 .text-2 p {
       font-size: 2rem;
     }
 
-    h1 .two .circle {
+    h1 .text-2 .circle {
       transform: translate(160px, 0);
     }
   }
@@ -84,7 +84,7 @@ export const Background = styled.section`
       margin-top: -240px;
     }
 
-    h1 .two {
+    h1 .text-2 {
       display: none;
     }
   }
@@ -94,11 +94,11 @@ export const Background = styled.section`
       padding: 0 40px;
     }
 
-    h1 .one p {
+    h1 .text-1 p {
       font-size: 2.5rem;
     }
 
-    h1 .one .circle {
+    h1 .text-1 .circle {
       transform: translate(64px, -32px);
     }
   }

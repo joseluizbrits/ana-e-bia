@@ -3,6 +3,7 @@ import { FooterStyled } from "./FooterStyled";
 import Instagram from "../../assets/svg/Instagram";
 import Facebook from "../../assets/svg/Facebook";
 import WhatsApp from "../../assets/svg/WhatsApp";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -37,7 +38,7 @@ function Footer() {
             <nav>
               <ul>
                 <li>
-                  <a href="#">Sobre</a>
+                  <Link to="/sobre">Sobre</Link>
                 </li>
                 <hr />
                 <li>

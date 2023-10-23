@@ -8,11 +8,20 @@ import School from "../components/School/School";
 import Questions from "../components/Questions/Questions";
 import Footer from "../components/Footer/Footer";
 
+import imgHero from "../assets/hero-home.jpg";
+
 function Home() {
   return (
     <>
       <Nav />
-      <Hero />
+      <Hero
+        img={imgHero}
+        text={[
+          "Delícias doces em um paraíso açucarado",
+          "Sabores celestiais que derretem na boca",
+        ]}
+        circleColor={"rgb(255, 150, 174)"}
+      />
       <Products />
       <Form />
       <Services />

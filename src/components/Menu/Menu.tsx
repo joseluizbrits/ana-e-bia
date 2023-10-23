@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -33,7 +34,7 @@ function Menu({ className }: { className: string }) {
     <Nav className={className}>
       <ul>
         <li>
-          <a href="#">Sobre</a>
+          <Link to="/sobre">Sobre</Link>
         </li>
         <li>
           <a href="#">Serviços</a>
