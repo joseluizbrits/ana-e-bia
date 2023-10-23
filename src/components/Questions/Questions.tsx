@@ -23,6 +23,7 @@ function Questions() {
     <QuestionStyled>
       <div className="card">
         <h2>Perguntas frequentes (FAQs)</h2>
+
         <ul className="accordion-list">
           {FAQs.map(({ question, answer }, index) => (
             <li key={index}>
@@ -32,11 +33,14 @@ function Questions() {
                 onClick={handleClick}
               >
                 <p>{question}</p>
+
                 <PlusCircle
                   className={active === `question-${index}` ? "active" : ""}
                 />
               </div>
+
               {index !== FAQs.length - 1 && <hr />}
+
               <div
                 className={
                   active === `question-${index}` ? "answer active" : "answer"

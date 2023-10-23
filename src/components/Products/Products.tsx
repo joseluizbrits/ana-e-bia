@@ -22,6 +22,7 @@ function Produtos() {
               <img src={img} alt={alt} id={type} />
               <div className="shadow"></div>
             </div>
+
             <div className="text">
               <h3>{name}</h3>
               <p>{desc}</p>

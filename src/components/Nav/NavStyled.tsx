@@ -11,6 +11,7 @@ export const Header = styled.header`
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 10;
 
   .logo {
     transform: translateX(105px);

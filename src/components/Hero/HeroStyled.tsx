@@ -7,6 +7,9 @@ export const Background = styled.section`
   display: flex;
   align-items: center;
 
+  position: relative;
+  z-index: 1;
+
   h1 {
     font-family: var(--title);
     font-weight: var(--bold);

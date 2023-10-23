@@ -15,47 +15,58 @@ function Footer() {
               <span>Ana & Bia</span>
               <span>doces</span>
             </a>
+
             <p className="description">
               Confeitaria e Escola de Doces Ana & Bia Ltda.
             </p>
+
             <ul className="networks">
               <li className="instagram">
                 <a href="#">
                   <Instagram />
                 </a>
               </li>
+
               <li className="facebook">
                 <a href="#">
                   <Facebook />
                 </a>
               </li>
+
               <li className="whatsapp">
                 <a href="#">
                   <WhatsApp />
                 </a>
               </li>
             </ul>
+
             <nav>
               <ul>
                 <li>
                   <Link to="/sobre">Sobre</Link>
                 </li>
+
                 <hr />
+
                 <li>
                   <a href="#">Serviços</a>
                 </li>
+
                 <hr />
+
                 <li>
                   <a href="#">Escola</a>
                 </li>
               </ul>
             </nav>
+
             <p className="copyright">
               © Copyright {new Date().getFullYear()} -{" "}
               {new Date().getFullYear() + 1} | Ana & Bia | Todos os Direitos
               Reservados | Criado por BRITS
             </p>
           </div>
+
           <div className="location">
             <div className="map">
               <iframe
@@ -68,6 +79,7 @@ function Footer() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
+
             <p className="address">Rua Ali Perto, 123 - Barra da Tijuca, RJ</p>
           </div>
         </div>

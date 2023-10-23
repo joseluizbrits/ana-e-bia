@@ -13,11 +13,14 @@ function Nav() {
         className={`hamburger ${menuActive ? "active" : ""}`}
         onClick={() => setMenuActive(!menuActive)}
       />
+
       <Menu className={menuActive ? "active" : ""} />
+
       <Link to="/" className="logo">
         <span>Ana & Bia</span>
         <span>doces</span>
       </Link>
+
       <Button className="rounded" color="gradient" text="Faça seu pedido!" />
     </Header>
   );
