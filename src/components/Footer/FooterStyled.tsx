@@ -56,7 +56,13 @@ export const FooterStyled = styled.section`
     padding-top: 32px;
 
     & > * {
+      cursor: pointer;
       padding: 16px;
+      transition: 0.3s;
+
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 
@@ -65,10 +71,24 @@ export const FooterStyled = styled.section`
     gap: 48px;
   }
 
+  .brand nav ul li a {
+    font-family: var(--text);
+    font-weight: var(--medium);
+    font-size: 1.25rem;
+    color: #fff;
+
+    &:hover {
+      color: var(--p2);
+    }
+  }
+
+  .brand nav ul hr {
+    border: 1px solid var(--p7);
+  }
+
   .brand .copyright {
     font-family: var(--title);
     font-size: 0.875rem;
-    padding-top: 180px;
     color: var(--p3);
 
     position: absolute;
@@ -90,7 +110,7 @@ export const FooterStyled = styled.section`
       width: 100%;
       height: 100%;
       border-radius: 50px;
-      filter: grayscale(0.6);
+      filter: hue-rotate(280deg);
     }
   }
 
@@ -118,8 +138,82 @@ export const FooterStyled = styled.section`
       position: initial;
     }
 
+    .brand .logo :nth-child(1) {
+      font-size: 3rem;
+    }
+
+    .brand .logo :nth-child(2) {
+      font-size: 1.25rem;
+    }
+
+    .brand .description {
+      font-size: 1rem;
+    }
+
+    .brand .copyright {
+      font-size: 0.75rem;
+      text-align: center;
+      padding-right: 40px;
+      left: 40px;
+    }
+
     .location {
-      padding: 40px;
+      padding: 40px 40px 100px 40px;
+    }
+
+    .location .address {
+      font-size: 0.75rem;
+    }
+  }
+
+  @media screen and (max-width: 690px) {
+    .card {
+      margin: 0 20px;
+    }
+
+    .brand {
+      padding: 160px 40px 64px 40px;
+    }
+
+    .brand .logo :nth-child(1) {
+      font-size: 2rem;
+    }
+
+    .brand .logo :nth-child(2) {
+      font-size: 0.875rem;
+    }
+
+    .brand .description {
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      padding-top: 8px;
+    }
+
+    .brand .networks > * {
+      padding: 12px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .brand nav ul {
+      flex-direction: column;
+      gap: 20px;
+      padding-top: 28px;
+    }
+
+    .brand nav ul li a {
+      font-size: 1rem;
+    }
+
+    .location {
+      padding: 40px 20px 100px 20px;
+    }
+
+    .location .map {
+      height: 400px;
     }
   }
 `;

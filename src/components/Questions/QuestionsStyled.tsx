@@ -62,15 +62,13 @@ export const QuestionStyled = styled.section`
   }
 
   .answer {
-    background: rgba(255, 182, 199, 0.8);
-    border-radius: 0 0 20px 20px;
     overflow-y: hidden;
-
     height: 0;
     transition: 0.3s;
 
     &.active {
       height: 86px;
+      max-width: 100%;
     }
   }
 
@@ -79,7 +77,7 @@ export const QuestionStyled = styled.section`
     font-family: var(--text);
     font-size: 0.875rem;
     line-height: 1.5em;
-    padding: 20px;
+    padding-top: 20px;
   }
 
   @media screen and (max-width: 1550px) {
@@ -141,7 +139,7 @@ export const QuestionStyled = styled.section`
 
     .answer p {
       font-size: 0.75rem;
-      padding: 12px 20px;
+      padding-top: 12px;
     }
   }
 
