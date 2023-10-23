@@ -96,9 +96,15 @@ export const HistoryStyled = styled.section`
     color: var(--p1);
   }
 
-  .card-grandmother .wrapp p {
-    grid-row: 1;
-    text-align: end;
+  .card-grandmother .wrapp {
+    .image {
+      justify-self: end;
+    }
+
+    p {
+      grid-row: 1;
+      text-align: end;
+    }
   }
 
   .circle {
@@ -155,7 +161,7 @@ export const HistoryStyled = styled.section`
     }
 
     .card-grandmother .wrapp .image img {
-      object-position: 0 -200px;
+      object-position: 0 -100px;
     }
 
     .card-grandmother .wrapp p {
