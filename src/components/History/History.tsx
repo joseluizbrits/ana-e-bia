@@ -7,7 +7,7 @@ function History() {
   return (
     <section>
       <HistoryStyled>
-        <div className="circle top"></div>
+        <div className="circle circle-title"></div>
 
         <div className="title">
           <div className="logo">
@@ -20,7 +20,7 @@ function History() {
           </h2>
         </div>
 
-        <div className="card sisters">
+        <div className="card card-sisters">
           <div className="wrapp">
             <div className="image">
               <img
@@ -36,10 +36,10 @@ function History() {
             </p>
           </div>
 
-          <div className="circle sisters"></div>
+          <div className="circle circle-sisters"></div>
         </div>
 
-        <div className="card grandmother">
+        <div className="card card-grandmother">
           <div className="wrapp">
             <div className="image">
               <img src={grandmother} alt="Senhora de óculos modelando massa" />
@@ -53,7 +53,7 @@ function History() {
             </p>
           </div>
 
-          <div className="circle grandmother"></div>
+          <div className="circle circle-grandmother"></div>
         </div>
       </HistoryStyled>
     </section>

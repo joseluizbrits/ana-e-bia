@@ -40,20 +40,20 @@ export const HistoryStyled = styled.section`
     gap: 12px;
 
     & :nth-child(1) {
-      font-size: 4rem;
+      font-size: clamp(1rem, 4vw, 4rem);
       font-weight: var(--bold);
       color: var(--p1);
     }
 
     & :nth-child(2) {
-      font-size: 2.5rem;
+      font-size: clamp(0.75rem, 2.5vw, 2.5rem);
       font-weight: var(--regular);
       color: var(--p3);
     }
   }
 
   .card {
-    margin: 0 120px 200px 120px;
+    margin: 0 7% 200px 7%;
     border-radius: 50px;
     border: 1px solid var(--p4);
     position: relative;
@@ -62,7 +62,7 @@ export const HistoryStyled = styled.section`
   .card .wrapp {
     background: var(--p5);
     border-radius: 50px;
-    padding: 80px;
+    padding: 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -84,12 +84,21 @@ export const HistoryStyled = styled.section`
     }
   }
 
+  .card-sisters .wrapp .image img {
+    object-position: 0 -40px;
+  }
+
   .card .wrapp p {
     font-family: var(--title);
     font-size: clamp(1.25rem, 2vw, 2.5rem);
     line-height: 1.5em;
     letter-spacing: 0.05rem;
     color: var(--p1);
+  }
+
+  .card-grandmother .wrapp p {
+    grid-row: 1;
+    text-align: end;
   }
 
   .circle {
@@ -99,20 +108,59 @@ export const HistoryStyled = styled.section`
     background: var(--p4);
     opacity: 0.5;
     position: absolute;
+  }
 
-    &.top {
-      top: -200px;
-      left: -200px;
+  .circle-top {
+    top: -200px;
+    left: -200px;
+  }
+
+  .circle-sisters {
+    top: -140px;
+    right: -180px;
+  }
+
+  .circle-grandmother {
+    bottom: -140px;
+    left: -180px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .title {
+      padding: 100px 0 120px 0;
     }
 
-    &.sisters {
-      top: -140px;
-      right: -180px;
+    .card {
+      margin: 0 5% 160px 5%;
     }
 
-    &.grandmother {
-      bottom: -140px;
-      left: -180px;
+    .circle-title {
+      display: none;
+    }
+
+    .circle-sisters,
+    .circle-grandmother {
+      top: -20%;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .card .wrapp {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .card .wrapp .image img {
+      aspect-ratio: 4/3;
+    }
+
+    .card-grandmother .wrapp .image img {
+      object-position: 0 -200px;
+    }
+
+    .card-grandmother .wrapp p {
+      grid-row: initial;
+      text-align: start;
     }
   }
 `;

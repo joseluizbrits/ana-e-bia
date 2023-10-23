@@ -123,6 +123,7 @@ export const QuestionStyled = styled.section`
 
     .question p {
       font-size: 1rem;
+      line-height: 1.5em;
     }
 
     .question svg {
@@ -177,24 +178,12 @@ export const QuestionStyled = styled.section`
       padding: 28px 0 16px;
     }
 
-    .question p {
-      font-size: 0.75rem;
-    }
-
     .question svg {
       transform: scale(0.4);
 
       &.active {
         transform: scale(0.6) rotate(135deg);
       }
-    }
-
-    .answer.active {
-      height: 72px;
-    }
-
-    .answer p {
-      font-size: 0.5rem;
     }
   }
 `;
