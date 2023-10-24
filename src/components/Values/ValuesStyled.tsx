@@ -10,7 +10,7 @@ export const ValuesStyled = styled.section`
   }
 
   .card .wrapp {
-    padding: 5%;
+    padding: 7%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
@@ -30,26 +30,33 @@ export const ValuesStyled = styled.section`
     padding: 12%;
     display: flex;
     flex-direction: column;
-    gap: 2.5vh;
+    gap: 28px;
 
     hr {
       border: 1px solid var(--p7);
+      opacity: 0.3;
     }
   }
 
   .card .wrapp ul li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     span {
       font-family: var(--title);
-      font-size: clamp(0.875rem, 1.5vw, 1.5vw);
+      font-size: clamp(0.75rem, 1.5vw, 1.5vw);
       color: var(--p4);
+    }
+
+    svg {
+      width: clamp(12px, 1vw, 24px);
+      opacity: 0.6;
     }
   }
 
   .card .wrapp .cookie {
-    width: clamp(400px, 100%, 700px);
+    width: clamp(200px, 100%, 700px);
     padding-right: 5%;
 
     grid-area: 2/2;
@@ -78,14 +85,76 @@ export const ValuesStyled = styled.section`
     gap: 16px;
 
     & :nth-child(1) {
-      font-size: clamp(1.25rem, 4vw, 4rem);
+      font-size: clamp(2rem, 4vw, 4rem);
       font-weight: var(--semibold);
       color: var(--p8);
     }
 
     & :nth-child(2) {
-      font-size: clamp(1.25rem, 2vw, 2 rem);
+      font-size: clamp(1rem, 2vw, 2rem);
+      font-weight: var(--semibold);
       color: var(--p5);
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .card .wrapp ul {
+      gap: 20px;
+    }
+
+    .card .wrapp .cookie {
+      top: -100px;
+    }
+
+    .logo {
+      gap: 8px;
+
+      :nth-child(1) {
+        font-size: clamp(1.25rem, 3.25vw, 4rem);
+      }
+      :nth-child(2) {
+        font-size: clamp(0.75rem, 1.5vw, 4rem);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1100px) {
+    .card .wrapp ul {
+      gap: 16px;
+    }
+
+    .card .wrapp .cookie {
+      top: -150px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .card .wrapp {
+      grid-template-columns: 1fr;
+    }
+
+    .card .wrapp .cookie {
+      top: -25px;
+      right: 30px;
+    }
+
+    .card .wrapp .born {
+      gap: 16px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .card .wrapp {
+      padding: 11%;
+    }
+
+    .card .wrapp ul {
+      padding: 15% 0;
+      gap: 12px;
+    }
+
+    .card .wrapp .cookie {
+      display: none;
     }
   }
 `;

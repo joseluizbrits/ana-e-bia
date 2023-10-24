@@ -3,6 +3,7 @@ import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
 import History from "../components/History/History";
 import Values from "../components/Values/Values";
+import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
 
 import imgHero from "../assets/hero-about.jpg";
 
@@ -17,6 +18,7 @@ function About() {
       />
       <History />
       <Values />
+      <AboutConclusion />
     </>
   );
 }

@@ -73,7 +73,7 @@ export const HistoryStyled = styled.section`
   }
 
   .card .wrapp .image {
-    max-width: 600px;
+    max-width: 800px;
 
     img {
       width: 100%;
@@ -133,7 +133,7 @@ export const HistoryStyled = styled.section`
 
   @media screen and (max-width: 1000px) {
     .title {
-      padding: 100px 0 120px 0;
+      padding: 160px 0 160px 0;
     }
 
     .card {
@@ -167,6 +167,16 @@ export const HistoryStyled = styled.section`
     .card-grandmother .wrapp p {
       grid-row: initial;
       text-align: start;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .title {
+      padding-top: 120px;
+    }
+
+    .card .wrapp {
+      padding: 11%;
     }
   }
 `;
