@@ -1,9 +1,10 @@
 import React from "react";
 import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
+import History from "../components/History/History";
+import Values from "../components/Values/Values";
 
 import imgHero from "../assets/hero-about.jpg";
-import History from "../components/History/History";
 
 function About() {
   return (
@@ -15,6 +16,7 @@ function About() {
         circleColor={"rgba(255, 100, 136, 0.5)"}
       />
       <History />
+      <Values />
     </>
   );
 }

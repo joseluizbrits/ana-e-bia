@@ -116,7 +116,7 @@ export const HistoryStyled = styled.section`
     position: absolute;
   }
 
-  .circle-top {
+  .circle-title {
     top: -200px;
     left: -200px;
   }
