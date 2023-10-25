@@ -63,6 +63,7 @@ export const ValuesStyled = styled.section`
 
     position: absolute;
     top: -40px;
+    z-index: 1;
   }
 
   .card .wrapp .born {

@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero";
 import History from "../components/History/History";
 import Values from "../components/Values/Values";
 import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
+import Sweets from "../components/Sweets/Sweets";
 
 import imgHero from "../assets/hero-about.jpg";
 
@@ -19,6 +20,7 @@ function About() {
       <History />
       <Values />
       <AboutConclusion />
+      <Sweets />
     </>
   );
 }
