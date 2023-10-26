@@ -7,6 +7,7 @@ import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
 import Sweets from "../components/Sweets/Sweets";
 
 import imgHero from "../assets/hero-about.jpg";
+import Swiper from "../components/Swiper/Swiper";
 
 function About() {
   return (
