@@ -5,13 +5,14 @@ import History from "../components/History/History";
 import Values from "../components/Values/Values";
 import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
 import Sweets from "../components/Sweets/Sweets";
+import Contact from "../components/Contact/Contact";
+import Macaron from "../assets/svg/Macaron";
 
 import imgHero from "../assets/hero-about.jpg";
-import Swiper from "../components/Swiper/Swiper";
 
 function About() {
   return (
-    <>
+    <div className="container" style={{ background: "var(--p5)" }}>
       <Nav />
       <Hero
         img={imgHero}
@@ -22,7 +23,8 @@ function About() {
       <Values />
       <AboutConclusion />
       <Sweets />
-    </>
+      <Contact sweet={<Macaron />} theme="light" />
+    </div>
   );
 }
 

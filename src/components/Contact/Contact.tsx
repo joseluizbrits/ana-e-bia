@@ -1,11 +1,15 @@
 import React from "react";
 import { FormStyled } from "./ContactStyled";
 import useForm from "../../hooks/useForm";
-import Cake from "../../assets/svg/Cake";
 import Field from "./Field";
 import emailjs from "@emailjs/browser";
 
-function Contact() {
+type ContactProps = {
+  sweet: JSX.Element;
+  theme?: string;
+};
+
+function Contact({ sweet, theme }: ContactProps) {
   const [loading, setLoading] = React.useState("");
   const [success, setSuccess] = React.useState(false);
   const name = useForm(false);
@@ -64,9 +68,9 @@ function Contact() {
   }, [success, name.error, email.error, message.error]);
 
   return (
-    <FormStyled>
+    <FormStyled className={theme}>
       <div className="wrapp">
-        <Cake />
+        {sweet}
         <form onSubmit={handleSubmit}>
           <div className="title">
             <div className="circle"></div>

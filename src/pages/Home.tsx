@@ -2,12 +2,12 @@ import React from "react";
 import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
 import Products from "../components/Products/Products";
-import Form from "../components/Contact/Contact";
+import Contact from "../components/Contact/Contact";
 import Services from "../components/Services/Services";
 import School from "../components/School/School";
 import Questions from "../components/Questions/Questions";
 import Footer from "../components/Footer/Footer";
-
+import Cake from "../assets/svg/Cake";
 import imgHero from "../assets/hero-home.jpg";
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
         circleColor={"rgb(255, 150, 174)"}
       />
       <Products />
-      <Form />
+      <Contact sweet={<Cake />} />
       <Services />
       <School />
       <Questions />

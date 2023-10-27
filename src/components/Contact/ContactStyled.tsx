@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const FormStyled = styled.section`
   width: 100%;
-  background: var(--p8);
+  margin-top: 18%;
   border-radius: 0 200px 0 0;
-  margin-top: 160px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  background: var(--p8);
   display: flex;
   justify-content: center;
   position: relative;
@@ -122,7 +123,7 @@ export const FormStyled = styled.section`
     &:focus-visible {
       background: #fff;
       outline: 1px solid var(--p7);
-      box-shadow: 0px 0px 4px 1px var(--p4);
+      box-shadow: 0px 0px 10px 1px var(--p5);
     }
   }
 
@@ -199,6 +200,42 @@ export const FormStyled = styled.section`
     color: #6bbf59;
   }
 
+  /* -------------------- THEME LIGHT -------------------- */
+  &.light {
+    background: var(--p4);
+
+    form .title h2 {
+      text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    form .title .circle,
+    form .fields .circle {
+      background: var(--p5);
+    }
+
+    form .fields label {
+      color: var(--p6);
+    }
+
+    form .fields input[type="text"],
+    form .fields input[type="email"],
+    form .fields textarea {
+      color: var(--p8);
+      background: #fff;
+
+      &:focus-visible {
+        background: #fff;
+        outline: 1px solid var(--p5);
+        box-shadow: 0px 0px 10px 1px var(--p5);
+      }
+    }
+
+    p.error {
+      color: #ef2c1e;
+    }
+  }
+
+  /* -------------------- RESPONSIVE -------------------- */
   @media screen and (max-width: 1200px) {
     & {
       border-radius: 0 100px 0 0;
@@ -229,6 +266,8 @@ export const FormStyled = styled.section`
   }
 
   @media screen and (max-width: 700px) {
+    margin-top: 32%;
+
     svg {
       display: none;
     }
