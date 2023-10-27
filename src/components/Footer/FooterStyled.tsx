@@ -4,12 +4,27 @@ import map from "../../assets/map.jpg";
 export const FooterStyled = styled.section`
   background: var(--p4);
   padding: 120px 0 40px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: clamp(200px, 40vw, 400px);
+    height: clamp(200px, 40vw, 400px);
+    background: var(--p5);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 
   .card {
     background: var(--p8);
     border-radius: 50px;
     box-shadow: 0 0 2px 0px rgba(0, 0, 0, 0.2);
     margin: 0 40px;
+
+    position: relative;
+    z-index: 1;
   }
 
   .wrapp {
@@ -66,7 +81,12 @@ export const FooterStyled = styled.section`
     }
   }
 
-  .brand nav ul {
+  .brand nav {
+    padding-top: 28px;
+  }
+
+  .brand nav ul,
+  .brand nav ul li {
     display: flex;
     gap: 48px;
   }
@@ -75,6 +95,7 @@ export const FooterStyled = styled.section`
     font-family: var(--text);
     font-weight: var(--medium);
     font-size: 1.25rem;
+    text-transform: capitalize;
     color: #fff;
 
     &:hover {
@@ -122,6 +143,44 @@ export const FooterStyled = styled.section`
     color: var(--p3);
   }
 
+  /* -------------------- THEME LIGHT -------------------- */
+  &.light {
+    &::after {
+      background: var(--p3);
+    }
+
+    .card {
+      background: var(--p5);
+    }
+
+    .brand .logo {
+      :nth-child(1) {
+        color: var(--p8);
+      }
+
+      :nth-child(2) {
+        color: var(--p6);
+      }
+    }
+
+    .brand .description {
+      color: var(--p2);
+    }
+
+    .brand nav ul hr {
+      border: 1px solid var(--p6);
+    }
+
+    .brand nav ul li a {
+      color: var(--p8);
+
+      &:hover {
+        color: var(--p7);
+      }
+    }
+  }
+
+  /* -------------------- RESPONSIVE -------------------- */
   @media screen and (max-width: 1400px) {
     .brand {
       padding-right: 80px;
@@ -166,7 +225,7 @@ export const FooterStyled = styled.section`
     }
   }
 
-  @media screen and (max-width: 690px) {
+  @media screen and (max-width: 700px) {
     .card {
       margin: 0 20px;
     }
@@ -202,6 +261,11 @@ export const FooterStyled = styled.section`
       flex-direction: column;
       gap: 20px;
       padding-top: 28px;
+    }
+
+    .brand nav ul li {
+      flex-direction: column;
+      gap: 20px;
     }
 
     .brand nav ul li a {

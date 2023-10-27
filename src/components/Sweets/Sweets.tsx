@@ -1,6 +1,6 @@
 import React from "react";
-import { SweetsStyled } from "./SweetsStyled";
 import { useLocation } from "react-router-dom";
+import { SweetsStyled } from "./SweetsStyled";
 import { products } from "../../utils/products";
 import useMedia from "../../hooks/useMedia";
 

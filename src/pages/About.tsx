@@ -6,9 +6,10 @@ import Values from "../components/Values/Values";
 import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
 import Sweets from "../components/Sweets/Sweets";
 import Contact from "../components/Contact/Contact";
-import Macaron from "../assets/svg/Macaron";
+import Footer from "../components/Footer/Footer";
 
 import imgHero from "../assets/hero-about.jpg";
+import Macaron from "../assets/svg/Macaron";
 
 function About() {
   return (
@@ -24,6 +25,7 @@ function About() {
       <AboutConclusion />
       <Sweets />
       <Contact sweet={<Macaron />} theme="light" />
+      <Footer theme="light" />
     </div>
   );
 }

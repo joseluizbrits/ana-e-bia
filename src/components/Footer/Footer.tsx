@@ -1,13 +1,36 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { FooterStyled } from "./FooterStyled";
 import Instagram from "../../assets/svg/Instagram";
 import Facebook from "../../assets/svg/Facebook";
 import WhatsApp from "../../assets/svg/WhatsApp";
-import { Link } from "react-router-dom";
 
-function Footer() {
+const navigation = [
+  {
+    page: "home",
+    route: "/",
+  },
+  {
+    page: "sobre",
+    route: "/sobre",
+  },
+  {
+    page: "serviços",
+    route: "/servicos",
+  },
+  {
+    page: "escola",
+    route: "/escola",
+  },
+];
+
+function Footer({ theme }: { theme?: string }) {
+  const URL = useLocation();
+
+  const routes = navigation.filter(({ route }) => route !== URL.pathname);
+
   return (
-    <FooterStyled>
+    <FooterStyled className={theme}>
       <div className="card">
         <div className="wrapp">
           <div className="brand">
@@ -42,21 +65,12 @@ function Footer() {
 
             <nav>
               <ul>
-                <li>
-                  <Link to="/sobre">Sobre</Link>
-                </li>
-
-                <hr />
-
-                <li>
-                  <a href="#">Serviços</a>
-                </li>
-
-                <hr />
-
-                <li>
-                  <a href="#">Escola</a>
-                </li>
+                {routes.map(({ page, route }, index) => (
+                  <li key={route}>
+                    <Link to={route}>{page}</Link>
+                    {index < 2 && <hr />}
+                  </li>
+                ))}
               </ul>
             </nav>
 
