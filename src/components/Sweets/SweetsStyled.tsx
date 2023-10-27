@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import arrow from "../../assets/svg/arrowCircle.svg";
 
 export const SweetsStyled = styled.div`
   background: var(--p5);
@@ -12,17 +13,25 @@ export const SweetsStyled = styled.div`
   .wrapp h2 {
     font-family: var(--title);
     font-weight: var(--bold);
-    font-size: clamp(2rem, 6vw, 6rem);
+    font-size: clamp(1.75rem, 5vw, 6rem);
     letter-spacing: 0.05rem;
     text-align: center;
     color: var(--p6);
-    padding-top: 6%;
-    padding-bottom: 8%;
+    padding: 4% 6% 6% 6%;
   }
 
   .swiper {
-    margin: 0 6%;
+    margin: 0 6% 6% 6%;
     overflow-x: hidden;
+    position: relative;
+
+    &.mobile,
+    &:hover {
+      .swiper-button-prev,
+      .swiper-button-next {
+        opacity: 1;
+      }
+    }
   }
 
   .swiper-wrapper {
@@ -31,12 +40,24 @@ export const SweetsStyled = styled.div`
   }
 
   .swiper-slide {
-    background: var(--p7);
-    border-radius: 50px;
     cursor: pointer;
+    display: grid;
   }
 
-  .swiper-slide img {
+  .swiper-slide .content {
+    width: 95%;
+    height: 94%;
+    margin-left: 4%;
+    border-radius: 50px;
+    background: var(--p7);
+    box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+
+    grid-area: 1/1;
+    justify-self: center;
+    z-index: 1;
+  }
+
+  .swiper-slide .content img {
     aspect-ratio: 1/1;
     width: 100%;
     border-radius: 50px 50px 0 0;
@@ -55,8 +76,8 @@ export const SweetsStyled = styled.div`
     }
   }
 
-  .swiper-slide .text {
-    padding: 24px 0 24px 48px;
+  .swiper-slide .content .text {
+    padding: 20px 40px 64px 40px;
     display: flex;
     flex-direction: column;
 
@@ -73,7 +94,108 @@ export const SweetsStyled = styled.div`
       font-size: clamp(0.75rem, 1vw, 1.5rem);
       line-height: 1.5em;
       color: #fff;
-      max-width: 20ch;
+      margin-top: 8px;
+    }
+  }
+
+  .swiper-slide .shadow {
+    width: 97%;
+    height: 95%;
+    margin-top: 2%;
+    border-radius: 50px;
+    background: var(--p8);
+
+    grid-area: 1/1;
+    justify-self: center;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: clamp(40px, 5vw, 100px);
+    height: clamp(40px, 5vw, 100px);
+    background: url(${arrow}) center center;
+    background-size: cover;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  .swiper-button-prev {
+    left: 0;
+    transform: translateY(-50px) rotate(180deg);
+
+    &:hover {
+      transform: translateY(-50px) rotate(180deg) scale(0.9);
+    }
+
+    &.swiper-button-disabled {
+      transform: translateY(-50px) rotate(180deg) scale(1);
+      filter: brightness(0.8);
+      cursor: initial;
+    }
+  }
+
+  .swiper-button-next {
+    right: 0;
+    transform: translateY(-50px);
+
+    &:hover {
+      transform: translateY(-50px) scale(0.9);
+    }
+
+    &.swiper-button-disabled {
+      transform: translateY(-50px) scale(1);
+      filter: brightness(0.8);
+      cursor: initial;
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .swiper-slide .content .text h3 {
+      font-size: clamp(1.25rem, 3vw, 3rem);
+    }
+
+    .swiper-slide .content p {
+      font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .wrapp {
+      margin: 0 7%;
+    }
+
+    .swiper-slide .content,
+    .swiper-slide .shadow {
+      width: 50%;
+      height: 97%;
+
+      .text {
+        padding: 20px 40px 40px 40px;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .wrapp h2 {
+      padding: 8%;
+    }
+
+    .swiper-slide .content,
+    .swiper-slide .shadow {
+      width: 80%;
+      height: 97%;
     }
   }
 `;
