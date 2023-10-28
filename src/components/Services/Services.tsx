@@ -31,7 +31,7 @@ function Services() {
     <ServicesStyled>
       <div className="title">
         <Cupcake />
-        <h2>Nossos serviços</h2>
+        <h2>Nossos servicos</h2>
       </div>
       <div className="cards">
         {services.map(({ id, title, desc, icon }) => (

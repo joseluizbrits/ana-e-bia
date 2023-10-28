@@ -9,7 +9,7 @@ export const navigation = [
   },
   {
     page: "serviços",
-    route: "/serviços",
+    route: "/servicos",
   },
   {
     page: "escola",

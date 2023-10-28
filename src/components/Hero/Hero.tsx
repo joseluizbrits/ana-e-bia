@@ -27,6 +27,8 @@ function Hero({ img, text, type, circleColor }: HeroProps) {
       });
   }, [circleColor]);
 
+  const nav = services.filter(({ nav }) => nav);
+
   return (
     <Background
       style={{
@@ -46,7 +48,7 @@ function Hero({ img, text, type, circleColor }: HeroProps) {
 
         {type && (
           <div className={`title-${type}`}>
-            <span>Nossos serviços</span>
+            <span>Nossos servicos</span>
             <ArrowCircleDown />
           </div>
         )}
@@ -55,7 +57,7 @@ function Hero({ img, text, type, circleColor }: HeroProps) {
       {type === "services" && (
         <nav className="nav-services">
           <ul>
-            {services.map(
+            {nav.map(
               ({ type }, index) => index < 3 && <li key={type}>{type}</li>
             )}
           </ul>
