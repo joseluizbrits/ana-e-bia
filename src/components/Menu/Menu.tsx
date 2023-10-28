@@ -37,7 +37,7 @@ function Menu({ className }: { className: string }) {
           <Link to="/sobre">Sobre</Link>
         </li>
         <li>
-          <a href="/servicos">servicos</a>
+          <a href="/servicos">Serviços</a>
         </li>
         <li>
           <a href="/escola">Escola</a>

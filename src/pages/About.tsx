@@ -13,7 +13,7 @@ import Macaron from "../assets/svg/Macaron";
 
 function About() {
   return (
-    <div className="container" style={{ background: "var(--p5)" }}>
+    <main className="container" style={{ background: "var(--p5)" }}>
       <Nav />
       <Hero
         img={imgHero}
@@ -26,7 +26,7 @@ function About() {
       <Sweets />
       <Contact sweet={<Macaron />} theme="light" />
       <Footer theme="light" />
-    </div>
+    </main>
   );
 }
 
