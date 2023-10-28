@@ -2,10 +2,14 @@ import React from "react";
 import { Background } from "./HeroStyled";
 
 import gsap from "gsap";
+import ArrowCircleDown from "../../assets/svg/ArrowCircleDown";
+
+import { services } from "../../utils/services";
 
 type HeroProps = {
   img: string;
-  text: string[];
+  text?: string[];
+  type?: "services" | "school";
   circleColor?:
     | "rgba(255, 100, 136, 0.5)"
     | "rgba(255, 100, 136, 0.8)"
@@ -13,14 +17,15 @@ type HeroProps = {
     | "rgb(255, 150, 174)";
 };
 
-function Hero({ img, circleColor, text }: HeroProps) {
+function Hero({ img, text, type, circleColor }: HeroProps) {
   React.useEffect(() => {
-    gsap.from(".circle", {
-      duration: 1,
-      y: -100,
-      opacity: 0,
-    });
-  }, []);
+    circleColor &&
+      gsap.from(".circle", {
+        duration: 1,
+        y: -100,
+        opacity: 0,
+      });
+  }, [circleColor]);
 
   return (
     <Background
@@ -30,7 +35,7 @@ function Hero({ img, circleColor, text }: HeroProps) {
       }}
     >
       <h1>
-        {text.map((t, i) => (
+        {text?.map((t, i) => (
           <div key={t} className={`text-${i + 1}`}>
             {circleColor && (
               <div className="circle" style={{ background: circleColor }}></div>
@@ -38,7 +43,24 @@ function Hero({ img, circleColor, text }: HeroProps) {
             <p>{t}</p>
           </div>
         ))}
+
+        {type && (
+          <div className={`title-${type}`}>
+            <span>Nossos serviços</span>
+            <ArrowCircleDown />
+          </div>
+        )}
       </h1>
+
+      {type === "services" && (
+        <nav className="nav-services">
+          <ul>
+            {services.map(
+              ({ type }, index) => index < 3 && <li key={type}>{type}</li>
+            )}
+          </ul>
+        </nav>
+      )}
     </Background>
   );
 }

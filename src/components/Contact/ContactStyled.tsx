@@ -204,6 +204,10 @@ export const FormStyled = styled.section`
   &.light {
     background: var(--p4);
 
+    .wrapp {
+      padding-bottom: 0;
+    }
+
     form .title h2 {
       text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
     }
@@ -232,6 +236,10 @@ export const FormStyled = styled.section`
 
     p.error {
       color: #ef2c1e;
+    }
+
+    p.success {
+      color: #00a246;
     }
   }
 

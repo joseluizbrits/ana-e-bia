@@ -1,6 +1,6 @@
 import React from "react";
-import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
+import Nav from "../components/Nav/Nav";
 import Products from "../components/Products/Products";
 import Contact from "../components/Contact/Contact";
 import Services from "../components/Services/Services";

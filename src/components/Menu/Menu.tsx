@@ -37,10 +37,10 @@ function Menu({ className }: { className: string }) {
           <Link to="/sobre">Sobre</Link>
         </li>
         <li>
-          <a href="#">Serviços</a>
+          <a href="/serviços">Serviços</a>
         </li>
         <li>
-          <a href="#">Escola</a>
+          <a href="/escola">Escola</a>
         </li>
       </ul>
     </Nav>

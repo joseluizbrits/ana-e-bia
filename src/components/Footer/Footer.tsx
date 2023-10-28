@@ -5,24 +5,7 @@ import Instagram from "../../assets/svg/Instagram";
 import Facebook from "../../assets/svg/Facebook";
 import WhatsApp from "../../assets/svg/WhatsApp";
 
-const navigation = [
-  {
-    page: "home",
-    route: "/",
-  },
-  {
-    page: "sobre",
-    route: "/sobre",
-  },
-  {
-    page: "serviços",
-    route: "/servicos",
-  },
-  {
-    page: "escola",
-    route: "/escola",
-  },
-];
+import { navigation } from "../../utils/navigation";
 
 function Footer({ theme }: { theme?: string }) {
   const URL = useLocation();

@@ -68,6 +68,49 @@ export const Background = styled.section`
     }
   }
 
+  /* -------------------- PAGE SERVICES -------------------- */
+  .title-services {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    position: absolute;
+    bottom: 40px;
+    left: 120px;
+
+    span {
+      font-family: var(--text);
+      font-weight: var(--bold);
+      font-size: clamp(0.75rem, 1vw, 1.5rem);
+      text-transform: uppercase;
+      color: var(--p1);
+    }
+
+    svg {
+      width: clamp(12px, 1vw, 20px);
+    }
+  }
+
+  .nav-services {
+    position: absolute;
+    bottom: 40px;
+    right: 120px;
+
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+
+    li {
+      font-family: var(--text);
+      font-weight: var(--bold);
+      font-size: clamp(0.75rem, 1vw, 1.5rem);
+      text-transform: uppercase;
+      color: var(--p1);
+    }
+  }
+
+  /* -------------------- RESPONSIVE -------------------- */
   @media screen and (max-width: 1500px) {
     h1 .text-1 p {
       font-size: 3.5rem;
