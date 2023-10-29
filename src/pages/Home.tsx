@@ -3,7 +3,7 @@ import Hero from "../components/Hero/Hero";
 import Nav from "../components/Nav/Nav";
 import Products from "../components/Products/Products";
 import Contact from "../components/Contact/Contact";
-import Services from "../components/Services/Services";
+import ServicesGrid from "../components/ServicesGrid/ServicesGrid";
 import School from "../components/School/School";
 import Questions from "../components/Questions/Questions";
 import Footer from "../components/Footer/Footer";
@@ -24,7 +24,7 @@ function Home() {
       />
       <Products />
       <Contact sweet={<Cake />} />
-      <Services />
+      <ServicesGrid />
       <School />
       <Questions />
       <Footer />

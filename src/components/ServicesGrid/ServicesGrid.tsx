@@ -1,4 +1,4 @@
-import { ServicesStyled } from "./ServicesStyled";
+import { ServicesGridStyled } from "./ServicesGridStyled";
 import Cupcake from "../../assets/svg/Cupcake";
 import CakeServices from "../../assets/svg/CakeServices";
 import MenuServices from "../../assets/svg/MenuServices";
@@ -28,7 +28,7 @@ const services = [
 
 function Services() {
   return (
-    <ServicesStyled>
+    <ServicesGridStyled>
       <div className="title">
         <Cupcake />
         <h2>Nossos servicos</h2>
@@ -50,7 +50,7 @@ function Services() {
         </p>
         <Button className="rounded" color="gradient" text="Saiba mais" />
       </div>
-    </ServicesStyled>
+    </ServicesGridStyled>
   );
 }
 

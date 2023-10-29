@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ServicesStyled = styled.section`
+export const ServicesGridStyled = styled.section`
   background: var(--p1);
   padding: 250px 120px 300px 120px;
   display: flex;

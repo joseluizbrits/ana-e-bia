@@ -7,7 +7,7 @@ export const services = [
     type: "eventos",
     title: "Eventos personalizados",
     desc: "Mesas de sobremesas temáticas com uma variedade de doces, bolos e outras delícias que se encaixam perfeitamente no tema do evento",
-    tags: ["casamentos", "aniversários", "eventos corporativos"],
+    tags: ["casamentos", "aniversários", "confraternizações"],
     nav: true,
     img: imgEvents,
   },
