@@ -68,8 +68,9 @@ export const Background = styled.section`
     }
   }
 
-  /* -------------------- PAGE SERVICES -------------------- */
-  .title-services {
+  /* -------------------- pages SERVICES and SCHOOL -------------------- */
+  .title-services,
+  .title-school {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -108,6 +109,15 @@ export const Background = styled.section`
       text-transform: uppercase;
       color: var(--p1);
     }
+  }
+
+  /* -------------------- pages SCHOOL variation -------------------- */
+  .title-school span {
+    color: var(--p4);
+  }
+
+  .title-school svg g path {
+    fill: var(--p4);
   }
 
   /* -------------------- RESPONSIVE -------------------- */

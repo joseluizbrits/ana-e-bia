@@ -4,6 +4,7 @@ import GlobalStyle from "./styles/GlobalStyles";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
+import School from "./pages/School";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<About />} />
           <Route path="/servicos" element={<Services />} />
+          <Route path="/escola" element={<School />} />
         </Routes>
       </BrowserRouter>
     </div>
