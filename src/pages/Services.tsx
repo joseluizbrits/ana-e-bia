@@ -7,7 +7,8 @@ import Footer from "../components/Footer/Footer";
 import MagnifyingGlass from "../components/MagnifyingGlass/MagnifyingGlass";
 
 import imgHero from "../assets/hero-services.jpg";
-import Donut from "../assets/svg/Donut";
+import Macaron from "../assets/svg/Macaron";
+import TranslucentCard from "../components/TranslucentCard/TranslucentCard";
 
 function Services() {
   return (
@@ -15,7 +16,8 @@ function Services() {
       <Nav />
       <Hero img={imgHero} type="services" />
       <MagnifyingGlass />
-      <Contact sweet={<Donut />} theme="light" />
+      <TranslucentCard />
+      <Contact sweet={<Macaron />} theme="light" />
       <Footer theme="light" />
     </main>
   );

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MagnifyingGlassStyled = styled.div`
   width: max-content;
-  margin: 16% auto 0 auto;
+  margin: 11% auto 0 auto;
 
   display: grid;
   grid-template-columns: max-content max-content;
@@ -164,6 +164,8 @@ export const MagnifyingGlassStyled = styled.div`
   }
 
   @media screen and (max-width: 1200px) {
+    margin: 16% auto 0 auto;
+
     .title {
       border-radius: 50px 50px 0 0;
     }
