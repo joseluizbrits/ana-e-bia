@@ -78,6 +78,7 @@ export const QuestionStyled = styled.section`
     font-size: 0.875rem;
     line-height: 1.5em;
     padding-top: 20px;
+    max-width: 58ch;
   }
 
   @media screen and (max-width: 1550px) {

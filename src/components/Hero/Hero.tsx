@@ -9,7 +9,7 @@ import { services } from "../../utils/services";
 type HeroProps = {
   img: string;
   text?: string[];
-  type?: "services" | "school";
+  page?: "services" | "school";
   circleColor?:
     | "rgba(255, 100, 136, 0.5)"
     | "rgba(255, 100, 136, 0.8)"
@@ -17,7 +17,7 @@ type HeroProps = {
     | "rgb(255, 150, 174)";
 };
 
-function Hero({ img, text, type, circleColor }: HeroProps) {
+function Hero({ img, text, page, circleColor }: HeroProps) {
   React.useEffect(() => {
     circleColor &&
       gsap.from(".circle", {
@@ -46,15 +46,19 @@ function Hero({ img, text, type, circleColor }: HeroProps) {
           </div>
         ))}
 
-        {type && (
-          <div className={`title-${type}`}>
-            <span>Nossos servicos</span>
+        {page && (
+          <div className={`title-${page}`}>
+            {page === "services" ? (
+              <span>Nossos servicos</span>
+            ) : (
+              <span>Escola de confeitaria</span>
+            )}
             <ArrowCircleDown />
           </div>
         )}
       </h1>
 
-      {type === "services" && (
+      {page === "services" && (
         <nav className="nav-services">
           <ul>
             {nav.map(

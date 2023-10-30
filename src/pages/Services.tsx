@@ -14,7 +14,7 @@ function Services() {
   return (
     <main className="container" style={{ background: "var(--p3)" }}>
       <Nav />
-      <Hero img={imgHero} type="services" />
+      <Hero img={imgHero} page="services" />
       <MagnifyingGlass />
       <TranslucentCard />
       <Contact sweet={<Macaron />} theme="light" />
