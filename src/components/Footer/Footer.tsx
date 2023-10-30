@@ -7,7 +7,7 @@ import WhatsApp from "../../assets/svg/WhatsApp";
 
 import { navigation } from "../../utils/navigation";
 
-function Footer({ theme }: { theme?: string }) {
+function Footer({ theme }: { theme?: "light" | "white" }) {
   const URL = useLocation();
 
   const routes = navigation.filter(({ route }) => route !== URL.pathname);

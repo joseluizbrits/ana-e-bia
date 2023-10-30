@@ -6,6 +6,10 @@ export const FooterStyled = styled.section`
   padding: 120px 0 40px 0;
   position: relative;
 
+  &.white {
+    background: var(--p1);
+  }
+
   &::after {
     content: "";
     display: block;
@@ -76,7 +80,7 @@ export const FooterStyled = styled.section`
       transition: 0.3s;
 
       &:hover {
-        transform: scale(1.2);
+        transform: scale(1.3);
       }
     }
   }
@@ -169,14 +173,57 @@ export const FooterStyled = styled.section`
 
     .brand nav ul hr {
       border: 1px solid var(--p6);
+      opacity: 0.5;
     }
 
     .brand nav ul li a {
-      color: var(--p8);
+      color: var(--p7);
 
       &:hover {
-        color: var(--p7);
+        color: var(--p8);
       }
+    }
+  }
+
+  /* -------------------- THEME WHITE -------------------- */
+  &.white {
+    &::after {
+      background: var(--p4);
+      opacity: 0.3;
+    }
+
+    .card {
+      background: #fff;
+    }
+
+    .brand .logo {
+      :nth-child(1) {
+        color: var(--p8);
+      }
+
+      :nth-child(2) {
+        color: var(--p5);
+      }
+    }
+
+    .brand .description {
+      color: var(--p3);
+    }
+
+    .brand nav ul hr {
+      border: 1px solid var(--p1);
+    }
+
+    .brand nav ul li a {
+      color: var(--p6);
+
+      &:hover {
+        color: var(--p5);
+      }
+    }
+
+    .brand .networks > * {
+      opacity: 0.9;
     }
   }
 
