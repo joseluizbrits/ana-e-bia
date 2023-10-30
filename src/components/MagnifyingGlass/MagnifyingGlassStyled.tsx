@@ -13,7 +13,7 @@ export const MagnifyingGlassStyled = styled.div`
     background: var(--p6);
 
     margin-left: 48px;
-    margin-right: -110px; // -------------->>> REVISAR
+    margin-right: -110px;
     align-self: end;
 
     h2 {
@@ -34,6 +34,7 @@ export const MagnifyingGlassStyled = styled.div`
     border-radius: 0 50px 0 0;
     margin-left: -110px;
     margin-right: 48px;
+    background: var(--p2);
 
     display: flex;
     justify-content: end;
@@ -41,6 +42,15 @@ export const MagnifyingGlassStyled = styled.div`
     h2 {
       text-align: end;
       padding: 5% 10% 5% 0;
+      color: var(--p3);
+    }
+  }
+
+  .title-3 {
+    background: var(--p1);
+
+    h2 {
+      color: var(--p3);
     }
   }
 
@@ -57,11 +67,16 @@ export const MagnifyingGlassStyled = styled.div`
   .card-2 {
     grid-area: 2/-1;
     border-radius: 0 50px 50px 0;
+    background: var(--p1);
 
     padding: 0;
     margin: 0;
     padding-left: 80px;
     margin-left: -110px;
+  }
+
+  .card-3 {
+    background: #fff;
   }
 
   .sub-card {
@@ -99,8 +114,11 @@ export const MagnifyingGlassStyled = styled.div`
   }
 
   .sub-card-2 .description-2 {
+    background: rgba(255, 210, 221, 0.3);
+
     p {
       text-align: end;
+      color: var(--p5);
     }
 
     .tags-2 {
@@ -108,10 +126,18 @@ export const MagnifyingGlassStyled = styled.div`
     }
   }
 
+  .sub-card-3 .description-3 {
+    background: rgba(255, 210, 221, 0.15);
+
+    p {
+      color: var(--p5);
+    }
+  }
+
   .image {
-    background: var(--p5);
     width: clamp(100px, 40vw, 800px);
     height: clamp(100px, 40vw, 800px);
+    background: var(--p5);
 
     border-radius: 50%;
 
@@ -127,6 +153,14 @@ export const MagnifyingGlassStyled = styled.div`
       object-fit: cover;
       border-radius: 50%;
     }
+  }
+
+  .image-2 {
+    background: var(--p1);
+  }
+
+  .image-3 {
+    background: #fff;
   }
 
   @media screen and (max-width: 1200px) {
