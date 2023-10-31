@@ -59,8 +59,8 @@ export const MagnifyingGlassStyled = styled.div`
     border-radius: 50px 0 0 50px;
     background: var(--p5);
 
-    padding-right: 80px; // ------------------>>> REVISAR
-    margin-right: -110px; // ------------------>>> REVISAR
+    padding-right: 80px;
+    margin-right: -110px;
     grid-area: 2;
   }
 

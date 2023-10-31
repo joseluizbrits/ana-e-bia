@@ -3,6 +3,7 @@ import Hero from "../components/Hero/Hero";
 
 import imgHero from "../assets/hero-school.jpg";
 import Teaching from "../components/Teaching/Teaching";
+import HandsOnLearning from "../components/HandsOnLearning/HandsOnLearning";
 import Footer from "../components/Footer/Footer";
 
 function School() {
@@ -11,6 +12,7 @@ function School() {
       <Nav />
       <Hero img={imgHero} page="school" />
       <Teaching />
+      <HandsOnLearning />
       <Footer theme="white" />
     </>
   );
