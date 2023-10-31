@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Background = styled.section`
+type Props = {
+  $circleColor?: string;
+};
+
+export const HeroStyled = styled.section<Props>`
   width: 100%;
   height: 100vh;
 
@@ -32,7 +36,10 @@ export const Background = styled.section`
         transform: translate(0); // gambiarra (alternativa ao z-index)
       }
 
-      .circle {
+      &::before {
+        // CIRCLES
+        content: "";
+        background: ${({ $circleColor }) => $circleColor};
         border-radius: 50%;
         grid-area: 1/1;
         position: absolute;
@@ -44,7 +51,8 @@ export const Background = styled.section`
       max-width: 14ch;
     }
 
-    .text-1 .circle {
+    .text-1::before {
+      // CIRCLE ONE
       width: 160px;
       height: 160px;
       top: 10%;
@@ -60,7 +68,8 @@ export const Background = styled.section`
       max-width: 18ch;
     }
 
-    .text-2 .circle {
+    .text-2::before {
+      // CIRCLE TWO
       width: 100px;
       height: 100px;
       top: 10%;

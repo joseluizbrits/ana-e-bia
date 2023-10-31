@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocation } from "react-router-dom";
 import { SweetsStyled } from "./SweetsStyled";
 import { products } from "../../utils/products";
@@ -31,11 +30,13 @@ function Sweets() {
             <SwiperSlide key={name}>
               <div className="content">
                 <img src={img} alt={alt} className={type} />
+
                 <div className="text">
                   <h3>{name}</h3>
                   <p>{descShort}</p>
                 </div>
               </div>
+
               <div className="shadow"></div>
             </SwiperSlide>
           ))}

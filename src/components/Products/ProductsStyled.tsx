@@ -77,7 +77,8 @@ export const Section = styled.section`
       }
     }
 
-    .shadow {
+    &::after {
+      content: "";
       width: 450px;
       height: 450px;
       border-radius: 50px;
@@ -129,7 +130,7 @@ export const Section = styled.section`
       transform: translateY(0);
     }
 
-    .shadow {
+    .image::after {
       top: -80px;
       left: -80px;
       background: var(--p4);
@@ -180,14 +181,14 @@ export const Section = styled.section`
       }
     }
 
-    .candy .image .shadow {
+    .candy .image::after {
       width: 250px;
       height: 250px;
       bottom: -48px;
       right: -48px;
     }
 
-    .candy:nth-child(even) .image .shadow {
+    .candy:nth-child(even) .image::after {
       top: -48px;
       left: -48px;
     }
@@ -260,7 +261,7 @@ export const Section = styled.section`
       }
     }
 
-    .candy .image .shadow {
+    .candy .image::after {
       display: none;
     }
 

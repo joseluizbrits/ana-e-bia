@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FooterStyled } from "./FooterStyled";
 import Instagram from "../../assets/svg/Instagram";

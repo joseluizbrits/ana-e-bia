@@ -1,5 +1,3 @@
-import React from "react";
-
 type FieldProps = {
   name: "name" | "email" | "message";
   label: string;

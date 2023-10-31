@@ -107,7 +107,10 @@ export const HistoryStyled = styled.section`
     }
   }
 
-  .circle {
+  /* ---------- CIRCLES ---------- */
+  &::before,
+  .card::before {
+    content: "";
     width: 400px;
     height: 400px;
     border-radius: 50%;
@@ -116,17 +119,17 @@ export const HistoryStyled = styled.section`
     position: absolute;
   }
 
-  .circle-title {
+  &::before {
     top: -200px;
     left: -200px;
   }
 
-  .circle-sisters {
+  .card-sisters::before {
     top: -140px;
     right: -180px;
   }
 
-  .circle-grandmother {
+  .card-grandmother::before {
     bottom: -140px;
     left: -180px;
   }

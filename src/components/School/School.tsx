@@ -1,4 +1,3 @@
-import React from "react";
 import { SchoolStyled } from "./SchoolStyled";
 import Button from "../Button/Button";
 

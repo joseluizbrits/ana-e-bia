@@ -1,4 +1,3 @@
-import React from "react";
 import { Section } from "./ProductsStyled";
 import Button from "../Button/Button";
 import { products } from "../../utils/products";
@@ -8,6 +7,7 @@ function Produtos() {
     <Section>
       <div className="title">
         <h2>Sabor feito com carinho</h2>
+
         <p>
           Nossos produtos são pequenas obras-primas de confeitaria, de cupcakes
           decorados a bolos elaborados. Cada mordida é uma experiência de

@@ -40,7 +40,8 @@ export const FormStyled = styled.section`
   form .title {
     position: relative;
 
-    .circle {
+    &::before {
+      content: "";
       position: absolute;
       bottom: 12px;
       right: 80px;
@@ -70,22 +71,24 @@ export const FormStyled = styled.section`
     gap: 20px;
 
     position: relative;
-  }
 
-  form .fields .circle {
-    position: absolute;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: var(--p6);
-    opacity: 30%;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: var(--p6);
+      opacity: 30%;
+    }
 
-    &.c-one {
+    &::before {
       top: 26%;
       left: 26%;
     }
 
-    &.c-two {
+    &::after {
       bottom: 12px;
       right: -24px;
     }
@@ -134,18 +137,22 @@ export const FormStyled = styled.section`
 
   form .fields textarea {
     height: 200px;
+    position: relative;
+    z-index: 1;
   }
 
   form .fields button {
     height: 40px;
     border-radius: 10px;
-    position: relative;
     background: var(--p6);
     box-shadow: -1px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
     font-family: var(--text);
     font-weight: var(--semibold);
     color: #fff;
+
+    position: relative;
+    z-index: 1;
 
     transition: background 0.3s;
 
@@ -212,8 +219,9 @@ export const FormStyled = styled.section`
       text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
     }
 
-    form .title .circle,
-    form .fields .circle {
+    form .title::before,
+    form .fields::before,
+    form .fields::after {
       background: var(--p5);
     }
 

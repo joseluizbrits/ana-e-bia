@@ -1,4 +1,3 @@
-import React from "react";
 import { MagnifyingGlassStyled } from "./MagnifyingGlassStyled";
 import { services } from "../../utils/services";
 

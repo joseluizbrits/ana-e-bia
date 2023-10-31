@@ -73,14 +73,10 @@ function Contact({ sweet, theme }: ContactProps) {
         {sweet}
         <form onSubmit={handleSubmit}>
           <div className="title">
-            <div className="circle"></div>
             <h2>Entre em contato conosco e faça o seu pedido!</h2>
           </div>
 
           <div className="fields">
-            <div className="circle c-one"></div>
-            <div className="circle c-two"></div>
-
             <Field label="Nome" type="text" name="name" {...name} />
             <Field label="Email" type="email" name="email" {...email} />
             <Field

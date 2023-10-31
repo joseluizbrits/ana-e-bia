@@ -1,4 +1,3 @@
-import React from "react";
 import { TranslucentCardStyled } from "./TranslucentCardStyled";
 import { services } from "../../utils/services";
 

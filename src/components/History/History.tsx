@@ -1,4 +1,3 @@
-import React from "react";
 import { HistoryStyled } from "./HistoryStyled";
 import sisters from "../../assets/sisters.jpg";
 import grandmother from "../../assets/grandmother.jpg";
@@ -6,13 +5,12 @@ import grandmother from "../../assets/grandmother.jpg";
 function History() {
   return (
     <HistoryStyled>
-      <div className="circle circle-title"></div>
-
       <div className="title">
         <div className="logo">
           <span>Ana & Bia</span>
           <span>doces</span>
         </div>
+
         <h2>
           <p>Um pedaço da história de uma família</p>
           <p>Muito mais que uma simples confeitaria</p>

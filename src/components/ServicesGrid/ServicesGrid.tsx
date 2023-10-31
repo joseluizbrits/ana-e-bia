@@ -33,6 +33,7 @@ function Services() {
         <Cupcake />
         <h2>Nossos servicos</h2>
       </div>
+
       <div className="cards">
         {services.map(({ id, title, desc, icon }) => (
           <div key={id} className={id}>
@@ -42,12 +43,15 @@ function Services() {
           </div>
         ))}
       </div>
+
       <div className="sub-title">
         <h3>Atendimento profissional</h3>
+
         <p>
           Nossa equipe garante que as sobremesas sejam servidas com sabor e
           estética, propriciando uma experiência mágica sem grandes preocupações
         </p>
+
         <Button className="rounded" color="gradient" text="Saiba mais" />
       </div>
     </ServicesGridStyled>

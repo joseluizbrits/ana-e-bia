@@ -1,4 +1,3 @@
-import React from "react";
 import { AboutConclusionStyled } from "./AboutConclusionStyled";
 import Donut from "../../assets/svg/Donut";
 

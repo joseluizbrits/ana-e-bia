@@ -1,4 +1,3 @@
-import React from "react";
 import { ValuesStyled } from "./ValuesStyled";
 import Check from "../../assets/svg/Check";
 import Cookie from "../../assets/svg/Cookie";
