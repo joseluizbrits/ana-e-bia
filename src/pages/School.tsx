@@ -4,6 +4,7 @@ import Hero from "../components/Hero/Hero";
 import imgHero from "../assets/hero-school.jpg";
 import Teaching from "../components/Teaching/Teaching";
 import HandsOnLearning from "../components/HandsOnLearning/HandsOnLearning";
+import Register from "../components/Register/Register";
 import Footer from "../components/Footer/Footer";
 
 function School() {
@@ -13,6 +14,7 @@ function School() {
       <Hero img={imgHero} page="school" />
       <Teaching />
       <HandsOnLearning />
+      <Register />
       <Footer theme="white" />
     </main>
   );

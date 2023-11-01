@@ -1,31 +1,25 @@
 import React from "react";
-import { FormStyled } from "./ContactStyled";
-import useForm from "../../hooks/useForm";
+import { RegisterStyled } from "./RegisterStyled";
+import img from "../../assets/img-register.jpg";
 import Field from "../Field/Field";
+import useForm from "../../hooks/useForm";
 import emailjs from "@emailjs/browser";
 
-type ContactProps = {
-  sweet: JSX.Element;
-  theme?: string;
-};
-
-function Contact({ sweet, theme }: ContactProps) {
+function Register() {
   const [loading, setLoading] = React.useState<"" | "loading">("");
   const [success, setSuccess] = React.useState(false);
-  const name = useForm(false);
+  const name = useForm("");
   const email = useForm("email");
-  const message = useForm("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     setLoading("loading");
 
-    if (email.validate() && message.validate()) {
+    if (email.validate()) {
       const templateParams = {
         from_name: name.value,
         email: email.value,
-        message: message.value,
       };
 
       emailjs
@@ -41,7 +35,6 @@ function Contact({ sweet, theme }: ContactProps) {
             setSuccess(true);
             name.setValue("");
             email.setValue("");
-            message.setValue("");
           },
           (err: Error) => {
             console.log("Erro ao enviar o menssagem");
@@ -49,7 +42,6 @@ function Contact({ sweet, theme }: ContactProps) {
             setLoading("");
             name.setValue("");
             email.setValue("");
-            message.setValue("");
           }
         );
     } else {
@@ -58,33 +50,27 @@ function Contact({ sweet, theme }: ContactProps) {
   }
 
   React.useEffect(() => {
-    if (name.error || email.error || message.error) setSuccess(false);
+    if (name.error || email.error) setSuccess(false);
 
     if (success) {
       setTimeout(() => {
         setSuccess(false);
       }, 10000);
     }
-  }, [success, name.error, email.error, message.error]);
+  }, [success, name.error, email.error]);
 
   return (
-    <FormStyled className={theme}>
-      <div className="wrapp">
-        {sweet}
-        <form onSubmit={handleSubmit}>
-          <div className="title">
-            <h2>Entre em contato conosco e faça o seu pedido!</h2>
-          </div>
+    <RegisterStyled>
+      <div className="content">
+        <h2>
+          <span>Isabela Manfrini</span>
+          <span>nossa diretora de arte te convida a se inscrever</span>
+        </h2>
 
-          <div className="fields">
+        <form onSubmit={handleSubmit}>
+          <div className="wrapp">
             <Field label="Nome" type="text" name="name" {...name} />
             <Field label="Email" type="email" name="email" {...email} />
-            <Field
-              label="Menssagem"
-              type="textarea"
-              name="message"
-              {...message}
-            />
 
             <button className={loading}>Enviar</button>
             {success && (
@@ -93,8 +79,13 @@ function Contact({ sweet, theme }: ContactProps) {
           </div>
         </form>
       </div>
-    </FormStyled>
+
+      <img
+        src={img}
+        alt="Mulher com garfo e faca na mão de frente para um doce"
+      />
+    </RegisterStyled>
   );
 }
 
-export default Contact;
+export default Register;

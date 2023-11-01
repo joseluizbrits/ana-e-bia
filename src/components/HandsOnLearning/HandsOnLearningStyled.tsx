@@ -29,6 +29,10 @@ export const HandsOnLearningStyled = styled.section`
     }
   }
 
+  .content {
+    padding-bottom: 20%;
+  }
+
   .paragraph {
     height: clamp(100px, 20vw, 300px);
     padding: 0 11%;

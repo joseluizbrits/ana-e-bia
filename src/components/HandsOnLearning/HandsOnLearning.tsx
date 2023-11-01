@@ -11,6 +11,7 @@ function HandsOnLearning() {
           <span>Mão na massa</span>
         </h2>
       </div>
+
       <div className="content">
         <div className="paragraph p-1">
           <img src={choco} alt="Pedaços de chocolate na palma das mãos" />
