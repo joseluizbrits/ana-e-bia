@@ -8,13 +8,13 @@ import Footer from "../components/Footer/Footer";
 
 function School() {
   return (
-    <>
+    <main className="container" style={{ background: "var(--p1)" }}>
       <Nav />
       <Hero img={imgHero} page="school" />
       <Teaching />
       <HandsOnLearning />
       <Footer theme="white" />
-    </>
+    </main>
   );
 }
 
