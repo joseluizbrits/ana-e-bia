@@ -1,6 +1,6 @@
-import imgEvents from "../assets/services-events.jpg";
-import imgMenus from "../assets/services-menus.jpg";
-import imgDecorations from "../assets/services-decorations.jpg";
+import imgEvents from "../assets/img/services-events.jpg";
+import imgMenus from "../assets/img/services-menus.jpg";
+import imgDecorations from "../assets/img/services-decorations.jpg";
 
 export const services = [
   {

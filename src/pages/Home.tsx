@@ -6,8 +6,9 @@ import ServicesGrid from "../components/ServicesGrid/ServicesGrid";
 import School from "../components/School/School";
 import Questions from "../components/Questions/Questions";
 import Footer from "../components/Footer/Footer";
+
+import imgHero from "../assets/img/hero-home.jpg";
 import Cake from "../assets/svg/Cake";
-import imgHero from "../assets/hero-home.jpg";
 
 function Home() {
   return (

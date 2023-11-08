@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import map from "../../assets/map.jpg";
+import map from "../../assets/img/map.jpg";
 
 export const FooterStyled = styled.section`
   background: var(--p4);

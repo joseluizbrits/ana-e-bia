@@ -1,35 +1,35 @@
-import cookie from "../assets/cookie.jpg";
-import donut from "../assets/donut.jpg";
-import cake from "../assets/cake.jpg";
-import macaron from "../assets/macaron.jpg";
+import cookie from "../assets/img/cookie.jpg";
+import donut from "../assets/img/donut.jpg";
+import cake from "../assets/img/cake.jpg";
+import macaron from "../assets/img/macaron.jpg";
 
-import cookieHero from "../assets/hero-cookie.jpg";
-import cookieDesc1 from "../assets/cookie-desc-1.jpg";
-import cookieDesc2 from "../assets/cookie-desc-2.jpg";
-import cookieDesc3 from "../assets/cookie-desc-3.jpg";
-import cookieDesc4 from "../assets/cookie-desc-4.jpg";
-import cookieDesc5 from "../assets/cookie-desc-5.jpg";
+import cookieHero from "../assets/img/hero-cookie.jpg";
+import cookieDesc1 from "../assets/img/cookie-desc-1.jpg";
+import cookieDesc2 from "../assets/img/cookie-desc-2.jpg";
+import cookieDesc3 from "../assets/img/cookie-desc-3.jpg";
+import cookieDesc4 from "../assets/img/cookie-desc-4.jpg";
+import cookieDesc5 from "../assets/img/cookie-desc-5.jpg";
 
-import donutHero from "../assets/hero-donut.jpg";
-import donutDesc1 from "../assets/donut-desc-1.jpg";
-import donutDesc2 from "../assets/donut-desc-2.jpg";
-import donutDesc3 from "../assets/donut-desc-3.jpg";
-import donutDesc4 from "../assets/donut-desc-4.jpg";
-import donutDesc5 from "../assets/services-menus.jpg";
+import donutHero from "../assets/img/hero-donut.jpg";
+import donutDesc1 from "../assets/img/donut-desc-1.jpg";
+import donutDesc2 from "../assets/img/donut-desc-2.jpg";
+import donutDesc3 from "../assets/img/donut-desc-3.jpg";
+import donutDesc4 from "../assets/img/donut-desc-4.jpg";
+import donutDesc5 from "../assets/img/services-menus.jpg";
 
-import cakeHero from "../assets/hero-cake.jpg";
-import cakeDesc1 from "../assets/cake-desc-1.jpg";
-import cakeDesc2 from "../assets/cake-handsOn.jpg";
-import cakeDesc3 from "../assets/cake-desc-3.jpg";
-import cakeDesc4 from "../assets/cake-desc-4.jpg";
-import cakeDesc5 from "../assets/services-menus.jpg";
+import cakeHero from "../assets/img/hero-cake.jpg";
+import cakeDesc1 from "../assets/img/cake-desc-1.jpg";
+import cakeDesc2 from "../assets/img/cake-handsOn.jpg";
+import cakeDesc3 from "../assets/img/cake-desc-3.jpg";
+import cakeDesc4 from "../assets/img/cake-desc-4.jpg";
+import cakeDesc5 from "../assets/img/services-menus.jpg";
 
-import macaronHero from "../assets/hero-macaron.jpg";
-import macaronDesc1 from "../assets/macaron-desc-1.jpg";
-import macaronDesc2 from "../assets/macaron-desc-2.jpg";
-import macaronDesc3 from "../assets/macaron-desc-3.jpg";
-import macaronDesc4 from "../assets/macaron-desc-4.jpg";
-import macaronDesc5 from "../assets/macaron-desc-5.jpg";
+import macaronHero from "../assets/img/hero-macaron.jpg";
+import macaronDesc1 from "../assets/img/macaron-desc-1.jpg";
+import macaronDesc2 from "../assets/img/macaron-desc-2.jpg";
+import macaronDesc3 from "../assets/img/macaron-desc-3.jpg";
+import macaronDesc4 from "../assets/img/macaron-desc-4.jpg";
+import macaronDesc5 from "../assets/img/macaron-desc-5.jpg";
 
 export const products = [
   {

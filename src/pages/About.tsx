@@ -7,7 +7,7 @@ import Sweets from "../components/Sweets/Sweets";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
-import imgHero from "../assets/hero-about.jpg";
+import imgHero from "../assets/img/hero-about.jpg";
 import Macaron from "../assets/svg/Macaron";
 
 function About() {

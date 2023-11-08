@@ -1,6 +1,6 @@
 import React from "react";
 import { RegisterStyled } from "./RegisterStyled";
-import img from "../../assets/img-register.jpg";
+import img from "../../assets/img/img-register.jpg";
 import Field from "../Field/Field";
 import useForm from "../../hooks/useForm";
 import emailjs from "@emailjs/browser";

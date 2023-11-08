@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "../../assets/img-school.jpg";
+import img from "../../assets/img/img-school.jpg";
 
 export const SchoolStyled = styled.section`
   background: var(--p4);

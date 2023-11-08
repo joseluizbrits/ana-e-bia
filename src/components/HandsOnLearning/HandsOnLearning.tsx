@@ -1,6 +1,6 @@
 import { HandsOnLearningStyled } from "./HandsOnLearningStyled";
-import choco from "../../assets/choco-handsOn.jpg";
-import cake from "../../assets/cake-handsOn.jpg";
+import choco from "../../assets/img/choco-handsOn.jpg";
+import cake from "../../assets/img/cake-handsOn.jpg";
 
 function HandsOnLearning() {
   return (

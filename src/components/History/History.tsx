@@ -1,6 +1,6 @@
 import { HistoryStyled } from "./HistoryStyled";
-import sisters from "../../assets/sisters.jpg";
-import grandmother from "../../assets/grandmother.jpg";
+import sisters from "../../assets/img/sisters.jpg";
+import grandmother from "../../assets/img/grandmother.jpg";
 
 function History() {
   return (
