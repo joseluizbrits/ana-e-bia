@@ -125,8 +125,11 @@ export const FormStyled = styled.section`
 
     &:focus-visible {
       background: #fff;
-      outline: 1px solid var(--p7);
-      box-shadow: 0px 0px 10px 1px var(--p5);
+      outline: 1px solid var(--p6);
+    }
+
+    &.error {
+      box-shadow: 0px 0px 2px 1px var(--p5);
     }
   }
 
@@ -235,10 +238,13 @@ export const FormStyled = styled.section`
       color: var(--p8);
       background: #fff;
 
+      &:hover,
       &:focus-visible {
-        background: #fff;
-        outline: 1px solid var(--p5);
-        box-shadow: 0px 0px 10px 1px var(--p5);
+        outline: 1px solid var(--p7);
+      }
+
+      &.error {
+        box-shadow: 0px 0px 1px 1px #ef2c1e;
       }
     }
 

@@ -28,6 +28,7 @@ const Field = ({
           value={value}
           onChange={onChange}
           onBlur={onBlur}
+          className={error ? "error" : ""}
         />
       ) : (
         <textarea
@@ -36,6 +37,7 @@ const Field = ({
           value={value}
           onChange={onChange}
           onBlur={onBlur}
+          className={error ? "error" : ""}
         />
       )}
       {error && <p className="error">{error}</p>}

@@ -74,16 +74,21 @@ function Register() {
 
             <button className={loading}>Enviar</button>
             {success && (
-              <p className="success">Menssagem enviada com sucesso!</p>
+              <p className="success">
+                Enviaremos por email as instruções para a realização da
+                inscrição
+              </p>
             )}
           </div>
         </form>
       </div>
 
-      <img
-        src={img}
-        alt="Mulher com garfo e faca na mão de frente para um doce"
-      />
+      <div className="image">
+        <img
+          src={img}
+          alt="Mulher com garfo e faca na mão de frente para um doce"
+        />
+      </div>
     </RegisterStyled>
   );
 }
