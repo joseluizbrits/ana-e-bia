@@ -73,8 +73,11 @@ export const products = [
 /* ----------------- PRODUCT PAGES ----------------- */
 export const productsPage = [
   {
+    /* ----------------- COOKIE ----------------- */
+    type: "cookie",
     name: "CROC COOKIE",
     title: "Cookies frescos e saborosos",
+    circleColor: "rgba(255, 150, 174, 0.5)",
     img: cookieHero,
     desc: [
       {
@@ -125,8 +128,11 @@ export const productsPage = [
     ],
   },
   {
+    /* ----------------- DONUT ----------------- */
+    type: "donut",
     name: "DUDE DONUT",
-    title: "Donuts únicos com combinações incríveis",
+    title: "Donuts únicos e combinações incríveis",
+    circleColor: "rgba(255, 100, 136, 0.8)",
     img: donutHero,
     desc: [
       {
@@ -177,8 +183,11 @@ export const productsPage = [
     ],
   },
   {
+    /* ----------------- CAKE ----------------- */
+    type: "cake",
     name: "CHOCO CAKE",
     title: "Bolos recheados de doçura e maciez",
+    circleColor: "rgba(255, 100, 136, 0.8)",
     img: cakeHero,
     desc: [
       {
@@ -229,8 +238,11 @@ export const productsPage = [
     ],
   },
   {
+    /* ----------------- MACARON ----------------- */
+    type: "macaron",
     name: "MAG MACARON",
     title: "Macarons delicados de puro sabor",
+    circleColor: "rgba(255, 100, 136, 0.5)",
     img: macaronHero,
     desc: [
       {

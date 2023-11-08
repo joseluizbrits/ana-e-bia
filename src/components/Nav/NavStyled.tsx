@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Header = styled.header`
   height: 80px;
   width: 100%;
+  padding: 0 120px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 120px;
 
   position: absolute;
   top: 0;
@@ -36,6 +37,7 @@ export const Header = styled.header`
 
   @media (max-width: 1100px) {
     flex-direction: row-reverse;
+    padding: 0 64px;
 
     button.rounded {
       display: none;

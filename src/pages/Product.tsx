@@ -1,13 +1,35 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import Hero from "../components/Hero/Hero";
+import Nav from "../components/Nav/Nav";
 
-function Product() {
-  const pageName = useLocation().pathname.replace("/", "");
+type ProductType = {
+  product: {
+    type: string;
+    name: string;
+    title: string;
+    circleColor: string;
+    img: string;
+    desc: {
+      id: string;
+      item: string;
+      text: string;
+      subItem: string;
+      subText: string;
+      img: string;
+    }[];
+  };
+};
 
+function Product({ product }: ProductType) {
   return (
-    <div>
-      <h1>Página {pageName}</h1>
-    </div>
+    <>
+      <Nav />
+      <Hero
+        img={product.img}
+        text={[product.title]}
+        circleColor={product.circleColor}
+      />
+    </>
   );
 }
 

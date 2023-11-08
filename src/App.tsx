@@ -6,7 +6,7 @@ import Services from "./pages/Services";
 import School from "./pages/School";
 import Product from "./pages/Product";
 
-import { products } from "./utils/products";
+import { productsPage } from "./utils/products";
 
 function App() {
   return (
@@ -18,8 +18,12 @@ function App() {
           <Route path="/sobre" element={<About />} />
           <Route path="/servicos" element={<Services />} />
           <Route path="/escola" element={<School />} />
-          {products.map(({ type }) => (
-            <Route path={`/${type}`} element={<Product />} />
+          {productsPage.map((product) => (
+            <Route
+              key={product.type}
+              path={`/${product.type}`}
+              element={<Product product={product} />}
+            />
           ))}
         </Routes>
       </BrowserRouter>

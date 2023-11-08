@@ -12,7 +12,7 @@ function School() {
   return (
     <main className="container" style={{ background: "var(--p1)" }}>
       <Nav />
-      <Hero img={imgHero} page="school" />
+      <Hero img={imgHero} page="school" circleColor="transparent" />
       <Teaching />
       <HandsOnLearning />
       <Register />

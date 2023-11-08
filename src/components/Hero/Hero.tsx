@@ -8,11 +8,7 @@ type HeroProps = {
   img: string;
   text?: string[];
   page?: "services" | "school";
-  circleColor?:
-    | "rgba(255, 100, 136, 0.5)"
-    | "rgba(255, 100, 136, 0.8)"
-    | "rgba(255, 150, 174, 0.5)"
-    | "rgb(255, 150, 174)";
+  circleColor: string;
 };
 
 function Hero({ img, text, page, circleColor }: HeroProps) {
