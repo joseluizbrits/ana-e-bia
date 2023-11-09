@@ -49,7 +49,7 @@ function Footer({ theme }: { theme?: "light" | "white" }) {
               <ul>
                 {routes.map(({ page, route }, index) => (
                   <li key={route}>
-                    <Link to={route}>{page}</Link>
+                    {index < 3 && <Link to={route}>{page}</Link>}
                     {index < 2 && <hr />}
                   </li>
                 ))}

@@ -2,12 +2,8 @@ import styled from "styled-components";
 import arrow from "../../assets/svg/arrowCircle.svg";
 
 export const SweetsStyled = styled.div`
-  background: var(--p5);
-
   .wrapp {
     margin: 0 11%;
-    border-radius: 50px;
-    border: 1px solid var(--p6);
   }
 
   .wrapp h2 {
@@ -154,6 +150,19 @@ export const SweetsStyled = styled.div`
       cursor: initial;
     }
   }
+
+  /* ---------------- PAGE ABOUT ---------------- */
+
+  &.sweets-about {
+    background: var(--p5);
+
+    .wrapp {
+      border-radius: 50px;
+      border: 1px solid var(--p6);
+    }
+  }
+
+  /* ---------------- RESPONSIVE ---------------- */
 
   @media screen and (max-width: 1400px) {
     .swiper-slide .content .text h3 {

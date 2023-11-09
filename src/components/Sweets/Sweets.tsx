@@ -9,16 +9,19 @@ import { Navigation } from "swiper/modules";
 function Sweets() {
   const desktop = useMedia("(max-width: 1400px)");
   const mobile = useMedia("(max-width: 900px)");
-  const URL = useLocation();
+  const pageName = useLocation().pathname.replace("/", "");
 
-  const sweets = products.filter(
-    (sweet) => sweet.type !== URL.pathname.replace("/", "")
-  );
+  const sweets = products.filter((sweet) => sweet.type !== pageName);
 
   return (
-    <SweetsStyled>
+    <SweetsStyled className={pageName === "sobre" ? "sweets-about" : ""}>
       <div className="wrapp">
-        <h2>Veja os nossos doces</h2>
+        {pageName === "sobre" ? (
+          <h2>Veja os nossos doces</h2>
+        ) : (
+          <h2>Veja também</h2>
+        )}
+
         <Swiper
           slidesPerView={desktop ? (mobile ? 1 : 2) : 3}
           spaceBetween={40}

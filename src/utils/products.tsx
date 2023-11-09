@@ -3,6 +3,11 @@ import donut from "../assets/img/donut.jpg";
 import cake from "../assets/img/cake.jpg";
 import macaron from "../assets/img/macaron.jpg";
 
+import Cookie from "../assets/svg/Cookie";
+import Donut from "../assets/svg/Donut";
+import Cake from "../assets/svg/CakeChoco";
+import Macaron from "../assets/svg/Macaron";
+
 import cookieHero from "../assets/img/hero-cookie.jpg";
 import cookieDesc1 from "../assets/img/cookie-desc-1.jpg";
 import cookieDesc2 from "../assets/img/cookie-desc-2.jpg";
@@ -79,6 +84,7 @@ export const productsPage = [
     title: "Cookies frescos e saborosos",
     circleColor: "rgba(255, 150, 174, 0.5)",
     img: cookieHero,
+    icon: <Cookie />,
     desc: [
       {
         id: "cookie-desc-1",
@@ -134,6 +140,7 @@ export const productsPage = [
     title: "Donuts únicos e combinações incríveis",
     circleColor: "rgba(255, 100, 136, 0.8)",
     img: donutHero,
+    icon: <Donut />,
     desc: [
       {
         id: "donut-desc-1",
@@ -189,6 +196,7 @@ export const productsPage = [
     title: "Bolos recheados de doçura e maciez",
     circleColor: "rgba(255, 100, 136, 0.8)",
     img: cakeHero,
+    icon: <Cake />,
     desc: [
       {
         id: "cake-desc-1",
@@ -244,6 +252,7 @@ export const productsPage = [
     title: "Macarons delicados de puro sabor",
     circleColor: "rgba(255, 100, 136, 0.5)",
     img: macaronHero,
+    icon: <Macaron />,
     desc: [
       {
         id: "macaron-desc-1",

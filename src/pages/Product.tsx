@@ -1,6 +1,8 @@
-import React from "react";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 import Hero from "../components/Hero/Hero";
 import Nav from "../components/Nav/Nav";
+import Sweets from "../components/Sweets/Sweets";
 
 type ProductType = {
   product: {
@@ -9,6 +11,7 @@ type ProductType = {
     title: string;
     circleColor: string;
     img: string;
+    icon: JSX.Element;
     desc: {
       id: string;
       item: string;
@@ -29,6 +32,9 @@ function Product({ product }: ProductType) {
         text={[product.title]}
         circleColor={product.circleColor}
       />
+      <Sweets />
+      <Contact sweet={product.icon} theme="light" />
+      <Footer theme="light" />
     </>
   );
 }
