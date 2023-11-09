@@ -15,7 +15,9 @@ type DescProps = {
 function ProductDescription({ desc, name }: DescProps) {
   return (
     <ProductDescriptionStyled>
-      <h2>{name}</h2>
+      <div className="title">
+        <h2>{name}</h2>
+      </div>
 
       <div className="card">
         <div className="wrapp">

@@ -5,9 +5,24 @@ export const ProductDescriptionStyled = styled.section`
   flex-direction: column;
   align-items: center;
 
+  .title {
+    width: 100%;
+    text-align: center;
+    background: var(--p4);
+    border-radius: 0 0 0 200px;
+    margin-bottom: 10%;
+
+    h2 {
+      font-family: var(--title);
+      font-size: clamp(10rem, 13vw, 16vw);
+      color: var(--p3);
+      padding: 120px 0;
+    }
+  }
+
   .card {
     width: clamp(1000px, 92vw, 2000px);
-    margin: 0 80px;
+    margin: 0 80px 10% 80px;
     border-radius: 50px;
     background: var(--p7);
   }
@@ -58,7 +73,7 @@ export const ProductDescriptionStyled = styled.section`
 
   .card .item:hover {
     span {
-      opacity: 0.6;
+      color: #fff;
       scale: 1.1;
     }
 

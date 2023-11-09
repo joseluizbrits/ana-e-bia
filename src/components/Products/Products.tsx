@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Section } from "./ProductsStyled";
 import Button from "../Button/Button";
 import { products } from "../../utils/products";
@@ -18,10 +19,10 @@ function Produtos() {
       <div className="products">
         {products.map(({ name, type, desc, img, alt }) => (
           <div key={name} className={`candy ${type}`}>
-            <div className="image">
+            <NavLink to={`/${type}`} className="image">
               <img src={img} alt={alt} id={type} />
               <div className="shadow"></div>
-            </div>
+            </NavLink>
 
             <div className="text">
               <h3>{name}</h3>
