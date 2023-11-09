@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { SweetsStyled } from "./SweetsStyled";
 import { products } from "../../utils/products";
 import useMedia from "../../hooks/useMedia";
@@ -12,6 +13,10 @@ function Sweets() {
   const pageName = useLocation().pathname.replace("/", "");
 
   const sweets = products.filter((sweet) => sweet.type !== pageName);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pageName]);
 
   return (
     <SweetsStyled className={pageName === "sobre" ? "sweets-about" : ""}>
@@ -31,14 +36,14 @@ function Sweets() {
         >
           {sweets.map(({ name, type, descShort, img, alt }) => (
             <SwiperSlide key={name}>
-              <div className="content">
+              <NavLink to={`/${type}`} className="content">
                 <img src={img} alt={alt} className={type} />
 
                 <div className="text">
                   <h3>{name}</h3>
                   <p>{descShort}</p>
                 </div>
-              </div>
+              </NavLink>
 
               <div className="shadow"></div>
             </SwiperSlide>
