@@ -1,9 +1,7 @@
-import React from "react";
 import { ProductDescriptionStyled } from "./ProductDescriptionStyled";
 
-import cookieDesc from "../../assets/img/cookie-desc-1.jpg";
-
 type DescProps = {
+  name: string;
   desc: {
     id: string;
     item: string;
@@ -14,9 +12,11 @@ type DescProps = {
   }[];
 };
 
-function ProductDescription({ desc }: DescProps) {
+function ProductDescription({ desc, name }: DescProps) {
   return (
     <ProductDescriptionStyled>
+      <h2>{name}</h2>
+
       <div className="card">
         <div className="wrapp">
           {desc.map(({ id, item, text, subItem, subText, img }) => (

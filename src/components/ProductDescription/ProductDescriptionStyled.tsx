@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const ProductDescriptionStyled = styled.section`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 
   .card {
-    width: clamp(1800px, 200vw, 2000px);
+    width: clamp(1000px, 92vw, 2000px);
     margin: 0 80px;
     border-radius: 50px;
     background: var(--p7);

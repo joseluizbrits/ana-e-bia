@@ -33,7 +33,7 @@ function Product({ product }: ProductType) {
         text={[product.title]}
         circleColor={product.circleColor}
       />
-      <ProductDescription desc={product.desc} />
+      <ProductDescription desc={product.desc} name={product.name} />
       <Sweets />
       <Contact sweet={product.icon} theme="light" />
       <Footer theme="light" />

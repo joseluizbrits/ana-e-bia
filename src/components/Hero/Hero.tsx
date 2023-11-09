@@ -17,8 +17,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
   return (
     <HeroStyled
       style={{
-        background: `url(${img}) center center`,
-        backgroundSize: "cover",
+        background: `url(${img}) center center / cover`,
       }}
       $circleColor={circleColor}
     >
