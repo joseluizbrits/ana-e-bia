@@ -114,7 +114,7 @@ export const ProductDescriptionStyled = styled.section`
       max-width: 32ch;
     }
 
-    button {
+    a {
       font-family: var(--text);
       font-weight: var(--semibold);
       font-size: clamp(0.875rem, 1vw, 1.25rem);

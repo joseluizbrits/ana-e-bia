@@ -33,7 +33,7 @@ function ProductDescription({ desc, name }: DescProps) {
                   <h4>{subItem}</h4>
                   <p>{subText}</p>
 
-                  <button>Fazer pedido</button>
+                  <a href="#contact">Fazer pedido</a>
                 </div>
               </div>
             </div>

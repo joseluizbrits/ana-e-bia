@@ -27,7 +27,12 @@ function Produtos() {
             <div className="text">
               <h3>{name}</h3>
               <p>{desc}</p>
-              <Button className="rounded" color="gradient" text="Eu quero!" />
+              <Button
+                className="rounded"
+                color="gradient"
+                text="Eu quero!"
+                href="#contact"
+              />
             </div>
           </div>
         ))}

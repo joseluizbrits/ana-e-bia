@@ -1,48 +1,40 @@
-import { Link } from "react-router-dom";
-
-import styled from "styled-components";
-
-const Nav = styled.nav`
-  display: none;
-
-  &.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    background: var(--p5);
-    z-index: 100;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    li a {
-      color: #fff;
-      font-family: var(--title);
-      font-weight: var(--bold);
-      font-size: 7rem;
-      letter-spacing: 0.05rem;
-    }
-  }
-`;
+import { Link, useLocation } from "react-router-dom";
+import { MenuStyled } from "./MenuStyled";
+import { navigation } from "../../utils/navigation";
+import { products } from "../../utils/products";
 
 function Menu({ className }: { className: string }) {
+  const pageName = useLocation().pathname;
+
+  const nav = navigation.filter(({ route }) => route !== pageName);
+  const sweets = products.filter(
+    ({ type }) => type !== pageName.replace("/", "")
+  );
+
   return (
-    <Nav className={className}>
+    <MenuStyled className={className}>
       <ul>
-        <li>
-          <Link to="/sobre">Sobre</Link>
-        </li>
-        <li>
-          <a href="/servicos">Serviços</a>
-        </li>
-        <li>
-          <a href="/escola">Escola</a>
-        </li>
+        {nav.map(({ route, page, img, alt }, index) => (
+          <li key={page} className={`route-${index + 1}`}>
+            <div className="link">
+              <Link to={route}>{page}</Link>
+            </div>
+
+            <aside>
+              <img src={img} alt={alt} />
+            </aside>
+          </li>
+        ))}
       </ul>
-    </Nav>
+
+      <ul className="sweets-routes">
+        {sweets.map(({ type }) => (
+          <li key={type}>
+            <a href={`/${type}`}>{type}</a>
+          </li>
+        ))}
+      </ul>
+    </MenuStyled>
   );
 }
 

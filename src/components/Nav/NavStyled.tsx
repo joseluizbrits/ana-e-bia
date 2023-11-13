@@ -35,11 +35,15 @@ export const Header = styled.header`
     }
   }
 
+  a.rounded {
+    z-index: 10;
+  }
+
   @media (max-width: 1100px) {
     flex-direction: row-reverse;
     padding: 0 64px;
 
-    button.rounded {
+    a.rounded {
       display: none;
     }
 
@@ -61,23 +65,26 @@ export const Header = styled.header`
   }
 `;
 
-export const Hamburger = styled.button`
-  width: 40px;
-  height: 40px;
+export const Hamburger = styled.a`
+  width: 80px;
+  height: 64px;
+  translate: 20px;
   border-radius: 5px;
   background: none;
+
   cursor: pointer;
   z-index: 101;
 
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 4px;
 
   &::before {
     content: "";
     width: 40px;
-    height: 3px;
+    height: 2px;
     border-radius: 3px;
     background: var(--p6);
     transition: 0.3s;
@@ -86,7 +93,7 @@ export const Hamburger = styled.button`
   &::after {
     content: "";
     width: 40px;
-    height: 3px;
+    height: 2px;
     border-radius: inherit;
     background: var(--p6);
     transition: 0.3s;
@@ -94,11 +101,11 @@ export const Hamburger = styled.button`
 
   &.active::before {
     transform: rotate(-135deg) translateY(-5px);
-    background: #fff;
+    background: var(--p8);
   }
 
   &.active::after {
     transform: rotate(135deg) translateY(5px);
-    background: #fff;
+    background: var(--p8);
   }
 `;

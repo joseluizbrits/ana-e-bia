@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { SweetsStyled } from "./SweetsStyled";
 import { products } from "../../utils/products";
 import useMedia from "../../hooks/useMedia";
@@ -36,14 +36,14 @@ function Sweets() {
         >
           {sweets.map(({ name, type, descShort, img, alt }) => (
             <SwiperSlide key={name}>
-              <NavLink to={`/${type}`} className="content">
+              <Link to={`/${type}`} className="content">
                 <img src={img} alt={alt} className={type} />
 
                 <div className="text">
                   <h3>{name}</h3>
                   <p>{descShort}</p>
                 </div>
-              </NavLink>
+              </Link>
 
               <div className="shadow"></div>
             </SwiperSlide>

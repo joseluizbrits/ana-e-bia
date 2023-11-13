@@ -112,7 +112,7 @@ export const Section = styled.section`
       margin-top: 20px;
     }
 
-    button.rounded {
+    a.rounded {
       margin-top: 40px;
       align-self: flex-end;
     }
@@ -136,7 +136,7 @@ export const Section = styled.section`
       background: var(--p4);
     }
 
-    button.rounded {
+    a.rounded {
       align-self: flex-start;
     }
   }

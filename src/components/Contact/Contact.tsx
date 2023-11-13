@@ -68,7 +68,7 @@ function Contact({ sweet, theme }: ContactProps) {
   }, [success, name.error, email.error, message.error]);
 
   return (
-    <FormStyled className={theme}>
+    <FormStyled id="contact" className={theme}>
       <div className="wrapp">
         {sweet}
         <form onSubmit={handleSubmit}>
