@@ -14,17 +14,18 @@ export const ProductDescriptionStyled = styled.section`
 
     h2 {
       font-family: var(--title);
-      font-size: clamp(10rem, 13vw, 16vw);
+      font-size: clamp(3rem, 13vw, 16vw);
       color: var(--p3);
       padding: 120px 0;
     }
   }
 
   .card {
-    width: clamp(1000px, 92vw, 2000px);
+    width: clamp(350px, 92vw, 2000px);
     margin: 0 80px 10% 80px;
-    border-radius: 50px;
     background: var(--p7);
+    border-radius: 50px;
+    box-shadow: 1px 0 4px 0px rgba(0, 0, 0, 0.4);
   }
 
   .card .wrapp {
@@ -47,13 +48,14 @@ export const ProductDescriptionStyled = styled.section`
   .card .item h3 {
     font-family: var(--text);
     font-weight: var(--medium);
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    font-size: clamp(1.25rem, 2vw, 2.5rem);
     color: var(--p1);
   }
 
   .card .item span {
     font-family: var(--text);
-    font-size: clamp(0.75rem, 1vw, 1.5rem);
+    font-size: clamp(0.875rem, 1vw, 1.5rem);
+    line-height: 1.5em;
     color: var(--p4);
     transition: 0.1s;
   }
@@ -61,6 +63,7 @@ export const ProductDescriptionStyled = styled.section`
   .card .item .sub-item {
     background: var(--p6);
     border-radius: 50px;
+    box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.2);
     padding: 40px;
 
     display: none; // .card .item:hover --> display: flex: ;
@@ -143,6 +146,71 @@ export const ProductDescriptionStyled = styled.section`
     }
     to {
       scale: 1;
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+    .title {
+      border-radius: 0 0 0 100px;
+
+      h2 {
+        padding: 80px 0;
+      }
+    }
+
+    .card .wrapp {
+      padding: 2% 8% 5% 8%;
+    }
+
+    .card .item {
+      flex-direction: column;
+      align-items: initial;
+      gap: 12px;
+      padding: 40px 0 20px 0;
+
+      h3 {
+        font-family: var(--title);
+        font-weight: var(--bold);
+        color: var(--p1);
+      }
+    }
+
+    .card .sub-item {
+      translate: 0 -200px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .card .item span {
+      font-size: 0.75rem;
+    }
+
+    .card .item .sub-item {
+      flex-direction: column;
+      gap: 40px;
+
+      img {
+        width: 300px;
+      }
+
+      .text-wrapp {
+        margin-left: 0;
+      }
+
+      .text-wrapp button {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .card .wrapp {
+      padding: 2% 11% 5% 11%;
+    }
+
+    .card .item .sub-item {
+      translate: -40px -200px;
+      padding: 20px;
     }
   }
 `;

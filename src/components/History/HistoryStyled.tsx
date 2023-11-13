@@ -10,6 +10,8 @@ export const HistoryStyled = styled.section`
 
   .title {
     padding: 200px 0 240px 0;
+    position: relative;
+    z-index: 1;
   }
 
   .title .logo {
