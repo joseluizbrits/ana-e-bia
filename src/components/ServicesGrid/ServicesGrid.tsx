@@ -52,7 +52,12 @@ function Services() {
           estética, propriciando uma experiência mágica sem grandes preocupações
         </p>
 
-        <Button className="rounded" color="gradient" text="Saiba mais" />
+        <Button
+          className="rounded"
+          color="gradient"
+          text="Saiba mais"
+          href="/servicos"
+        />
       </div>
     </ServicesGridStyled>
   );

@@ -15,7 +15,12 @@ function School() {
           confeitaria
         </p>
 
-        <Button className="rounded outline" color="none" text="Inscreva-se" />
+        <Button
+          className="rounded outline"
+          color="none"
+          text="Inscreva-se"
+          href="/escola"
+        />
       </div>
     </SchoolStyled>
   );
