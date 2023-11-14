@@ -15,33 +15,37 @@ function Menu({ className }: { className: string }) {
   );
 
   React.useLayoutEffect(() => {
-    const tl = gsap.timeline({ paused: true, reversed: true });
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ paused: true, reversed: true });
 
-    if (className) tl.play();
+      if (className) tl.play();
 
-    tl.fromTo(
-      "nav",
-      {
-        width: 0,
-      },
-      {
-        width: "100%",
-        ease: "power2.inOut",
-        duration: 1,
-      }
-    );
+      tl.fromTo(
+        "nav",
+        {
+          width: 0,
+        },
+        {
+          width: "100%",
+          ease: "power2.inOut",
+          duration: 1,
+        }
+      );
 
-    tl.fromTo(
-      "nav ul li",
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        ease: "power1",
-        stagger: 0.1,
-      }
-    );
+      tl.fromTo(
+        "nav ul li",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          ease: "power1",
+          stagger: 0.1,
+        }
+      );
+
+      return () => ctx.revert();
+    });
   }, [className]);
 
   return (
