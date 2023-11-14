@@ -24,13 +24,14 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
       delay: 0.5,
     });
 
-    gsap.from(".hero p", {
-      opacity: 0,
-      y: -100,
-      ease: "power2.inOut",
-      duration: 1,
-    });
-  }, []);
+    if (text)
+      gsap.from(".hero p", {
+        opacity: 0,
+        y: -100,
+        ease: "power2.inOut",
+        duration: 1,
+      });
+  }, [text]);
 
   return (
     <HeroStyled
