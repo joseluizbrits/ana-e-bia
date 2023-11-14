@@ -1,8 +1,11 @@
+import React from "react";
 import { HeroStyled } from "./HeroStyled";
 
 import ArrowCircleDown from "../../assets/svg/ArrowCircleDown";
 
 import { services } from "../../utils/services";
+
+import gsap from "gsap";
 
 type HeroProps = {
   img: string;
@@ -14,8 +17,24 @@ type HeroProps = {
 function Hero({ img, text, page, circleColor }: HeroProps) {
   const nav = services.filter(({ nav }) => nav);
 
+  React.useLayoutEffect(() => {
+    gsap.from(".hero", {
+      "--circleScale": 0,
+      duration: 1,
+      delay: 0.5,
+    });
+
+    gsap.from(".hero p", {
+      opacity: 0,
+      y: -100,
+      ease: "power2.inOut",
+      duration: 1,
+    });
+  }, []);
+
   return (
     <HeroStyled
+      className="hero"
       style={{
         background: `url(${img}) center center / cover`,
       }}

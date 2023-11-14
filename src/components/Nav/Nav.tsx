@@ -4,6 +4,8 @@ import { Header, Hamburger } from "./NavStyled";
 import Button from "../Button/Button";
 import Menu from "../Menu/Menu";
 
+import gsap from "gsap";
+
 function Nav() {
   const [menuActive, setMenuActive] = React.useState(false);
 
@@ -21,6 +23,18 @@ function Nav() {
     }
   }, [menuActive]);
 
+  React.useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from("header", {
+        y: -200,
+        opacity: 0,
+        ease: "power3.inOut",
+        duration: 1,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   return (
     <Header>
       <Hamburger
@@ -28,7 +42,8 @@ function Nav() {
         onClick={() => setMenuActive(!menuActive)}
       />
 
-      <Menu className={menuActive ? "active" : ""} />
+      {/* <Menu className={menuActive ? "menu active" : "menu"} /> */}
+      <Menu className="menu active" />
 
       <Link to="/" className="logo">
         <span>Ana & Bia</span>

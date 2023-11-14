@@ -5,6 +5,8 @@ type Props = {
 };
 
 export const HeroStyled = styled.section<Props>`
+  --circleScale: 1
+
   width: 100%;
   height: 100vh;
 
@@ -43,6 +45,8 @@ export const HeroStyled = styled.section<Props>`
         border-radius: 50%;
         grid-area: 1/1;
         position: absolute;
+        scale: var(--circleScale);
+        animation-delay: 1s;
       }
     }
 
@@ -57,6 +61,25 @@ export const HeroStyled = styled.section<Props>`
       height: 160px;
       top: 10%;
       left: 10%;
+      animation: randomMoveOne 6s ease-in-out infinite;
+
+      @keyframes randomMoveOne {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(10px, 20px);
+        }
+        50% {
+          transform: translate(-5px, -10px);
+        }
+        75% {
+          transform: translate(5px, 20px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
     }
 
     .text-2 {
@@ -74,6 +97,25 @@ export const HeroStyled = styled.section<Props>`
       height: 100px;
       top: 10%;
       right: 10%;
+      animation: randomMoveTwo 4s ease-in-out infinite;
+
+      @keyframes randomMoveTwo {
+        0% {
+          transform: translate(0, 0);
+        }
+        30% {
+          transform: translate(-5px, 10px);
+        }
+        60% {
+          transform: translate(5px, -5px);
+        }
+        80% {
+          transform: translate(-10px, 10px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
     }
   }
 
