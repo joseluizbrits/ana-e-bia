@@ -18,19 +18,23 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
   const nav = services.filter(({ nav }) => nav);
 
   React.useLayoutEffect(() => {
-    gsap.from(".hero", {
-      "--circleScale": 0,
-      duration: 1,
-      delay: 0.5,
+    const ctx = gsap.context(() => {
+      gsap.from(".hero", {
+        "--circleScale": 0,
+        duration: 1,
+        delay: 0.5,
+      });
+
+      if (text)
+        gsap.from(".hero p", {
+          opacity: 0,
+          y: -100,
+          ease: "power2.inOut",
+          duration: 1,
+        });
     });
 
-    if (text)
-      gsap.from(".hero p", {
-        opacity: 0,
-        y: -100,
-        ease: "power2.inOut",
-        duration: 1,
-      });
+    return () => ctx.revert();
   }, [text]);
 
   return (
