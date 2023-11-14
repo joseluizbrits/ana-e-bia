@@ -4,6 +4,8 @@ import { MenuStyled } from "./MenuStyled";
 import { navigation } from "../../utils/navigation";
 import { products } from "../../utils/products";
 
+import gsap from "gsap";
+
 function Menu({ className }: { className: string }) {
   const pageName = useLocation().pathname;
 
@@ -11,6 +13,36 @@ function Menu({ className }: { className: string }) {
   const sweets = products.filter(
     ({ type }) => type !== pageName.replace("/", "")
   );
+
+  React.useLayoutEffect(() => {
+    const tl = gsap.timeline({ paused: true, reversed: true });
+
+    if (className) tl.play();
+
+    tl.fromTo(
+      "nav",
+      {
+        width: 0,
+      },
+      {
+        width: "100%",
+        ease: "power2.inOut",
+        duration: 1,
+      }
+    );
+
+    tl.fromTo(
+      "nav ul li",
+      {
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        ease: "power1",
+        stagger: 0.1,
+      }
+    );
+  }, [className]);
 
   return (
     <MenuStyled className={className}>

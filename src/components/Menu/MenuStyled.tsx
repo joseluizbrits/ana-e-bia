@@ -100,7 +100,7 @@ export const MenuStyled = styled.nav`
       transition: 0.3s;
 
       &:hover {
-        opacity: 0.6;
+        color: var(--p7);
       }
     }
   }
