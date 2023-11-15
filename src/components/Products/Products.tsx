@@ -29,10 +29,9 @@ function Produtos() {
             toggleActions: "play none none none",
             start: "-=80px 60%",
             end: "bottom center",
-            markers: true,
           },
           scale: 0,
-          ease: "power3.out",
+          // ease: "power3.out",
         });
       });
 
@@ -43,12 +42,11 @@ function Produtos() {
             toggleActions: "play none none none",
             start: "-=80px 60%",
             end: "bottom center",
-            markers: true,
           },
           opacity: 0,
           y: -100,
           ease: "power3.out",
-          delay: 0.3,
+          duration: 1,
         });
       });
     });

@@ -302,8 +302,10 @@ export const Section = styled.section`
       text-align: center;
     }
 
-    .text button.rounded {
+    .text a.rounded {
       font-weight: var(--semibold);
+      font-size: 1rem;
+      text-align: center;
       width: 100%;
       margin-top: 32px;
     }

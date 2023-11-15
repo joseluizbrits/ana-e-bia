@@ -50,6 +50,8 @@ export const FormStyled = styled.section`
       border-radius: 50%;
       background: var(--p7);
       opacity: 30%;
+      scale: var(--circleScale);
+      animation: randomMoveTwo 4s ease-in-out infinite;
     }
   }
 
@@ -81,16 +83,19 @@ export const FormStyled = styled.section`
       border-radius: 50%;
       background: var(--p6);
       opacity: 30%;
+      scale: var(--circleScale);
     }
 
     &::before {
       top: 26%;
       left: 26%;
+      animation: randomMoveOne 4s ease-in-out infinite;
     }
 
     &::after {
       bottom: 12px;
       right: -24px;
+      animation: randomMoveTwo 4s ease-in-out infinite;
     }
   }
 

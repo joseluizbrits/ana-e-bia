@@ -2,6 +2,8 @@ import React from "react";
 import { FormStyled } from "./ContactStyled";
 import useForm from "../../hooks/useForm";
 import Field from "../Field/Field";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
 
 type ContactProps = {
@@ -10,6 +12,34 @@ type ContactProps = {
 };
 
 function Contact({ sweet, theme }: ContactProps) {
+  React.useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#contact",
+            start: "-=100px center",
+            end: "bottom center",
+          },
+        })
+        .from("#contact svg", {
+          x: -200,
+          scale: 0,
+          rotate: "360deg",
+          duration: 0.5,
+        })
+        .from("#contact form", {
+          opacity: 0,
+          "--circleScale": 0,
+          duration: 1,
+        });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   const [loading, setLoading] = React.useState<"" | "loading">("");
   const [success, setSuccess] = React.useState(false);
   const name = useForm(false);
