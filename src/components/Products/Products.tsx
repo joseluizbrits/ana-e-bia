@@ -22,27 +22,33 @@ function Produtos() {
         opacity: 0,
       });
 
-      gsap.from(".candy .image", {
-        scrollTrigger: {
-          trigger: ".candy",
-          start: "top 80%",
-          end: "bottom center",
-        },
-        scale: 0,
-      });
-
       products.forEach(({ type }) => {
-        gsap.from(`.candy.${type}`, {
+        gsap.from(`.candy.${type} .image`, {
           scrollTrigger: {
             trigger: `.candy.${type}`,
             toggleActions: "play none none none",
-            start: "top 80%",
+            start: "-=80px 60%",
+            end: "bottom center",
+            markers: true,
+          },
+          scale: 0,
+          ease: "power3.out",
+        });
+      });
+
+      products.forEach(({ type }) => {
+        gsap.from(`.candy.${type} .text`, {
+          scrollTrigger: {
+            trigger: `.candy.${type}`,
+            toggleActions: "play none none none",
+            start: "-=80px 60%",
             end: "bottom center",
             markers: true,
           },
           opacity: 0,
-          x: 100,
-          delay: 0.5,
+          y: -100,
+          ease: "power3.out",
+          delay: 0.3,
         });
       });
     });
