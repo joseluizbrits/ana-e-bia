@@ -15,23 +15,23 @@ function Produtos() {
       gsap.from(".section-products .title", {
         scrollTrigger: {
           trigger: ".section-products .title",
-          start: "top center",
+          start: "top 80%",
           end: "bottom center",
         },
-        x: -600,
         opacity: 0,
+        x: -600,
       });
 
       products.forEach(({ type }) => {
         gsap.from(`.candy.${type} .image`, {
           scrollTrigger: {
             trigger: `.candy.${type}`,
-            toggleActions: "play none none none",
-            start: "-=80px 60%",
+            start: "-=80px 80%",
             end: "bottom center",
           },
-          scale: 0,
-          // ease: "power3.out",
+          scale: 0.5,
+          ease: "power3.out",
+          duration: 1,
         });
       });
 
@@ -39,7 +39,6 @@ function Produtos() {
         gsap.from(`.candy.${type} .text`, {
           scrollTrigger: {
             trigger: `.candy.${type}`,
-            toggleActions: "play none none none",
             start: "-=80px 60%",
             end: "bottom center",
           },

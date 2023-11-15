@@ -22,6 +22,7 @@ function Contact({ sweet, theme }: ContactProps) {
             trigger: "#contact",
             start: "-=100px center",
             end: "bottom center",
+            markers: true,
           },
         })
         .from("#contact svg", {
