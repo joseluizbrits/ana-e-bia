@@ -31,6 +31,30 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
+  /* ---------- SCROLLBAR ---------- */
+
+  *::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  html::-webkit-scrollbar {
+    background: var(--p3);
+    width: 20px;
+    height: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb,
+  html::-webkit-scrollbar-thumb {
+    background: var(--p4);
+    border-radius: 20px;
+    border: 5px solid var(--p3);
+  }
+
+  *::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover,
+  html::-webkit-scrollbar-thumb:hover {
+    background: var(--p5);
+  }
+
   a {
     text-decoration: none;
     outline: none;
@@ -62,6 +86,8 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: none;
     outline-style: none;
   }
+
+  /* --------- CIRCLE ANIMATION ---------- */
 
   @keyframes randomMoveOne {
     0% {
