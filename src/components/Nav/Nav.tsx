@@ -42,7 +42,7 @@ function Nav() {
         onClick={() => setMenuActive(!menuActive)}
       />
 
-      <Menu className={menuActive ? "active" : ""} />
+      <Menu className={menuActive ? "active" : ""} id="menu" />
 
       <Link to="/" className="logo">
         <span>Ana & Bia</span>

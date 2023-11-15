@@ -6,7 +6,7 @@ import { products } from "../../utils/products";
 
 import gsap from "gsap";
 
-function Menu({ className }: { className: string }) {
+function Menu({ className, id }: { className: string; id: string }) {
   const pageName = useLocation().pathname;
 
   const nav = navigation.filter(({ route }) => route !== pageName);
@@ -21,7 +21,7 @@ function Menu({ className }: { className: string }) {
       if (className) tl.play();
 
       tl.fromTo(
-        "nav",
+        "#menu",
         {
           width: 0,
         },
@@ -33,7 +33,7 @@ function Menu({ className }: { className: string }) {
       );
 
       tl.fromTo(
-        "nav ul li",
+        "#menu ul li",
         {
           opacity: 0,
         },
@@ -49,7 +49,7 @@ function Menu({ className }: { className: string }) {
   }, [className]);
 
   return (
-    <MenuStyled className={className}>
+    <MenuStyled className={className} id={id}>
       <ul>
         {nav.map(({ route, page, img, alt }, index) => (
           <li key={page} className={`route-${index + 1}`}>
