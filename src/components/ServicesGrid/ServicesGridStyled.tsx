@@ -78,7 +78,7 @@ export const ServicesGridStyled = styled.section`
     h3 {
       font-family: var(--title);
       font-weight: var(--bold);
-      font-size: 4rem;
+      font-size: clamp(3rem, 4vw, 4rem);
       letter-spacing: 0.05rem;
       text-transform: lowercase;
       text-align: center;
@@ -88,9 +88,9 @@ export const ServicesGridStyled = styled.section`
     p {
       font-family: var(--text);
       font-size: 1.25rem;
-      line-height: 2rem;
+      line-height: 1.5em;
       text-align: center;
-      padding: 24px 48px 64px 48px;
+      padding: 12px 48px 64px 48px;
     }
 
     .circle {
@@ -221,7 +221,6 @@ export const ServicesGridStyled = styled.section`
 
     .sub-title p {
       font-size: 0.875rem;
-      line-height: 1.25rem;
       padding: 8px 0 28px 0;
       max-width: 45ch;
     }
@@ -251,10 +250,6 @@ export const ServicesGridStyled = styled.section`
 
     .cards > * {
       width: max-content;
-
-      h3 {
-        font-size: 3rem;
-      }
 
       p {
         font-size: 0.875rem;
