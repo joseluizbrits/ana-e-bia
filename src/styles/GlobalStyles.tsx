@@ -17,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     --p3: #FFB6C7;
     --p2: #FFD2DD;
     --p1: #FFE7ED;
+    --circleScale: 1;
   }
 
   * {
@@ -60,6 +61,42 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     box-shadow: none;
     outline-style: none;
+  }
+
+  @keyframes randomMoveOne {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(10px, 20px);
+    }
+    50% {
+      transform: translate(-5px, -10px);
+    }
+    75% {
+      transform: translate(5px, 20px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes randomMoveTwo {
+    0% {
+      transform: translate(0, 0);
+    }
+    30% {
+      transform: translate(-5px, 10px);
+    }
+    60% {
+      transform: translate(5px, -5px);
+    }
+    80% {
+      transform: translate(-10px, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
   }
 `;
 
