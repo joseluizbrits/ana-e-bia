@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const QuestionStyled = styled.section`
+export const QuestionsStyled = styled.section`
   background: var(--p4);
   padding-top: 20px;
 

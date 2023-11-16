@@ -17,7 +17,6 @@ function School() {
         },
         "--circleScale": 0,
         "--circlePosition": "translate(500px, -500px)",
-        // opacity: 0,
         ease: "power3.out",
         duration: 3,
         delay: 0.5,
