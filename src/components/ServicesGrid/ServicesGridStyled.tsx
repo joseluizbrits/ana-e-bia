@@ -8,6 +8,7 @@ export const ServicesGridStyled = styled.section`
   align-items: center;
   gap: 210px;
   position: relative;
+  overflow-x: hidden;
 
   &::after {
     content: "hmmmmm!";

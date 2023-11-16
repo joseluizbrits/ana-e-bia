@@ -19,6 +19,7 @@ export const SchoolStyled = styled.section`
     background-size: cover;
     box-shadow: 0 0 0 100px var(--p5);
     opacity: 0.5;
+    transform: var(--circlePosition);
   }
 
   .description {

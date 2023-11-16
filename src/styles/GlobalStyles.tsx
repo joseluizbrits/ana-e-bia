@@ -18,6 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --p2: #FFD2DD;
     --p1: #FFE7ED;
     --circleScale: 1;
+    --circlePosition: translate(0, 0)
   }
 
   * {
