@@ -34,7 +34,7 @@ function Questions() {
         .from(".accordion-list li", {
           x: -100,
           opacity: 0,
-          stagger: 0.3,
+          stagger: 0.1,
           ease: "power3.out",
         });
     });

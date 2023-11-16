@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import map from "../../assets/img/map.jpg";
 
-export const FooterStyled = styled.section`
+export const FooterStyled = styled.footer`
   background: var(--p4);
   padding: 120px 0 40px 0;
   position: relative;
