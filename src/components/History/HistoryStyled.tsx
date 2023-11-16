@@ -5,7 +5,7 @@ export const HistoryStyled = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 
   .title {
@@ -110,6 +110,10 @@ export const HistoryStyled = styled.section`
   }
 
   /* ---------- CIRCLES ---------- */
+
+  --circleTop: -200px;
+  --circleLeft: -200px;
+
   &::before,
   .card::before {
     content: "";
@@ -121,19 +125,28 @@ export const HistoryStyled = styled.section`
     position: absolute;
   }
 
+  --circleTop: -200px;
+  --circleLeft: -200px;
+
   &::before {
-    top: -200px;
-    left: -200px;
+    top: var(--circleTop);
+    left: var(--circleLeft);
   }
+
+  --circleSisTop: -140px;
+  --circleSisRight: -180px;
 
   .card-sisters::before {
-    top: -140px;
-    right: -180px;
+    top: var(--circleSisTop);
+    right: var(--circleSisRight);
   }
 
+  --circleGrandmaTop: -140px;
+  --circleGrandmaLeft: -180px;
+
   .card-grandmother::before {
-    bottom: -140px;
-    left: -180px;
+    bottom: var(--circleGrandmaTop);
+    left: var(--circleGrandmaLeft);
   }
 
   @media screen and (max-width: 1000px) {
