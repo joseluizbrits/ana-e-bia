@@ -6,8 +6,11 @@ import { servicesGrid } from "../../utils/services";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useMedia from "../../hooks/useMedia";
 
 function Services() {
+  const mobile = useMedia("(max-width: 1300px)");
+
   React.useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.registerPlugin(ScrollTrigger);
@@ -24,7 +27,7 @@ function Services() {
         duration: 1,
       });
 
-      gsap.matchMedia().add("(min-width: 1300px)", () => {
+      if (!mobile)
         gsap.from(`.section-services .cards li`, {
           scrollTrigger: {
             trigger: `.section-services .cards`,
@@ -37,9 +40,8 @@ function Services() {
           stagger: 0.3,
           duration: 1,
         });
-      });
 
-      gsap.matchMedia().add("(max-width: 1300px)", () => {
+      if (mobile)
         servicesGrid.forEach(({ id }) => {
           gsap.from(`.section-services .cards .${id}`, {
             scrollTrigger: {
@@ -53,7 +55,6 @@ function Services() {
             duration: 1,
           });
         });
-      });
 
       gsap.from(".section-services .sub-title", {
         scrollTrigger: {
@@ -67,7 +68,7 @@ function Services() {
     });
 
     return () => ctx.revert();
-  }, []);
+  }, [mobile]);
 
   return (
     <ServicesGridStyled className="section-services">
