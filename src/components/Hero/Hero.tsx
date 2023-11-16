@@ -32,10 +32,39 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
           ease: "power2.inOut",
           duration: 1,
         });
+
+      if (page === "services") {
+        gsap.from(".title-services", {
+          y: 100,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 1,
+          delay: 0.3,
+        });
+
+        gsap.from(".nav-services li", {
+          y: 100,
+          opacity: 0,
+          stagger: 0.1,
+          ease: "power3.out",
+          duration: 1,
+          delay: 0.4,
+        });
+      }
+
+      if (page === "school") {
+        gsap.from(".title-school", {
+          y: 100,
+          opacity: 0,
+          ease: "power3.out",
+          duration: 1,
+          delay: 0.3,
+        });
+      }
     });
 
     return () => ctx.revert();
-  }, [text]);
+  }, [text, page]);
 
   return (
     <HeroStyled
