@@ -41,7 +41,6 @@ function Teaching() {
           trigger: ".section-teaching .card",
           start: "start 65%",
           end: "bottom center",
-          markers: true,
         },
       });
 
