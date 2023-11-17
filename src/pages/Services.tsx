@@ -11,7 +11,10 @@ import Macaron from "../assets/svg/Macaron";
 
 function Services() {
   return (
-    <main className="container" style={{ background: "var(--p3)" }}>
+    <main
+      className="container"
+      style={{ background: "var(--p3)", overflow: "hidden" }}
+    >
       <Nav />
       <Hero img={imgHero} page="services" circleColor="transparent" />
       <MagnifyingGlass />

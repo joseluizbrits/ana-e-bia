@@ -41,7 +41,8 @@ function Menu({ className, id }: { className: string; id: string }) {
           opacity: 1,
           ease: "power1",
           stagger: 0.1,
-        }
+        },
+        "-=0.3"
       );
 
       return () => ctx.revert();

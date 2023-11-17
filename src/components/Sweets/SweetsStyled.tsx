@@ -2,6 +2,8 @@ import styled from "styled-components";
 import arrow from "../../assets/svg/arrowCircle.svg";
 
 export const SweetsStyled = styled.div`
+  overflow: hidden;
+
   .wrapp {
     margin: 0 11%;
   }
