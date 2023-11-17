@@ -84,6 +84,7 @@ export const RegisterStyled = styled.section`
 
   form button {
     margin-top: 16px;
+    width: 100%;
     height: 40px;
     border-radius: 10px;
     background: var(--p6);
@@ -146,14 +147,12 @@ export const RegisterStyled = styled.section`
       height: 113%;
       border-radius: 50px;
       object-fit: cover;
-      box-shadow: -40px 40px 0 0 var(--p5);
       margin-top: -160px;
     }
   }
 
   @media screen and (max-width: 1100px) {
     .image img {
-      box-shadow: -20px 20px 0 0 var(--p5);
       margin-top: 80px;
       margin-left: 10px;
       height: 82%;
@@ -184,7 +183,6 @@ export const RegisterStyled = styled.section`
 
   @media screen and (max-width: 700px) {
     .image img {
-      box-shadow: -10px 10px 0 0 var(--p5);
       margin-top: 64px;
       margin-left: 5px;
     }
