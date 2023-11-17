@@ -13,7 +13,7 @@ export const TranslucentCardStyled = styled.div`
     padding: 4% 4%;
     border-radius: 50px;
     background: var(--p5);
-    box-shadow: -24px 24px 0 0 var(--p4);
+    /* box-shadow: -24px 24px 0 0 var(--p4); */
     margin-left: 24px;
   }
 

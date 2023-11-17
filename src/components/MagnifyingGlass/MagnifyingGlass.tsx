@@ -21,7 +21,6 @@ function MagnifyingGlass() {
               trigger: `.title-${index + 1}`,
               start: "top 80%",
               end: "bottom center",
-              markers: true,
             },
           })
           .from(`.card-${index + 1}`, {
@@ -50,19 +49,19 @@ function MagnifyingGlass() {
             "<"
           )
           .from(
-            `.title-${index + 1}`,
+            `.description-${index + 1}`,
             {
-              y: 100,
+              x: -40,
               opacity: 0,
               ease: "power3.out",
               duration: 1,
             },
-            "-=0.5"
+            "-=0.7"
           )
           .from(
-            `.description-${index + 1}`,
+            `.title-${index + 1}`,
             {
-              x: -40,
+              y: 100,
               opacity: 0,
               ease: "power3.out",
               duration: 1,
