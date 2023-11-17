@@ -58,6 +58,16 @@ function MagnifyingGlass() {
               duration: 1,
             },
             "-=0.5"
+          )
+          .from(
+            `.description-${index + 1}`,
+            {
+              x: -40,
+              opacity: 0,
+              ease: "power3.out",
+              duration: 1,
+            },
+            "<+0.3"
           );
       });
     });

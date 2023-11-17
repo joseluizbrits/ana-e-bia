@@ -17,7 +17,7 @@ function AboutConclusion() {
           end: "75% center",
           scrub: 1,
         },
-        x: -200,
+        x: "-20%",
         opacity: 0.6,
       });
 
@@ -28,7 +28,7 @@ function AboutConclusion() {
           end: "75% center",
           scrub: 1,
         },
-        x: 200,
+        x: "20%",
         opacity: 0.6,
       });
 

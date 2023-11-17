@@ -20,7 +20,7 @@ function Contact({ sweet, theme }: ContactProps) {
         .timeline({
           scrollTrigger: {
             trigger: "#contact",
-            start: "-=100px center",
+            start: "-=100px 80%",
             end: "bottom center",
           },
         })
