@@ -28,14 +28,20 @@ export const TeachingStyled = styled.section`
       position: absolute;
     }
 
+    --circleTop: -23%;
+    --circleLeft: -46%;
+
     &::before {
-      top: -23%;
-      left: -46%;
+      top: var(--circleTop);
+      left: var(--circleLeft);
     }
 
+    --circleBottom: -28%;
+    --circleRight: -50%;
+
     &::after {
-      bottom: -28%;
-      right: -50%;
+      bottom: var(--circleBottom);
+      right: var(--circleRight);
     }
   }
 
@@ -53,7 +59,7 @@ export const TeachingStyled = styled.section`
   }
 
   .logo-container {
-    margin: 40px 40px 40px 0;
+    margin: 40px;
     background: #ffdfe6;
     border-radius: 50px;
 
