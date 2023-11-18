@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FormStyled = styled.section`
+export const ContactStyled = styled.section`
   width: 100%;
   margin-top: 18%;
   border-radius: 0 200px 0 0;

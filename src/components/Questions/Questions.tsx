@@ -1,46 +1,11 @@
 import React from "react";
 import { QuestionsStyled } from "./QuestionsStyled";
+import { QuestionsAnimation } from "./QuestionsAnimation";
 import PlusCircle from "../../assets/svg/PlusCircle";
-
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { FAQs } from "../../utils/FAQs";
 
 function Questions() {
-  React.useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap
-        .timeline({
-          scrollTrigger: { trigger: ".section-questions" },
-          start: "top 60%",
-          end: "bottom center",
-        })
-        .from(".section-questions .card", {
-          y: 600,
-          duration: 1,
-          ease: "elastic.out(1, .8)",
-        })
-        .from(
-          ".section-questions .card h2",
-          {
-            y: -100,
-            opacity: 0,
-          },
-          "-=0.5"
-        )
-        .from(".accordion-list li", {
-          x: -100,
-          opacity: 0,
-          stagger: 0.1,
-          ease: "power3.out",
-        });
-    });
-
-    return () => ctx.revert();
-  }, []);
+  QuestionsAnimation();
 
   const [active, setActive] = React.useState("");
 

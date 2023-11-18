@@ -1,9 +1,8 @@
 import React from "react";
-import { FormStyled } from "./ContactStyled";
+import { ContactStyled } from "./ContactStyled";
+import { ContactAnimation } from "./ContactAnimation";
 import useForm from "../../hooks/useForm";
 import Field from "../Field/Field";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import emailjs from "@emailjs/browser";
 
 type ContactProps = {
@@ -12,40 +11,7 @@ type ContactProps = {
 };
 
 function Contact({ sweet, theme }: ContactProps) {
-  React.useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap
-        .timeline({
-          scrollTrigger: {
-            trigger: "#contact",
-            start: "-=100px 80%",
-            end: "bottom center",
-          },
-        })
-        .from("#contact svg", {
-          x: -200,
-          scale: 0,
-          rotate: "360deg",
-          ease: "power3.out",
-          duration: 1,
-        })
-        .from(
-          "#contact form",
-          {
-            y: 100,
-            opacity: 0,
-            "--circleScale": 0,
-            ease: "power3.out",
-            duration: 1,
-          },
-          "-=0.5"
-        );
-    });
-
-    return () => ctx.revert();
-  }, []);
+  ContactAnimation();
 
   const [loading, setLoading] = React.useState<"" | "loading">("");
   const [success, setSuccess] = React.useState(false);
@@ -105,7 +71,7 @@ function Contact({ sweet, theme }: ContactProps) {
   }, [success, name.error, email.error, message.error]);
 
   return (
-    <FormStyled id="contact" className={theme}>
+    <ContactStyled id="contact" className={theme}>
       <div className="wrapp">
         {sweet}
         <form onSubmit={handleSubmit}>
@@ -130,7 +96,7 @@ function Contact({ sweet, theme }: ContactProps) {
           </div>
         </form>
       </div>
-    </FormStyled>
+    </ContactStyled>
   );
 }
 

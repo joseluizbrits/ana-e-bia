@@ -1,60 +1,14 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
-import { Section } from "./ProductsStyled";
+import { ProductsStyled } from "./ProductsStyled";
+import { ProductsAnimation } from "./ProductsAnimation";
 import Button from "../Button/Button";
 import { products } from "../../utils/products";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 function Produtos() {
-  React.useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.from(".section-products .title", {
-        scrollTrigger: {
-          trigger: ".section-products .title",
-          start: "top 80%",
-          end: "bottom center",
-        },
-        opacity: 0,
-        x: -600,
-      });
-
-      products.forEach(({ type }) => {
-        gsap.from(`.candy.${type} .image`, {
-          scrollTrigger: {
-            trigger: `.candy.${type}`,
-            start: "-=80px 80%",
-            end: "bottom center",
-          },
-          scale: 0.5,
-          ease: "power3.out",
-          duration: 1,
-        });
-      });
-
-      products.forEach(({ type }) => {
-        gsap.from(`.candy.${type} .text`, {
-          scrollTrigger: {
-            trigger: `.candy.${type}`,
-            start: "-=80px 60%",
-            end: "bottom center",
-          },
-          opacity: 0,
-          y: -100,
-          ease: "power3.out",
-          duration: 1,
-        });
-      });
-    });
-
-    return () => ctx.revert();
-  });
+  ProductsAnimation(products);
 
   return (
-    <Section className="section-products">
+    <ProductsStyled className="section-products">
       <div className="title">
         <h2>Sabor feito com carinho</h2>
 
@@ -85,7 +39,7 @@ function Produtos() {
           </div>
         ))}
       </div>
-    </Section>
+    </ProductsStyled>
   );
 }
 

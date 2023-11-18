@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Section = styled.section`
+export const ProductsStyled = styled.section`
   .title {
     height: 570px;
     display: flex;

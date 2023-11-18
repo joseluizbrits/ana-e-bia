@@ -40,7 +40,7 @@ function Nav() {
         href={URL === "escola" ? "#register" : "#contact"}
         className="rounded"
         color="gradient"
-        text={URL === "escola" ? "Inscreva-se" : "Faça seu pedido!"}
+        text={URL === "escola" ? "Inscreva-se!" : "Faça seu pedido!"}
       />
     </Header>
   );
