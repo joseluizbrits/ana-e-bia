@@ -102,6 +102,22 @@ export const HeroStyled = styled.section<Props>`
 
     svg {
       width: clamp(12px, 1vw, 20px);
+      animation: downMove 1.5s ease-in-out infinite;
+    }
+
+    @keyframes downMove {
+      0% {
+        transform: translateY(-4px);
+        opacity: 0.5;
+      }
+      50% {
+        transform: translateY(8px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-4px);
+        opacity: 0.5;
+      }
     }
   }
 
@@ -124,7 +140,7 @@ export const HeroStyled = styled.section<Props>`
     }
   }
 
-  /* -------------------- pages SCHOOL variation -------------------- */
+  /* -------------------- page SCHOOL variation -------------------- */
   .title-school span {
     color: var(--p4);
   }
@@ -169,6 +185,15 @@ export const HeroStyled = styled.section<Props>`
 
     h1 .text-1 .circle {
       transform: translate(64px, -32px);
+    }
+
+    h1 .title-services {
+      display: none;
+    }
+
+    .nav-services {
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 `;

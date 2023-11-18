@@ -1,24 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Header, Hamburger } from "./NavStyled";
 import Button from "../Button/Button";
 import Menu from "../Menu/Menu";
 
-import gsap from "gsap";
-
 function Nav() {
-  React.useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from("header", {
-        opacity: 0,
-        scale: 0.5,
-        ease: "power3.out",
-        duration: 1.5,
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
+  const URL = useLocation().pathname.replace("/", "");
   const [menuActive, setMenuActive] = React.useState(false);
 
   React.useEffect(() => {
@@ -44,16 +31,16 @@ function Nav() {
 
       <Menu className={menuActive ? "active" : ""} id="menu" />
 
-      <Link to="/" className="logo">
+      <Link to="/" className={URL === "escola" ? "logo logo-school" : "logo"}>
         <span>Ana & Bia</span>
         <span>doces</span>
       </Link>
 
       <Button
-        href="#contact"
+        href={URL === "escola" ? "#register" : "#contact"}
         className="rounded"
         color="gradient"
-        text="Faça seu pedido!"
+        text={URL === "escola" ? "Inscreva-se" : "Faça seu pedido!"}
       />
     </Header>
   );

@@ -49,16 +49,31 @@ export const SweetsStyled = styled.div`
     border-radius: 50px;
     background: var(--p7);
     box-shadow: -1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 
     grid-area: 1/1;
     justify-self: center;
     z-index: 1;
+
+    &:hover {
+      img {
+        scale: 1.1;
+        filter: brightness(90%);
+      }
+
+      .text h3,
+      .text p {
+        scale: 1.05;
+      }
+    }
   }
 
   .swiper-slide .content img {
     aspect-ratio: 1/1;
     width: 100%;
     border-radius: 50px 50px 0 0;
+    transition: 0.3s;
+
     object-fit: cover;
 
     &.cookie {
@@ -76,6 +91,9 @@ export const SweetsStyled = styled.div`
 
   .swiper-slide .content .text {
     padding: 20px 40px 64px 40px;
+    background: var(--p7);
+    position: relative;
+
     display: flex;
     flex-direction: column;
 
@@ -85,6 +103,7 @@ export const SweetsStyled = styled.div`
       font-size: clamp(1.25rem, 2vw, 3rem);
       text-transform: uppercase;
       color: var(--p5);
+      transition: 0.3s;
     }
 
     p {
@@ -93,6 +112,7 @@ export const SweetsStyled = styled.div`
       line-height: 1.5em;
       color: #fff;
       margin-top: 8px;
+      transition: 0.3s;
     }
   }
 
@@ -133,7 +153,7 @@ export const SweetsStyled = styled.div`
 
     &.swiper-button-disabled {
       transform: translateY(-50px) rotate(180deg) scale(1);
-      filter: brightness(0.8);
+      filter: brightness(0.6);
       cursor: initial;
     }
   }
@@ -148,7 +168,7 @@ export const SweetsStyled = styled.div`
 
     &.swiper-button-disabled {
       transform: translateY(-50px) scale(1);
-      filter: brightness(0.8);
+      filter: brightness(0.6);
       cursor: initial;
     }
   }

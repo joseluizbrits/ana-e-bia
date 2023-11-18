@@ -87,8 +87,8 @@ export const SchoolStyled = styled.section`
       }
     }
 
-    button.rounded.outline {
-      font-size: 0.75rem;
+    a.rounded.outline {
+      font-size: 0.875rem;
     }
   }
 `;

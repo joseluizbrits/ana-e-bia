@@ -69,7 +69,6 @@ function HandsOnLearning() {
             trigger: ".p-3",
             start: "30% 80%",
             end: "bottom 60%",
-            markers: true,
           },
         })
         .from(".p-3 p", {

@@ -64,6 +64,13 @@ export const Section = styled.section`
       position: relative;
       z-index: 1;
 
+      transition: 0.3s;
+
+      &:hover {
+        scale: 1.05;
+        filter: brightness(115%);
+      }
+
       &#cookie {
         object-position: 0 -200px;
       }

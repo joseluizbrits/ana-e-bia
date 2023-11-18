@@ -48,7 +48,6 @@ function Register() {
             trigger: "#register .content h2",
             start: "top 80%",
             end: "bottom center",
-            markers: true,
           },
         })
         .from("#register .content h2 > *", {

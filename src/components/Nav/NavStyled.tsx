@@ -14,8 +14,21 @@ export const Header = styled.header`
   right: 0;
   z-index: 10;
 
+  animation: fall 1s ease-in forwards;
+
+  @keyframes fall {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .logo {
-    transform: translateX(105px);
+    transform: translateX(85px);
     display: flex;
     align-items: center;
     gap: 12px;
@@ -33,6 +46,10 @@ export const Header = styled.header`
       font-weight: var(--semibold);
       font-size: 1.25rem;
     }
+  }
+
+  .logo-school {
+    transform: translateX(40px);
   }
 
   a.rounded {

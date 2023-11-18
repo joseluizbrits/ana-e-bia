@@ -47,21 +47,25 @@ function History() {
       gsap.from(".card-sisters .wrapp > *", {
         scrollTrigger: {
           trigger: ".card-sisters",
-          start: "top 70%",
+          start: "top center",
           end: "center center",
         },
         x: -200,
         opacity: 0,
+        ease: "power3.out",
+        duration: 1,
       });
 
       gsap.from(".card-grandmother .wrapp > *", {
         scrollTrigger: {
           trigger: ".card-grandmother",
-          start: "top 70%",
+          start: "top center",
           end: "center center",
         },
         x: 200,
         opacity: 0,
+        ease: "power3.out",
+        duration: 1,
       });
 
       gsap.from(".card-grandmother", {

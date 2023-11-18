@@ -22,7 +22,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
       gsap.from(".hero", {
         "--circleScale": 0,
         duration: 1,
-        delay: 1,
+        delay: 1.5,
       });
 
       if (text)
@@ -31,7 +31,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
           y: -100,
           ease: "power2.inOut",
           duration: 1,
-          delay: 0.5,
+          delay: 1,
         });
 
       if (page === "services") {
@@ -40,7 +40,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
           opacity: 0,
           ease: "power3.out",
           duration: 1,
-          delay: 0.3,
+          delay: 0.8,
         });
 
         gsap.from(".nav-services li", {
@@ -49,7 +49,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
           stagger: 0.1,
           ease: "power3.out",
           duration: 1,
-          delay: 0.4,
+          delay: 1.2,
         });
       }
 
@@ -59,7 +59,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
           opacity: 0,
           ease: "power3.out",
           duration: 1,
-          delay: 0.3,
+          delay: 0.8,
         });
       }
     });
@@ -98,7 +98,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
         <nav className="nav-services">
           <ul>
             {nav.map(
-              ({ type }, index) => index < 3 && <li key={type}>{type}</li>
+              ({ id, type }, index) => index < 3 && <li key={id}>{type}</li>
             )}
           </ul>
         </nav>

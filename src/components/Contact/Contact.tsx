@@ -28,13 +28,20 @@ function Contact({ sweet, theme }: ContactProps) {
           x: -200,
           scale: 0,
           rotate: "360deg",
-          duration: 0.5,
-        })
-        .from("#contact form", {
-          opacity: 0,
-          "--circleScale": 0,
+          ease: "power3.out",
           duration: 1,
-        });
+        })
+        .from(
+          "#contact form",
+          {
+            y: 100,
+            opacity: 0,
+            "--circleScale": 0,
+            ease: "power3.out",
+            duration: 1,
+          },
+          "-=0.5"
+        );
     });
 
     return () => ctx.revert();

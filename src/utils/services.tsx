@@ -7,6 +7,7 @@ import DeliveryServices from "../assets/svg/DeliveryServices";
 
 export const services = [
   {
+    id: "events",
     type: "eventos",
     title: "Eventos personalizados",
     desc: "Mesas de sobremesas temáticas com uma variedade de doces, bolos e outras delícias que se encaixam perfeitamente no tema do evento",
@@ -15,6 +16,7 @@ export const services = [
     img: imgEvents,
   },
   {
+    id: "menus",
     type: "cardápios",
     title: "Cardápios diversificados",
     desc: "Menu com ampla variedade de bolos, cookies, donuts, macarons e outros doces que podem ser personalizados de acordo com as necessidades do evento",
@@ -23,6 +25,7 @@ export const services = [
     img: imgMenus,
   },
   {
+    id: "decorations",
     type: "decorações",
     title: "Apresentação Elegante",
     desc: "Decorações e designs que complementam a estética do evento, criando uma experiência gastronômica deliciosa e visualmente impressionante",
@@ -31,6 +34,7 @@ export const services = [
     img: imgDecorations,
   },
   {
+    id: "assistance",
     type: "atendimento",
     title: "Atendimento profissional",
     desc: "Equipe dedicada a oferecer atendimento profissional durante o evento, garantindo que as sobremesas sejam servidas com perfeição e que os convidados desfrutem de uma experiência agradável",
@@ -38,6 +42,7 @@ export const services = [
     nav: false,
   },
   {
+    id: "deliveries",
     type: "entregas",
     title: "Serviço de entrega",
     desc: "Equipe especializada em logística, com veículos adaptados para facilitar o transporte dos doces até o local do evento. Garantia que as sobremesas serão entregues sem perder o sabor e a estética",

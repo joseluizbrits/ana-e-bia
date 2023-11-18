@@ -24,18 +24,20 @@ function Sweets() {
         x: 200,
         opacity: 0,
         ease: "power3.out",
+        duration: 1,
       });
 
       gsap.from("#sweets .swiper-slide", {
         scrollTrigger: {
           trigger: "#sweets .swiper-slide",
-          start: "top 80%",
+          start: "top 60%",
           end: "bottom center",
         },
         x: -100,
         opacity: 0,
         stagger: 0.1,
         ease: "elastic(1, .8)",
+        duration: 1,
       });
     });
 

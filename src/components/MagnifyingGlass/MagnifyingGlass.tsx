@@ -76,8 +76,8 @@ function MagnifyingGlass() {
 
   return (
     <>
-      {servicesWithImage?.map(({ type, title, desc, tags, img }, index) => (
-        <MagnifyingGlassStyled key={type}>
+      {servicesWithImage?.map(({ id, title, desc, tags, img }, index) => (
+        <MagnifyingGlassStyled key={id}>
           <div className={`title title-${index + 1}`}>
             <h2>{title}</h2>
           </div>

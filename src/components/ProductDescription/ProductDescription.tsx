@@ -37,7 +37,6 @@ function ProductDescription({ desc, name }: DescProps) {
             trigger: ".product-description .card",
             start: "-=600px 80%",
             end: "bottom center",
-            markers: true,
           },
         })
         .from(".product-description .card", {
@@ -56,7 +55,6 @@ function ProductDescription({ desc, name }: DescProps) {
           ".product-description .card h3",
           {
             x: -40,
-            y: -20,
             opacity: 0,
             stagger: 0.2,
             ease: "power3.out",
@@ -68,7 +66,6 @@ function ProductDescription({ desc, name }: DescProps) {
           ".product-description .card .desc-wrapp",
           {
             x: -40,
-            y: -20,
             opacity: 0,
             stagger: 0.2,
             ease: "power3.out",

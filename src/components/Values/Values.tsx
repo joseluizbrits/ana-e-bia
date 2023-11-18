@@ -15,7 +15,7 @@ function Values() {
         .timeline({
           scrollTrigger: {
             trigger: ".section-values",
-            start: "top 80%",
+            start: "top center",
             end: "bottom center",
           },
         })
