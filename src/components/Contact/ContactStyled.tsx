@@ -126,15 +126,17 @@ export const FormStyled = styled.section`
 
     &:hover {
       background: #fff;
+      box-shadow: -2px 2px 1px 1px var(--p5);
     }
 
     &:focus-visible {
       background: #fff;
       outline: 1px solid var(--p6);
+      box-shadow: -2px 2px 1px 1px var(--p5);
     }
 
     &.error {
-      box-shadow: 0px 0px 2px 1px var(--p5);
+      outline: 1px solid #ef2c1e;
     }
   }
 
@@ -245,11 +247,11 @@ export const FormStyled = styled.section`
 
       &:hover,
       &:focus-visible {
-        outline: 1px solid var(--p7);
+        box-shadow: -2px 2px 1px 1px var(--p5);
       }
 
       &.error {
-        box-shadow: 0px 0px 1px 1px #ef2c1e;
+        outline: 1px solid #ef2c1e;
       }
     }
 

@@ -11,6 +11,7 @@ export const ProductDescriptionStyled = styled.section`
     background: var(--p4);
     border-radius: 0 0 0 200px;
     margin-bottom: 10%;
+    overflow: hidden;
 
     h2 {
       font-family: var(--title);
