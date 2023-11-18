@@ -22,7 +22,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
       gsap.from(".hero", {
         "--circleScale": 0,
         duration: 1,
-        delay: 0.5,
+        delay: 1,
       });
 
       if (text)
@@ -31,6 +31,7 @@ function Hero({ img, text, page, circleColor }: HeroProps) {
           y: -100,
           ease: "power2.inOut",
           duration: 1,
+          delay: 0.5,
         });
 
       if (page === "services") {

@@ -7,6 +7,18 @@ import Menu from "../Menu/Menu";
 import gsap from "gsap";
 
 function Nav() {
+  React.useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from("header", {
+        opacity: 0,
+        scale: 0.5,
+        ease: "power3.out",
+        duration: 1.5,
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
   const [menuActive, setMenuActive] = React.useState(false);
 
   React.useEffect(() => {
@@ -22,18 +34,6 @@ function Nav() {
       document.documentElement.style.overflowX = "hidden";
     }
   }, [menuActive]);
-
-  React.useLayoutEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from("header", {
-        y: -200,
-        opacity: 0,
-        ease: "power3.inOut",
-        duration: 1,
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   return (
     <Header>
