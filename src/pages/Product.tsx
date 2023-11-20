@@ -3,6 +3,7 @@ import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
 import ProductDescription from "../components/ProductDescription/ProductDescription";
 import Contact from "../components/Contact/Contact";
+import ButtonScrollTop from "../components/ButtonScrollTop/ButtonScrollTop";
 import Footer from "../components/Footer/Footer";
 
 const Sweets = React.lazy(() => import("../components/Sweets/Sweets"));
@@ -40,6 +41,7 @@ function Product({ product }: ProductType) {
         <Sweets />
       </React.Suspense>
       <Contact sweet={product.icon} theme="light" />
+      <ButtonScrollTop />
       <Footer theme="light" />
     </>
   );

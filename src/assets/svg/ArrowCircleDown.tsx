@@ -1,5 +1,3 @@
-import React from "react";
-
 function ArrowCircleDown() {
   return (
     <svg

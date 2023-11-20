@@ -5,6 +5,7 @@ import History from "../components/History/History";
 import Values from "../components/Values/Values";
 import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
 import Contact from "../components/Contact/Contact";
+import ButtonScrollTop from "../components/ButtonScrollTop/ButtonScrollTop";
 import Footer from "../components/Footer/Footer";
 
 import imgHero from "../assets/img/hero-about.jpg";
@@ -28,6 +29,7 @@ function About() {
         <Sweets />
       </React.Suspense>
       <Contact sweet={<Macaron />} theme="light" />
+      <ButtonScrollTop />
       <Footer theme="light" />
     </main>
   );

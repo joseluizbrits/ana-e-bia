@@ -1,10 +1,10 @@
-import Hero from "../components/Hero/Hero";
-
 import Nav from "../components/Nav/Nav";
+import Hero from "../components/Hero/Hero";
 import Contact from "../components/Contact/Contact";
-import Footer from "../components/Footer/Footer";
 import MagnifyingGlass from "../components/MagnifyingGlass/MagnifyingGlass";
 import TranslucentCard from "../components/TranslucentCard/TranslucentCard";
+import ButtonScrollTop from "../components/ButtonScrollTop/ButtonScrollTop";
+import Footer from "../components/Footer/Footer";
 
 import imgHero from "../assets/img/hero-services.jpg";
 import Macaron from "../assets/svg/Macaron";
@@ -20,6 +20,7 @@ function Services() {
       <MagnifyingGlass />
       <TranslucentCard />
       <Contact sweet={<Macaron />} theme="light" />
+      <ButtonScrollTop />
       <Footer theme="light" />
     </main>
   );
