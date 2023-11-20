@@ -5,6 +5,7 @@ import ProductDescription from "../components/ProductDescription/ProductDescript
 import Contact from "../components/Contact/Contact";
 import ButtonScrollTop from "../components/ButtonScrollTop/ButtonScrollTop";
 import Footer from "../components/Footer/Footer";
+import Loading from "../components/Loading/Loading";
 
 const Sweets = React.lazy(() => import("../components/Sweets/Sweets"));
 
@@ -37,7 +38,7 @@ function Product({ product }: ProductType) {
         circleColor={product.circleColor}
       />
       <ProductDescription desc={product.desc} name={product.name} />
-      <React.Suspense fallback={<div>Carregando...</div>}>
+      <React.Suspense fallback={<Loading />}>
         <Sweets />
       </React.Suspense>
       <Contact sweet={product.icon} theme="light" />

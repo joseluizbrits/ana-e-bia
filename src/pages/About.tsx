@@ -7,6 +7,7 @@ import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
 import Contact from "../components/Contact/Contact";
 import ButtonScrollTop from "../components/ButtonScrollTop/ButtonScrollTop";
 import Footer from "../components/Footer/Footer";
+import Loading from "../components/Loading/Loading";
 
 import imgHero from "../assets/img/hero-about.jpg";
 import Macaron from "../assets/svg/Macaron";
@@ -25,7 +26,7 @@ function About() {
       <History />
       <Values />
       <AboutConclusion />
-      <React.Suspense fallback={<div>Carregando...</div>}>
+      <React.Suspense fallback={<Loading />}>
         <Sweets />
       </React.Suspense>
       <Contact sweet={<Macaron />} theme="light" />
