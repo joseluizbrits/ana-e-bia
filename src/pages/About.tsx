@@ -1,14 +1,16 @@
+import React from "react";
 import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
 import History from "../components/History/History";
 import Values from "../components/Values/Values";
 import AboutConclusion from "../components/AboutConclusion/AboutConclusion";
-import Sweets from "../components/Sweets/Sweets";
 import Contact from "../components/Contact/Contact";
 import Footer from "../components/Footer/Footer";
 
 import imgHero from "../assets/img/hero-about.jpg";
 import Macaron from "../assets/svg/Macaron";
+
+const Sweets = React.lazy(() => import("../components/Sweets/Sweets"));
 
 function About() {
   return (
@@ -22,7 +24,9 @@ function About() {
       <History />
       <Values />
       <AboutConclusion />
-      <Sweets />
+      <React.Suspense fallback={<div>Carregando...</div>}>
+        <Sweets />
+      </React.Suspense>
       <Contact sweet={<Macaron />} theme="light" />
       <Footer theme="light" />
     </main>
