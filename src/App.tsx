@@ -14,14 +14,14 @@ function App() {
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<About />} />
-          <Route path="/servicos" element={<Services />} />
-          <Route path="/escola" element={<School />} />
+          <Route path="/ana-e-bia" element={<Home />} />
+          <Route path="/ana-e-bia/sobre" element={<About />} />
+          <Route path="/ana-e-bia/servicos" element={<Services />} />
+          <Route path="/ana-e-bia/escola" element={<School />} />
           {productsPage.map((product) => (
             <Route
               key={product.type}
-              path={`/${product.type}`}
+              path={`/ana-e-bia/${product.type}`}
               element={<Product product={product} />}
             />
           ))}

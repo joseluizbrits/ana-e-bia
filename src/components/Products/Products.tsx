@@ -22,7 +22,7 @@ function Produtos() {
       <div className="products">
         {products.map(({ name, type, desc, img, alt }) => (
           <div key={name} className={`candy ${type}`}>
-            <NavLink to={`/${type}`} className="image">
+            <NavLink to={`/ana-e-bia/${type}`} className="image">
               <img src={img} alt={alt} id={type} />
             </NavLink>
 

@@ -42,7 +42,7 @@ function Sweets() {
         >
           {sweets.map(({ name, type, descShort, img, alt }) => (
             <SwiperSlide key={name}>
-              <Link to={`/${type}`} className="content">
+              <Link to={`/ana-e-bia/${type}`} className="content">
                 <img src={img} alt={alt} className={type} />
 
                 <div className="text">
