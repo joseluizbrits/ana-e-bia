@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyles";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/ana-e-bia" element={<Home />} />
           <Route path="/ana-e-bia/sobre" element={<About />} />
@@ -26,7 +26,7 @@ function App() {
             />
           ))}
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
