@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     --gradient: linear-gradient(to right, #DB3A5F, #E84E72);
     --p8: #9C0024;
     --p7: #BA183E;
-    --p6: #DB3A5F;
+    --p6: #db3a60;
     --p5: #FF6488;
     --p4: #FF96AE;
     --p3: #FFB6C7;

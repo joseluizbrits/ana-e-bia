@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ProductsStyled } from "./ProductsStyled";
 import { ProductsAnimation } from "./ProductsAnimation";
 import Button from "../Button/Button";
@@ -22,13 +22,17 @@ function Produtos() {
       <div className="products">
         {products.map(({ name, type, desc, img, alt }) => (
           <div key={name} className={`candy ${type}`}>
-            <NavLink to={`/ana-e-bia/${type}`} className="image">
+            <Link to={`/ana-e-bia/${type}`} className="image">
               <img src={img} alt={alt} id={type} />
-            </NavLink>
+            </Link>
 
             <div className="text">
-              <h3>{name}</h3>
+              <Link to={`/ana-e-bia/${type}`}>
+                <h3>{name}</h3>
+              </Link>
+
               <p>{desc}</p>
+
               <Button
                 className="rounded"
                 color="gradient"

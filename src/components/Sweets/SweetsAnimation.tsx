@@ -22,7 +22,7 @@ export const SweetsAnimation = () => {
       gsap.from("#sweets .swiper-slide", {
         scrollTrigger: {
           trigger: "#sweets .swiper-slide",
-          start: "top 60%",
+          start: "top 80%",
           end: "bottom center",
         },
         x: -100,

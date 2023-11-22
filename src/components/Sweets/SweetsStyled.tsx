@@ -6,6 +6,8 @@ export const SweetsStyled = styled.div`
 
   .wrapp {
     margin: 0 11%;
+    border-radius: 50px;
+    border: 1px solid #db3a607d;
   }
 
   .wrapp h2 {
@@ -233,7 +235,7 @@ export const SweetsStyled = styled.div`
       img,
       .text h3,
       .text p {
-        scale: initial;
+        scale: 1;
       }
     }
   }

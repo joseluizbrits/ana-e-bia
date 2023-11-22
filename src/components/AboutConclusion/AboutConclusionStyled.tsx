@@ -13,7 +13,7 @@ export const AboutConclusionStyled = styled.div`
 
     > * {
       font-family: var(--title);
-      font-size: clamp(0.875rem, 2vw, 2.5rem);
+      font-size: clamp(1rem, 2vw, 2.5rem);
       line-height: 1.5em;
       letter-spacing: 0.05rem;
       color: var(--p3);

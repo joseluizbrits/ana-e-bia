@@ -121,7 +121,7 @@ export const ContactStyled = styled.section`
 
     font-family: var(--text);
     font-size: 1rem;
-    color: var(--p8);
+    color: var(--p6);
 
     transition: 0.3s;
 
@@ -243,7 +243,7 @@ export const ContactStyled = styled.section`
     form .fields input[type="text"],
     form .fields input[type="email"],
     form .fields textarea {
-      color: var(--p8);
+      color: var(--p6);
       background: #fff;
 
       &:hover,

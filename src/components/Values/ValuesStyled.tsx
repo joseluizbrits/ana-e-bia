@@ -45,8 +45,8 @@ export const ValuesStyled = styled.section`
 
     span {
       font-family: var(--title);
-      font-size: clamp(0.75rem, 1.5vw, 1.5vw);
-      color: var(--p4);
+      font-size: clamp(1rem, 1.5vw, 1.5vw);
+      color: var(--p3);
     }
 
     svg {
@@ -111,7 +111,7 @@ export const ValuesStyled = styled.section`
       gap: 8px;
 
       :nth-child(1) {
-        font-size: clamp(1.25rem, 3.25vw, 4rem);
+        font-size: clamp(1.5rem, 3.25vw, 4rem);
       }
       :nth-child(2) {
         font-size: clamp(0.75rem, 1.5vw, 4rem);
