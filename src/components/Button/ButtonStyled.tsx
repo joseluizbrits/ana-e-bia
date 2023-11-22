@@ -17,14 +17,4 @@ export const ButtonStyled = styled.a`
   &:hover {
     opacity: 0.8;
   }
-
-  &.outline {
-    border: 2px solid var(--p8);
-    color: var(--p8);
-
-    &:hover {
-      background: var(--p8);
-      color: #fff;
-    }
-  }
 `;

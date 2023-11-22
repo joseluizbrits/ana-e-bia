@@ -109,5 +109,16 @@ export const MenuStyled = styled.nav`
     .sweets-routes a {
       padding: 12px;
     }
+
+    &.active {
+      .route-1:hover,
+      .route-2:hover,
+      .route-3:hover,
+      .route-4:hover {
+        aside {
+          opacity: 0;
+        }
+      }
+    }
   }
 `;

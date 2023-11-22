@@ -15,7 +15,7 @@ export const QuestionsStyled = styled.section`
   h2 {
     font-family: var(--title);
     font-weight: var(--regular);
-    font-size: 5rem;
+    font-size: clamp(2.5rem, 5vw, 5rem);
     line-height: 1.25em;
     max-width: 11ch;
     padding: 80px 0 0 120px;
@@ -42,7 +42,8 @@ export const QuestionsStyled = styled.section`
 
   .question p {
     font-family: var(--text);
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
+    line-height: 1.5em;
     color: var(--p8);
   }
 
@@ -75,7 +76,7 @@ export const QuestionsStyled = styled.section`
   .answer p {
     color: var(--p8);
     font-family: var(--text);
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.5em;
     padding-top: 20px;
     max-width: 58ch;
@@ -83,16 +84,11 @@ export const QuestionsStyled = styled.section`
 
   @media screen and (max-width: 1550px) {
     h2 {
-      font-size: 3.25rem;
       max-width: 12ch;
     }
 
     .question {
       padding: 40px 0 28px;
-    }
-
-    .question p {
-      font-size: 1.5rem;
     }
 
     .question svg {
@@ -102,10 +98,6 @@ export const QuestionsStyled = styled.section`
     .answer.active {
       height: 100px;
     }
-
-    .answer p {
-      font-size: 0.875rem;
-    }
   }
 
   @media screen and (max-width: 1280px) {
@@ -114,24 +106,14 @@ export const QuestionsStyled = styled.section`
     }
 
     h2 {
-      font-size: 2.5rem;
       padding: 56px 0 0 80px;
     }
 
-    .question {
-      padding: 28px 0 16px;
-    }
-
-    .question p {
-      font-size: 1rem;
-      line-height: 1.5em;
-    }
-
     .question svg {
-      transform: scale(0.4);
+      transform: scale(0.6);
 
       &.active {
-        transform: scale(0.6) rotate(135deg);
+        transform: scale(0.8) rotate(135deg);
       }
     }
 
@@ -140,8 +122,7 @@ export const QuestionsStyled = styled.section`
     }
 
     .answer p {
-      font-size: 0.75rem;
-      padding-top: 12px;
+      padding-top: 20px;
     }
   }
 
@@ -170,21 +151,8 @@ export const QuestionsStyled = styled.section`
     }
 
     h2 {
-      font-size: 1.75rem;
       padding: 40px 40px 0 40px;
       text-align: center;
-    }
-
-    .question {
-      padding: 28px 0 16px;
-    }
-
-    .question svg {
-      transform: scale(0.4);
-
-      &.active {
-        transform: scale(0.6) rotate(135deg);
-      }
     }
   }
 `;

@@ -181,6 +181,25 @@ export const ServicesGridStyled = styled.section`
       max-width: 60ch;
       padding: 12px 0 32px 0;
     }
+
+    a {
+      padding: 16px 28px;
+      border-radius: 50px;
+      box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.2);
+      background: var(--gradient);
+      cursor: pointer;
+      transition: 0.3s;
+
+      color: #fff;
+      font-family: var(--text);
+      font-weight: var(--medium);
+      font-size: 1.25rem;
+      letter-spacing: 0.05rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   @media screen and (max-width: 1200px) {

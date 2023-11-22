@@ -326,5 +326,9 @@ export const ProductsStyled = styled.section`
     .candy:nth-child(even) .image {
       transform: translateY(14px);
     }
+
+    .candy .image img:hover {
+      scale: 1;
+    }
   }
 `;

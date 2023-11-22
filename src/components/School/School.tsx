@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import { SchoolStyled } from "./SchoolStyled";
 import { SchoolAnimation } from "./SchoolAnimation";
-import Button from "../Button/Button";
 
 function School() {
   SchoolAnimation();
@@ -12,18 +12,12 @@ function School() {
           <span>Ana & Bia</span>
           <span>escola de doces</span>
         </h2>
-
         <p>
           Oficinas e aulas para aqueles que desejam aprender a arte da
           confeitaria
         </p>
 
-        <Button
-          className="rounded outline"
-          color="none"
-          text="Inscreva-se"
-          href="/escola"
-        />
+        <Link to="/ana-e-bia/escola">Inscreva-se</Link>
       </div>
     </SchoolStyled>
   );

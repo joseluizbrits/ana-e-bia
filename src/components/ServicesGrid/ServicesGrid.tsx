@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import { ServicesGridStyled } from "./ServicesGridStyled";
 import { ServicesGridAnimation } from "./ServicesGridAnimation";
 import Cupcake from "../../assets/svg/Cupcake";
-import Button from "../Button/Button";
 import useMedia from "../../hooks/useMedia";
 import { servicesGrid } from "../../utils/services";
 
@@ -34,12 +34,7 @@ function Services() {
           estética, propriciando uma experiência mágica sem grandes preocupações
         </p>
 
-        <Button
-          className="rounded"
-          color="gradient"
-          text="Saiba mais"
-          href="/servicos"
-        />
+        <Link to="/ana-e-bia/servicos">Saiba mais</Link>
       </div>
     </ServicesGridStyled>
   );

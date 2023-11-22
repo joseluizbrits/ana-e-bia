@@ -228,5 +228,13 @@ export const SweetsStyled = styled.div`
       width: 80%;
       height: 97%;
     }
+
+    .swiper-slide .content:hover {
+      img,
+      .text h3,
+      .text p {
+        scale: initial;
+      }
+    }
   }
 `;

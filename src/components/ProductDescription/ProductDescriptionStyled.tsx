@@ -49,15 +49,15 @@ export const ProductDescriptionStyled = styled.section`
   .card .item h3 {
     font-family: var(--text);
     font-weight: var(--medium);
-    font-size: clamp(1.25rem, 2vw, 2.5rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
     color: var(--p1);
   }
 
   .card .item span {
     font-family: var(--text);
-    font-size: clamp(0.875rem, 1vw, 1.5rem);
+    font-size: clamp(1rem, 1vw, 1.5rem);
     line-height: 1.5em;
-    color: var(--p4);
+    color: var(--p3);
     transition: 0.1s;
   }
 
@@ -182,10 +182,6 @@ export const ProductDescriptionStyled = styled.section`
   }
 
   @media screen and (max-width: 800px) {
-    .card .item span {
-      font-size: 0.75rem;
-    }
-
     .card .item .sub-item {
       flex-direction: column;
       gap: 40px;
@@ -212,6 +208,17 @@ export const ProductDescriptionStyled = styled.section`
     .card .item .sub-item {
       translate: -40px -200px;
       padding: 20px;
+    }
+
+    .card .item:hover {
+      span {
+        color: var(--p3);
+        scale: initial;
+      }
+
+      .sub-item {
+        display: none;
+      }
     }
   }
 `;

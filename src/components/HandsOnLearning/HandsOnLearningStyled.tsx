@@ -23,7 +23,7 @@ export const HandsOnLearningStyled = styled.section`
       :nth-child(2) {
         font-family: var(--title);
         font-weight: var(--bold);
-        font-size: clamp(2rem, 6vw, 8rem);
+        font-size: clamp(2.5rem, 6vw, 8rem);
         color: var(--p6);
       }
     }
@@ -53,7 +53,7 @@ export const HandsOnLearningStyled = styled.section`
 
     p {
       font-family: var(--text);
-      font-size: clamp(0.75rem, 2vw, 2.5rem);
+      font-size: clamp(0.875rem, 2vw, 2.5rem);
       line-height: 1.5em;
       color: #fff;
     }
@@ -85,7 +85,7 @@ export const HandsOnLearningStyled = styled.section`
 
     p {
       max-width: 50ch;
-      color: var(--p3);
+      color: var(--p2);
     }
   }
 

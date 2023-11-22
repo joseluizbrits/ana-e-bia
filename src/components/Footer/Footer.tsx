@@ -18,10 +18,10 @@ function Footer({ theme }: { theme?: "light" | "white" }) {
       <div className="card">
         <div className="wrapp">
           <div className="brand">
-            <a href="/" className="logo">
+            <Link to="/ana-e-bia" className="logo">
               <span>Ana & Bia</span>
               <span>doces</span>
-            </a>
+            </Link>
 
             <p className="description">
               Confeitaria e Escola de Doces Ana & Bia Ltda.

@@ -120,6 +120,7 @@ export const ContactStyled = styled.section`
     position: relative;
 
     font-family: var(--text);
+    font-size: 1rem;
     color: var(--p8);
 
     transition: 0.3s;

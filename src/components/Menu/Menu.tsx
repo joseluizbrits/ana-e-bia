@@ -33,7 +33,9 @@ function Menu({ className, id }: { className: string; id: string }) {
       <ul className="sweets-routes">
         {sweets.map(({ type }) => (
           <li key={type}>
-            <a href={`/ana-e-bia/${type}`}>{type}</a>
+            <Link to={`/ana-e-bia/${type}`} target="_top">
+              {type}
+            </Link>
           </li>
         ))}
       </ul>

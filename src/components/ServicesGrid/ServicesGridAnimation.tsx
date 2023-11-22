@@ -20,7 +20,7 @@ export const ServicesGridAnimation = (
       gsap.from(".section-services .title", {
         scrollTrigger: {
           trigger: ".section-services .title",
-          start: "-=100px center",
+          start: "-=100px 80%",
           end: "bottom center",
         },
         opacity: 0,
@@ -33,7 +33,7 @@ export const ServicesGridAnimation = (
         gsap.from(`.section-services .cards li`, {
           scrollTrigger: {
             trigger: `.section-services .cards`,
-            start: "-=200px center",
+            start: "-=200px 80%",
             end: "bottom center",
           },
           opacity: 0,
@@ -48,7 +48,7 @@ export const ServicesGridAnimation = (
           gsap.from(`.section-services .cards .${id}`, {
             scrollTrigger: {
               trigger: `.section-services .cards .${id}`,
-              start: "-=260px center",
+              start: "-=260px 80%",
               end: "bottom center",
             },
             opacity: 0,

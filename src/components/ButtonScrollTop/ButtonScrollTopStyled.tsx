@@ -33,5 +33,10 @@ export const ButtonScrollTopStyled = styled.button`
     &.active {
       scale: 3;
     }
+
+    &:hover {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 `;
