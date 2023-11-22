@@ -6,7 +6,24 @@ import Menu from "../Menu/Menu";
 
 function Nav() {
   const URL = useLocation().pathname.replace("/", "");
+
   const [menuActive, setMenuActive] = React.useState(false);
+  const [contactPosition, setContactPosition] = React.useState(0);
+
+  React.useEffect(() => {
+    const contact =
+      document.querySelector("#contact") || document.querySelector("#register");
+
+    if (contact) setContactPosition(contact.getBoundingClientRect().top);
+  }, []);
+
+  function handleClick() {
+    window.scroll({
+      top: contactPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
 
   React.useEffect(() => {
     if (menuActive) {
@@ -37,7 +54,7 @@ function Nav() {
       </Link>
 
       <Button
-        href={URL === "escola" ? "#register" : "#contact"}
+        onClick={handleClick}
         className="rounded"
         color="gradient"
         text={URL === "escola" ? "Inscreva-se!" : "Faça seu pedido!"}

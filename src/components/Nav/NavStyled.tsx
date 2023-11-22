@@ -52,7 +52,7 @@ export const Header = styled.header`
     transform: translateX(40px);
   }
 
-  a.rounded {
+  button.rounded {
     z-index: 10;
   }
 
@@ -60,7 +60,7 @@ export const Header = styled.header`
     flex-direction: row-reverse;
     padding: 0 64px;
 
-    a.rounded {
+    button.rounded {
       display: none;
     }
 

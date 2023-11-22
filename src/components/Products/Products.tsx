@@ -21,26 +21,19 @@ function Produtos() {
 
       <div className="products">
         {products.map(({ name, type, desc, img, alt }) => (
-          <div key={name} className={`candy ${type}`}>
-            <Link to={`/${type}`} className="image">
+          <Link key={name} to={`/${type}`} className={`candy ${type}`}>
+            <div className="image">
               <img src={img} alt={alt} id={type} />
-            </Link>
+            </div>
 
             <div className="text">
-              <Link to={`/${type}`}>
-                <h3>{name}</h3>
-              </Link>
+              <h3>{name}</h3>
 
               <p>{desc}</p>
 
-              <Button
-                className="rounded"
-                color="gradient"
-                text="Eu quero!"
-                href="#contact"
-              />
+              <Button className="rounded" color="gradient" text="Eu quero!" />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </ProductsStyled>

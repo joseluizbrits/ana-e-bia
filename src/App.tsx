@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import GlobalStyle from "./styles/GlobalStyles";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,21 +12,20 @@ function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<About />} />
-          <Route path="/servicos" element={<Services />} />
-          <Route path="/escola" element={<School />} />
-          {productsPage.map((product) => (
-            <Route
-              key={product.type}
-              path={product.type}
-              element={<Product product={product} />}
-            />
-          ))}
-        </Routes>
-      </HashRouter>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sobre" element={<About />} />
+        <Route path="/servicos" element={<Services />} />
+        <Route path="/escola" element={<School />} />
+        {productsPage.map((product) => (
+          <Route
+            key={product.type}
+            path={product.type}
+            element={<Product product={product} />}
+          />
+        ))}
+      </Routes>
     </div>
   );
 }

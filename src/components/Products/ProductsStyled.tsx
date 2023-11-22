@@ -119,7 +119,7 @@ export const ProductsStyled = styled.section`
       margin-top: 20px;
     }
 
-    a.rounded {
+    button.rounded {
       margin-top: 40px;
       align-self: flex-end;
     }
@@ -143,7 +143,7 @@ export const ProductsStyled = styled.section`
       background: var(--p4);
     }
 
-    a.rounded {
+    button.rounded {
       align-self: flex-start;
     }
   }
@@ -309,7 +309,7 @@ export const ProductsStyled = styled.section`
       text-align: center;
     }
 
-    .text a.rounded {
+    .text button.rounded {
       font-weight: var(--semibold);
       font-size: 1rem;
       text-align: center;
