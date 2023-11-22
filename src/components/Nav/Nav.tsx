@@ -31,10 +31,7 @@ function Nav() {
 
       <Menu className={menuActive ? "active" : ""} id="menu" />
 
-      <Link
-        to="/ana-e-bia"
-        className={URL === "escola" ? "logo logo-school" : "logo"}
-      >
+      <Link to="/" className={URL === "escola" ? "logo logo-school" : "logo"}>
         <span>Ana & Bia</span>
         <span>doces</span>
       </Link>

@@ -33,7 +33,7 @@ function Menu({ className, id }: { className: string; id: string }) {
       <ul className="sweets-routes">
         {sweets.map(({ type }) => (
           <li key={type}>
-            <Link to={`/ana-e-bia/${type}`} target="_top">
+            <Link to={`/${type}`} target="_top">
               {type}
             </Link>
           </li>

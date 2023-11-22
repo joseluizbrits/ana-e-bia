@@ -18,7 +18,7 @@ function Footer({ theme }: { theme?: "light" | "white" }) {
       <div className="card">
         <div className="wrapp">
           <div className="brand">
-            <Link to="/ana-e-bia" className="logo">
+            <Link to="/" className="logo">
               <span>Ana & Bia</span>
               <span>doces</span>
             </Link>

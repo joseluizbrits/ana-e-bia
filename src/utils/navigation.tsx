@@ -6,25 +6,25 @@ import imgSchool from "../assets/img/hero-school.jpg";
 export const navigation = [
   {
     page: "home",
-    route: "/ana-e-bia",
+    route: "/",
     img: imgHome,
     alt: "Pão doce com recheio cremoso",
   },
   {
     page: "sobre",
-    route: "/ana-e-bia/sobre",
+    route: "/sobre",
     img: imgAbout,
     alt: "Bolo",
   },
   {
     page: "serviços",
-    route: "/ana-e-bia/servicos",
+    route: "/servicos",
     img: imgServices,
     alt: "Donut",
   },
   {
     page: "escola",
-    route: "/ana-e-bia/escola",
+    route: "/escola",
     img: imgSchool,
     alt: "Quatro donuts",
   },

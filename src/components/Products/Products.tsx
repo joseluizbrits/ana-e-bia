@@ -22,12 +22,12 @@ function Produtos() {
       <div className="products">
         {products.map(({ name, type, desc, img, alt }) => (
           <div key={name} className={`candy ${type}`}>
-            <Link to={`/ana-e-bia/${type}`} className="image">
+            <Link to={`/${type}`} className="image">
               <img src={img} alt={alt} id={type} />
             </Link>
 
             <div className="text">
-              <Link to={`/ana-e-bia/${type}`}>
+              <Link to={`/${type}`}>
                 <h3>{name}</h3>
               </Link>
 

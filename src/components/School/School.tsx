@@ -17,7 +17,7 @@ function School() {
           confeitaria
         </p>
 
-        <Link to="/ana-e-bia/escola">Inscreva-se</Link>
+        <Link to="/escola">Inscreva-se</Link>
       </div>
     </SchoolStyled>
   );

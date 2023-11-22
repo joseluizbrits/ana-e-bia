@@ -35,7 +35,7 @@ export const ButtonScrollTopStyled = styled.button`
     }
 
     &:hover {
-      opacity: 1;
+      opacity: 0.4;
       transform: translateY(0);
     }
   }

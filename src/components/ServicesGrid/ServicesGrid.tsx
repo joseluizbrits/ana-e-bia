@@ -34,7 +34,7 @@ function Services() {
           estética, propriciando uma experiência mágica sem grandes preocupações
         </p>
 
-        <Link to="/ana-e-bia/servicos">Saiba mais</Link>
+        <Link to="/servicos">Saiba mais</Link>
       </div>
     </ServicesGridStyled>
   );

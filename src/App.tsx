@@ -14,14 +14,14 @@ function App() {
       <GlobalStyle />
       <HashRouter>
         <Routes>
-          <Route path="/ana-e-bia" element={<Home />} />
-          <Route path="/ana-e-bia/sobre" element={<About />} />
-          <Route path="/ana-e-bia/servicos" element={<Services />} />
-          <Route path="/ana-e-bia/escola" element={<School />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre" element={<About />} />
+          <Route path="/servicos" element={<Services />} />
+          <Route path="/escola" element={<School />} />
           {productsPage.map((product) => (
             <Route
               key={product.type}
-              path={`/ana-e-bia/${product.type}`}
+              path={product.type}
               element={<Product product={product} />}
             />
           ))}
