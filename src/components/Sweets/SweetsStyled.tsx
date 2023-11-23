@@ -227,7 +227,7 @@ export const SweetsStyled = styled.div`
 
     .swiper-slide .content,
     .swiper-slide .shadow {
-      width: 80%;
+      width: 260px;
       height: 97%;
     }
 

@@ -6,7 +6,6 @@ import Menu from "../Menu/Menu";
 
 function Nav() {
   const URL = useLocation().pathname.replace("/", "");
-
   const [menuActive, setMenuActive] = React.useState(false);
   const [contactPosition, setContactPosition] = React.useState(0);
 
@@ -16,14 +15,6 @@ function Nav() {
 
     if (contact) setContactPosition(contact.getBoundingClientRect().top);
   }, []);
-
-  function handleClick() {
-    window.scroll({
-      top: contactPosition,
-      left: 0,
-      behavior: "smooth",
-    });
-  }
 
   React.useEffect(() => {
     if (menuActive) {
@@ -39,14 +30,25 @@ function Nav() {
     }
   }, [menuActive]);
 
+  function scrollToContact() {
+    window.scroll({
+      top: contactPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <Header>
       <Hamburger
-        className={`hamburger ${menuActive ? "active" : ""}`}
+        className={`hamburger ${menuActive && "active"}`}
         onClick={() => setMenuActive(!menuActive)}
       />
 
-      <Menu className={menuActive ? "active" : ""} id="menu" />
+      <Menu
+        className={`menu ${menuActive && "active"}`}
+        setMenuActive={setMenuActive}
+      />
 
       <Link to="/" className={URL === "escola" ? "logo logo-school" : "logo"}>
         <span>Ana & Bia</span>
@@ -54,7 +56,7 @@ function Nav() {
       </Link>
 
       <Button
-        onClick={handleClick}
+        onClick={scrollToContact}
         className="rounded"
         color="gradient"
         text={URL === "escola" ? "Inscreva-se!" : "Faça seu pedido!"}

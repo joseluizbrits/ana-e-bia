@@ -237,7 +237,7 @@ export const ContactStyled = styled.section`
     }
 
     form .fields label {
-      color: var(--p6);
+      color: var(--p7);
     }
 
     form .fields input[type="text"],

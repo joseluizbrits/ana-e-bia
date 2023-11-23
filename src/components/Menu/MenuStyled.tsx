@@ -97,6 +97,7 @@ export const MenuStyled = styled.nav`
       text-transform: uppercase;
       color: var(--p6);
       padding: 24px;
+      cursor: pointer;
       transition: 0.3s;
 
       &:hover {

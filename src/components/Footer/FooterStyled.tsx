@@ -65,7 +65,7 @@ export const FooterStyled = styled.footer`
     font-weight: var(--medium);
     font-size: 1.25rem;
     letter-spacing: 0.05rem;
-    color: var(--p4);
+    color: var(--p3);
     padding-top: 16px;
   }
 
@@ -168,7 +168,7 @@ export const FooterStyled = styled.footer`
     }
 
     .brand .description {
-      color: var(--p2);
+      color: var(--p1);
     }
 
     .brand nav ul hr {
@@ -177,11 +177,16 @@ export const FooterStyled = styled.footer`
     }
 
     .brand nav ul li a {
-      color: var(--p7);
+      color: var(--p8);
 
       &:hover {
-        color: var(--p8);
+        color: var(--p7);
       }
+    }
+
+    .brand .copyright,
+    .location .address {
+      color: var(--p1);
     }
   }
 
@@ -207,7 +212,7 @@ export const FooterStyled = styled.footer`
     }
 
     .brand .description {
-      color: var(--p3);
+      color: var(--p4);
     }
 
     .brand nav ul hr {
@@ -224,6 +229,11 @@ export const FooterStyled = styled.footer`
 
     .brand .networks > * {
       opacity: 0.9;
+    }
+
+    .brand .copyright,
+    .location .address {
+      color: var(--p4);
     }
   }
 

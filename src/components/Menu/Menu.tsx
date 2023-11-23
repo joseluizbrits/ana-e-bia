@@ -1,12 +1,19 @@
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MenuStyled } from "./MenuStyled";
 import { MenuAnimation } from "./MenuAnimation";
 import { navigation } from "../../utils/navigation";
 import { products } from "../../utils/products";
 
-function Menu({ className, id }: { className: string; id: string }) {
+type MenuProps = {
+  className: string;
+  setMenuActive: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+function Menu({ className, setMenuActive }: MenuProps) {
   MenuAnimation(className);
 
+  const navigate = useNavigate();
   const pageName = useLocation().pathname;
 
   const nav = navigation.filter(({ route }) => route !== pageName);
@@ -14,8 +21,15 @@ function Menu({ className, id }: { className: string; id: string }) {
     ({ type }) => type !== pageName.replace("/", "")
   );
 
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    setMenuActive(false);
+
+    const routeName = e.currentTarget.className.split("-")[0];
+    navigate("/" + routeName);
+  }
+
   return (
-    <MenuStyled className={className} id={id}>
+    <MenuStyled className={className}>
       <ul>
         {nav.map(({ route, page, img, alt }, index) => (
           <li key={page} className={`route-${index + 1}`}>
@@ -33,9 +47,9 @@ function Menu({ className, id }: { className: string; id: string }) {
       <ul className="sweets-routes">
         {sweets.map(({ type }) => (
           <li key={type}>
-            <Link to={`/${type}`} target="_top">
+            <a onClick={handleClick} className={`${type}-route`}>
               {type}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

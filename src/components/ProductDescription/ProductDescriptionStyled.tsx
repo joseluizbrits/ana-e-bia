@@ -50,7 +50,7 @@ export const ProductDescriptionStyled = styled.section`
     font-family: var(--text);
     font-weight: var(--medium);
     font-size: clamp(1.5rem, 2vw, 2.5rem);
-    color: var(--p1);
+    color: #fff;
   }
 
   .card .item span {
@@ -111,16 +111,16 @@ export const ProductDescriptionStyled = styled.section`
       font-family: var(--text);
       font-size: clamp(0.875rem, 1vw, 1.5rem);
       line-height: 1.5em;
-      color: var(--p2);
+      color: var(--p1);
       max-width: 32ch;
     }
 
-    a {
+    button {
       font-family: var(--text);
       font-weight: var(--semibold);
       font-size: clamp(0.875rem, 1vw, 1.25rem);
       line-height: 1.5em;
-      color: var(--p2);
+      color: #fff;
 
       background: none;
       border: 2px solid var(--p2);
@@ -136,7 +136,6 @@ export const ProductDescriptionStyled = styled.section`
 
       &:hover {
         background-color: var(--p5);
-        color: #fff;
       }
     }
   }

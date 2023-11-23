@@ -6,10 +6,10 @@ export const MenuAnimation = (className: string) => {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ paused: true, reversed: true });
 
-      if (className) tl.play();
+      if (className.indexOf("active") !== -1) tl.play();
 
       tl.fromTo(
-        "#menu",
+        ".menu",
         {
           width: 0,
         },
@@ -21,7 +21,7 @@ export const MenuAnimation = (className: string) => {
       );
 
       tl.fromTo(
-        "#menu ul li",
+        ".menu ul li",
         {
           opacity: 0,
         },

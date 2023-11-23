@@ -1,3 +1,4 @@
+import React from "react";
 import { ProductDescriptionStyled } from "./ProductDescriptionStyled";
 import { ProductDescriptionAnimation } from "./ProductDescriptionAnimation";
 
@@ -15,6 +16,23 @@ type DescProps = {
 
 function ProductDescription({ desc, name }: DescProps) {
   ProductDescriptionAnimation();
+
+  const [contactPosition, setContactPosition] = React.useState(0);
+
+  React.useEffect(() => {
+    const contact =
+      document.querySelector("#contact") || document.querySelector("#register");
+
+    if (contact) setContactPosition(contact.getBoundingClientRect().top);
+  }, []);
+
+  function handleClick() {
+    window.scroll({
+      top: contactPosition,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <ProductDescriptionStyled className="product-description">
@@ -38,7 +56,7 @@ function ProductDescription({ desc, name }: DescProps) {
                   <h4>{subItem}</h4>
                   <p>{subText}</p>
 
-                  <a href="#contact">Fazer pedido</a>
+                  <button onClick={handleClick}>Fazer pedido</button>
                 </div>
               </div>
             </div>

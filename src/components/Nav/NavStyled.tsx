@@ -82,7 +82,7 @@ export const Header = styled.header`
   }
 `;
 
-export const Hamburger = styled.a`
+export const Hamburger = styled.button`
   width: 80px;
   height: 64px;
   translate: 20px;
