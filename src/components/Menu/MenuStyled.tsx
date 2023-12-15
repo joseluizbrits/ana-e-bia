@@ -7,10 +7,10 @@ export const MenuStyled = styled.nav`
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
     background: var(--p5);
-    z-index: 100;
+    z-index: 10000;
 
     display: flex;
     align-items: center;
