@@ -1,3 +1,4 @@
+import Head from "../components/Head/Head";
 import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
 import Products from "../components/Products/Products";
@@ -14,6 +15,10 @@ import Cake from "../assets/svg/Cake";
 function Home() {
   return (
     <>
+      <Head
+        title="Home"
+        description="Descubra a doçura na Ana & Bia Doces. Bolos, macarons e cookies artesanais que encantam. Tradição e inovação em cada mordida!"
+      />
       <Nav />
       <Hero
         img={imgHero}

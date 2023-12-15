@@ -1,3 +1,4 @@
+import Head from "../components/Head/Head";
 import React from "react";
 import Nav from "../components/Nav/Nav";
 import Hero from "../components/Hero/Hero";
@@ -16,23 +17,29 @@ const Sweets = React.lazy(() => import("../components/Sweets/Sweets"));
 
 function About() {
   return (
-    <main className="container" style={{ background: "var(--p5)" }}>
-      <Nav />
-      <Hero
-        img={imgHero}
-        text={["Uma história doce", "Sobre família"]}
-        circleColor={"rgba(255, 100, 136, 0.5)"}
+    <>
+      <Head
+        title="Sobre"
+        description="Conheça a história de paixão e tradição da Ana & Bia Doces. Da cozinha da vovó às delícias artesanais, cada doce conta uma história única."
       />
-      <History />
-      <Values />
-      <AboutConclusion />
-      <React.Suspense fallback={<Loading />}>
-        <Sweets />
-      </React.Suspense>
-      <Contact sweet={<Macaron />} theme="light" />
-      <ButtonScrollTop />
-      <Footer theme="light" />
-    </main>
+      <main className="container" style={{ background: "var(--p5)" }}>
+        <Nav />
+        <Hero
+          img={imgHero}
+          text={["Uma história doce", "Sobre família"]}
+          circleColor={"rgba(255, 100, 136, 0.5)"}
+        />
+        <History />
+        <Values />
+        <AboutConclusion />
+        <React.Suspense fallback={<Loading />}>
+          <Sweets />
+        </React.Suspense>
+        <Contact sweet={<Macaron />} theme="light" />
+        <ButtonScrollTop />
+        <Footer theme="light" />
+      </main>
+    </>
   );
 }
 

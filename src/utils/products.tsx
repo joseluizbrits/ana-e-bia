@@ -85,6 +85,7 @@ export const productsPage = [
     circleColor: "rgba(255, 150, 174, 0.5)",
     img: cookieHero,
     icon: <Cookie />,
+    meta: products[0].desc,
     desc: [
       {
         id: "cookie-desc-1",
@@ -141,6 +142,7 @@ export const productsPage = [
     circleColor: "rgba(255, 100, 136, 0.8)",
     img: donutHero,
     icon: <Donut />,
+    meta: products[1].desc,
     desc: [
       {
         id: "donut-desc-1",
@@ -197,6 +199,7 @@ export const productsPage = [
     circleColor: "rgba(255, 100, 136, 0.8)",
     img: cakeHero,
     icon: <Cake />,
+    meta: products[2].desc,
     desc: [
       {
         id: "cake-desc-1",
@@ -253,6 +256,7 @@ export const productsPage = [
     circleColor: "rgba(255, 100, 136, 0.5)",
     img: macaronHero,
     icon: <Macaron />,
+    meta: products[3].desc,
     desc: [
       {
         id: "macaron-desc-1",
